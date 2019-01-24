@@ -8,7 +8,7 @@
  *
  */
 
-package com.proj.wsf.core.config;
+package com.proj.wsf.view;
 
 import java.util.Properties;
 import javax.persistence.EntityManagerFactory;
@@ -49,9 +49,9 @@ public class JPAConfiguration {
         factoryBean.setDataSource(dataSource);
 
         factoryBean.setJpaProperties(aditionalProperties());
-        factoryBean.setPackagesToScan("com.proj.art.core");
-        factoryBean.setPackagesToScan("com.proj.art.model");
-        factoryBean.setPackagesToScan("com.proj.art.mod");
+        factoryBean.setPackagesToScan("com.proj.wsf.core");
+        factoryBean.setPackagesToScan("com.proj.wsf.model");
+     //   factoryBean.setPackagesToScan("com.proj.wsf.mod");
 
         return factoryBean;
 
@@ -124,7 +124,7 @@ public class JPAConfiguration {
     public DataSource dataSourcePrd() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
         dataSource.setDriverClassName("oracle.jdbc.OracleDriver");
-        dataSource.setUrl("jdbc:oracle:thin:@172.16.20.41:1521:FOZHML");
+        dataSource.setUrl("jdbc:oracle:thin:@172.16.20.41:1521:FOZPRD");
         dataSource.setUsername("FOZWSF");
         dataSource.setPassword("D0llar370");
         return dataSource;

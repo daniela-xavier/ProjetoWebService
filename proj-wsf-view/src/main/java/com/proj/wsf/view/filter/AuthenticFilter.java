@@ -8,7 +8,8 @@
  *
  */
 
-package com.proj.wsf.view.authenticate;
+package com.proj.wsf.view.filter;
+
 
 import java.io.IOException;
 import javax.servlet.Filter;
@@ -21,6 +22,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
+import org.springframework.core.annotation.Order;
+import org.springframework.stereotype.Component;
 
 /**
  * Description the class  AuthenticFilter - Classe filtro da aplicação.
@@ -28,21 +31,14 @@ import org.slf4j.LoggerFactory;
  * @version $v rev. $rev  $Revision$
  * @since Build 1.1 23/01/2019
  */
+@Component
+@Order(1)
 public class AuthenticFilter implements Filter {
-
-    private static final boolean debug = true;
-
-    // The filter configuration object we are associated with.  If
-    // this value is null, this filter instance is not currently
-    // configured. 
-    private FilterConfig filterConfig = null;
-
-    /**
-     * Construtor da classe.
+  /**
+     * Logging todo o request da aplica��o para auditoria
      */
-    public AuthenticFilter() {
-    }
-
+    private final static Logger LOGGER = LoggerFactory.getLogger(AuthenticFilter.class);
+    
     /**
      * Método do Filter responsável por verificar se requisição é válida.
      *
@@ -76,18 +72,14 @@ public class AuthenticFilter implements Filter {
 
     @Override
     public void destroy() {
-        // If you have assigned any expensive resources as field of
-        // this Filter class, then you could clean/close them here.
+       LOGGER.warn("Destroy filtro de Authentic");
     }
 
-    /**
-     * Logging todo o request da aplica��o para auditoria
-     */
-    private final static Logger LOGGER = LoggerFactory.getLogger(AuthenticFilter.class);
+  
 
     @Override
     public void init(final FilterConfig filterConfig) throws ServletException {
-        LOGGER.info("Iniciando filtro de logging");
+        LOGGER.info("Iniciando filtro de Authentic");
     }
 
 }

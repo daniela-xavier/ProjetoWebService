@@ -7,7 +7,6 @@
  * This software is the proprietary information of Foz Sociedade de Advogados Company.
  *
  */
-
 package com.proj.wsf.view.controller;
 
 import com.proj.wsf.view.response.ResponseMessage;
@@ -16,6 +15,8 @@ import com.proj.wsf.core.IFacade;
 import com.proj.wsf.core.IServico;
 import com.proj.wsf.core.application.Result;
 import com.proj.wsf.model.DomainEntity;
+import io.swagger.annotations.Api;
+import io.swagger.annotations.ApiOperation;
 import java.util.Map;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -24,20 +25,26 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
-import org.springframework.web.servlet.ModelAndView;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Description the class  DomainEntityController -  Classe responsével pela
+ * Description the class DomainEntityController - Classe responsével pela
  * execução das açães, de acordo com métodos HTTP.
+ *
  * @author Daniela Xavier Conceição - sistemas@fozadvogados.com.br
- * @version $v rev. $rev  $Revision$
+ * @version $v rev. $rev $Revision$
  * @since Build 1.1 23/01/2019
  */
+@RestController
+@CrossOrigin(origins = "*")
+@RequestMapping(value="/")
+@Api(value="API REST FOZ")
 @Controller(value = "domainEntityController")
 public class DomainEntityController<T extends DomainEntity> extends BaseController {
 
@@ -75,14 +82,13 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
     }
 
     /**
-     * Método para requisiçães GET com parametro entity preenchido, que aceita
-     * entradas em JSON e retorno em JSON.
+     * Método para requisiçães GET na raiz do projeto.
      *
-     * @return ModelAndView - pagina WEB de Bem vindo.
+     * @return String
      */
-    @RequestMapping(path = "/testFoz", method = RequestMethod.GET)    
-    public ModelAndView getTestWebService() {  
-        return new ModelAndView("WebServiceAreaRestrita");
+    @RequestMapping("/")
+    public String index() {
+        return "Bem vindo(a) ao WebServiceFoz";
     }
 
     /**
@@ -94,6 +100,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
      */
     @RequestMapping(value = "{id}", method = RequestMethod.GET, consumes = {MediaType.APPLICATION_JSON_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE})
+    @ApiOperation(value="Retorna uma entidade")
     @Transactional
     public @ResponseBody
     ResponseEntity getEntityById(@PathVariable Long id) {
@@ -125,6 +132,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
      */
     @RequestMapping(method = RequestMethod.GET, consumes = {MediaType.APPLICATION_JSON_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE})
+    @ApiOperation(value="Retorna uma lista de entidades")
     @Transactional
     public @ResponseBody
     ResponseEntity getEntityByFiltro(@RequestBody T entity) {
@@ -161,6 +169,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
      */
     @RequestMapping(method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE})
+    @ApiOperation(value="Cria uma entidade")
     @Transactional
     public @ResponseBody
     ResponseEntity createEntity(@RequestBody T entity) {
@@ -197,6 +206,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
      */
     @RequestMapping(method = RequestMethod.PUT, consumes = {MediaType.APPLICATION_JSON_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE})
+    @ApiOperation(value="Altera uma entidade")
     @Transactional
     public @ResponseBody
     ResponseEntity updateEntity(@RequestBody T entity) {
@@ -232,6 +242,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
      * @return ResponseEntity - RequestBody.
      */
     @RequestMapping(value = "{id}", method = RequestMethod.DELETE, consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
+    @ApiOperation(value="Deleta uma entidade")
     @Transactional
     public @ResponseBody
     ResponseEntity deleteEntity(@PathVariable Long id) {
