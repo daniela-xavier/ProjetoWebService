@@ -52,17 +52,6 @@ public class DomainEntity implements IEntity, Serializable {
     @Column(name = "ATIVO")
     private String active;
 
-    @Expose
-    @Transient
-    private String uri;
-
-    @Expose
-    @Transient
-    private String user;
-
-    @Expose
-    @Transient
-    private String token;
 
     /**
      * Método para retorno de data de inclusão.
@@ -153,50 +142,5 @@ public class DomainEntity implements IEntity, Serializable {
     public void setChangedBy(String changedBy) {
         this.changedBy = changedBy;
     }
-
-    /**
-     * Método para retorno de uri.
-     *
-     * @return uri
-     */
-    public String getUri() {
-        return uri;
-    }
-
-    /**
-     * Método para inserção de uri.
-     *
-     * @param uri
-     */
-    public void setUri(String uri) {
-        this.uri = uri;
-    }
-
-    /**
-     * Método para inserção de user.
-     *
-     * @param user
-     */
-    public void setUser(String user) {
-        this.user = user;
-    }
-
-    /**
-     * Método para retorno de user.
-     *
-     * @return user
-     */
-    public String getUser() {
-        return user;
-    }
-
-    /**
-     * Método para inserção de token.
-     *
-     * @param token
-     */
-    public void setToken(String token) {
-        this.token = token;
-    }
-
+  
 }

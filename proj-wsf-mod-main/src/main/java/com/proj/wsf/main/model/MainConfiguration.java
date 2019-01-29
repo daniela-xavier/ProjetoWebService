@@ -29,7 +29,7 @@ import javax.persistence.Table;
  * @since Build 1.1 24/01/2019
  */
 @Entity
-@Table(name = "CONFIGWEBSERVICEFOZ")
+@Table(name = "CONFIG_WEB_SERVICE_FOZ")
 @AttributeOverrides({
 @AttributeOverride(name = "id", column = @Column(name = "CWSF_ID")),
 @AttributeOverride(name = "active", column = @Column(name = "CWSF_ATIVO")),
@@ -42,8 +42,8 @@ public class MainConfiguration extends DomainEntity{
   
     @Id
     @Column(name = "CWSF_ID")
-    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_CONFIGWEBSERVICEFOZ")
-    @SequenceGenerator(name = "SEQ_CONFIGWEBSERVICEFOZ", sequenceName = "SEQ_CONFIGWEBSERVICEFOZ", allocationSize=1)
+    @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_CONFIG_WEB_SERVICE_FOZ")
+    @SequenceGenerator(name = "SEQ_CONFIG_WEB_SERVICE_FOZ", sequenceName = "SEQ_CONFIG_WEB_SERVICE_FOZ", allocationSize=1)
     private Long id;
     
     @Expose
