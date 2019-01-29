@@ -87,6 +87,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
      * @return String
      */
     @RequestMapping("/")
+    @ApiOperation(value="Index da aplicação")
     public String index() {
         return "Bem vindo(a) ao WebServiceFoz";
     }
@@ -103,11 +104,12 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
     @ApiOperation(value="Retorna uma entidade")
     @Transactional
     public @ResponseBody
-    ResponseEntity getEntityById(@PathVariable Long id) {
+    ResponseEntity getEntityById(@PathVariable String id) {
+    Long longId = Long.parseLong(id);
 
         try {
             IServico entidadeServico = getServico(clazz.getSimpleName());
-            Result resultado = fachada.findById(id, entidadeServico);
+            Result resultado = fachada.findById(longId, entidadeServico);
             Iterable<DomainEntity> t = resultado.getEntity();
 
             return new ResponseEntity<>(t, HttpStatus.OK);
@@ -245,11 +247,11 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
     @ApiOperation(value="Deleta uma entidade")
     @Transactional
     public @ResponseBody
-    ResponseEntity deleteEntity(@PathVariable Long id) {
-
+    ResponseEntity deleteEntity(@PathVariable String id) {
+    Long longId = Long.parseLong(id);
         try {
             IServico entidadeServico = getServico(clazz.getSimpleName());
-            Result resultado = fachada.delete(id, entidadeServico);
+            Result resultado = fachada.delete(longId, entidadeServico);
             Iterable<DomainEntity> t = resultado.getEntity();
 
             return new ResponseEntity<>(resultado, HttpStatus.OK);

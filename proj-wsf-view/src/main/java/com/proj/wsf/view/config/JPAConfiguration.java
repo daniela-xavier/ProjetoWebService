@@ -7,16 +7,19 @@
  * This software is the proprietary information of Foz Sociedade de Advogados Company.
  *
  */
+package com.proj.wsf.view.config;
 
-package com.proj.wsf.view;
-
+import com.mchange.v2.c3p0.ComboPooledDataSource;
+import java.sql.Connection;
+import java.sql.SQLException;
 import java.util.Properties;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
-import org.springframework.context.annotation.Profile;
-import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import org.springframework.orm.jpa.JpaTransactionManager;
 import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
@@ -24,18 +27,37 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
 import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
- * Description the class  JPAConfiguration - Classe de configurção da entidade de
- * persistencia do sistema.
+ * Description the class JPAConfiguration - Classe de configurção da entidade
+ * de persistencia do sistema.
+ *
  * @author Daniela Xavier Conceição - sistemas@fozadvogados.com.br
- * @version $v rev. $rev  $Revision$
+ * @version $v rev. $rev $Revision$
  * @since Build 1.1 23/01/2019
  */
 @Configuration
 @EnableTransactionManagement
 public class JPAConfiguration {
 
+    @Value("${spring.datasource.url}")
+    private String springDatasourceUrl;
+
+    @Value("${spring.datasource.bd.port}")
+    private String springDatasourcePort;
+
+    @Value("${spring.datasource.bd.sid}")
+    private String springDatasourceSid;
+
+    @Value("${spring.datasource.driver-class-name}")
+    private String springDatasourceDriverClassName;
+
+    @Value("${spring.datasource.username}")
+    private String springDatasourceUsername;
+
+    @Value("${spring.datasource.password}")
+    private String springDatasourcePassword;
+
     /**
-     * Método de instancia de fabrica da entidade de gerenciamento de conexões.
+     * M�todo de instancia de fabrica da entidade de gerenciamento de conex�es.
      *
      * @param dataSource - Data source criado.
      * @return LocalContainerEntityManagerFactoryBean
@@ -48,10 +70,10 @@ public class JPAConfiguration {
         factoryBean.setJpaVendorAdapter(jpaVendorAdapter);
         factoryBean.setDataSource(dataSource);
 
-        factoryBean.setJpaProperties(aditionalProperties());
+        //factoryBean.setJpaProperties(aditionalProperties());
         factoryBean.setPackagesToScan("com.proj.wsf.core");
         factoryBean.setPackagesToScan("com.proj.wsf.model");
-     //   factoryBean.setPackagesToScan("com.proj.wsf.mod");
+        //   factoryBean.setPackagesToScan("com.proj.wsf.mod");
 
         return factoryBean;
 
@@ -63,20 +85,18 @@ public class JPAConfiguration {
      * @return Properties
      */
     private Properties aditionalProperties() {
-        Properties jpaProperties = new Properties();
-        jpaProperties.setProperty("hibernate.dialect", "org.hibernate.dialect.OracleDialect");
-        jpaProperties.setProperty("hibernate.show_sql", "true");
-        jpaProperties.setProperty("hibernate.format_sql", "true");
-        jpaProperties.setProperty("hibernate.temp.use_jdbc_metadata_defaults", "false");
-        jpaProperties.setProperty("hibernate.cache.provider_class", "org.hibernate.cache.NoCacheProvider");
 
-        //Configuração do C3PO 
-        jpaProperties.setProperty("hibernate.c3p0.min_size", "5");
-        jpaProperties.setProperty("hibernate.c3p0.max_size", "100");
-        jpaProperties.setProperty("hibernate.c3p0.acquire_increment", "1800");
-        jpaProperties.setProperty("hibernate.c3p0.max_statements", "150");
+        Properties properties = new Properties();
+        properties.setProperty("hibernate.dialect", "org.hibernate.dialect.OracleDialect");
+        properties.setProperty("hibernate.show_sql", "true");
+        properties.setProperty("hibernate.format_sql", "true");
+        properties.setProperty("user", springDatasourceUsername);
+        properties.setProperty("password", springDatasourcePassword);
+        properties.setProperty("useSSL", "false");
+        properties.setProperty("autoReconnect", "true");
+        properties.setProperty("serverTimezone", "UTC");
 
-        return jpaProperties;
+        return properties;
     }
 
     /**
@@ -84,50 +104,21 @@ public class JPAConfiguration {
      * Desenvolvimento.
      *
      * @return DataSource
-     */    
+     */
     @Bean(name = "dataSource")
-    @Profile("dev")
-    public DataSource dataSourceDev() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("oracle.jdbc.OracleDriver");
-        dataSource.setUrl("jdbc:oracle:thin:@172.16.20.249:1521:FOZTST");
-        dataSource.setUsername("FOZWSF");
-        dataSource.setPassword("D0llar370");
-        return dataSource;
-    }
+    public DataSource dataSource() {
 
-    /**
-     * Método que adiciona propriedades para a conexão com o banco, Profile
-     * Homologação.
-     *
-     * @return DataSource
-     */    
-    @Bean(name = "dataSource")
-    @Profile("hml")
-    public DataSource dataSourceHml() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("oracle.jdbc.OracleDriver");
-        dataSource.setUrl("jdbc:oracle:thin:@172.16.20.249:1521:FOZHML");
-        dataSource.setUsername("FOZWSF");
-        dataSource.setPassword("D0llar370");
-        return dataSource;
-    }
+        ComboPooledDataSource connectionPoolDatasource = new ComboPooledDataSource();
 
-    /**
-     * Método que adiciona propriedades para a conexão com o banco, Profile
-     * Produção.
-     *
-     * @return DataSource
-     */    
-    @Bean(name = "dataSource")
-    @Profile("prd")
-    public DataSource dataSourcePrd() {
-        DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        dataSource.setDriverClassName("oracle.jdbc.OracleDriver");
-        dataSource.setUrl("jdbc:oracle:thin:@172.16.20.41:1521:FOZPRD");
-        dataSource.setUsername("FOZWSF");
-        dataSource.setPassword("D0llar370");
-        return dataSource;
+        connectionPoolDatasource.setJdbcUrl(springDatasourceUrl + ":" + springDatasourcePort + ":" + springDatasourceSid);
+
+        connectionPoolDatasource.setMinPoolSize(1);
+        connectionPoolDatasource.setAcquireIncrement(1);
+        connectionPoolDatasource.setMaxPoolSize(10);
+        connectionPoolDatasource.setTestConnectionOnCheckin(true);
+        connectionPoolDatasource.setTestConnectionOnCheckout(true);
+        connectionPoolDatasource.setProperties(aditionalProperties());
+        return connectionPoolDatasource;
     }
 
     /**
