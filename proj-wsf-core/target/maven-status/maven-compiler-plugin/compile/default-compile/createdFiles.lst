@@ -1,4 +1,3 @@
-com\proj\wsf\core\config\JPAConfiguration.class
 com\proj\wsf\core\IStrategy.class
 com\proj\wsf\core\facade\impl\Facade.class
 com\proj\wsf\core\strategy\impl\ComplementaryEntityActive.class
