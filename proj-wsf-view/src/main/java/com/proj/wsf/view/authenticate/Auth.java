@@ -38,8 +38,9 @@ public class Auth {
 
             Jws<Claims> jws = JWTUtilToken.decodificarToken(token);
             if (jws != null) {
-                System.out.println("User request: " + jws.getBody().getSubject());
-                me.setUser(jws.getBody().getSubject());
+                String user = jws.getBody().getSubject();
+                System.out.println("User request: " + user);                
+                me.setUser(user);
                 me.setToken(token);
                 return me;
             }

@@ -12,7 +12,7 @@ package com.proj.wsf.mod.user.core.dao;
 import com.proj.wsf.core.IDAO;
 import com.proj.wsf.core.dao.impl.DAOImp;
 import com.proj.wsf.mod.user.model.User;
-import java.util.Date;
+import com.proj.wsf.mod.user.model.User_;
 import java.util.List;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
@@ -76,62 +76,62 @@ public class UserDAO extends DAOImp<User> implements IDAO<User> {
 
         if (usuario.getId() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<Long>get("id"), usuario.getId()));
+                    builder.equal(from.get(User_.ID), usuario.getId()));
         }
 
         if (usuario.getEmail() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<String>get("email"), usuario.getEmail()));
+                    builder.equal(from.get(User_.EMAIL), usuario.getEmail()));
         }
 
         if (usuario.getUsuario() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<String>get("usuario"), usuario.getUsuario()));
-        }
-
-        if (usuario.getEmail() != null) {
-            predicate = builder.and(predicate,
-                    builder.equal(from.<String>get("email"), usuario.getEmail()));
+                    builder.equal(from.get(User_.USUARIO), usuario.getUsuario()));
         }
 
         if (usuario.getToken() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<String>get("token"), usuario.getToken()));
+                    builder.equal(from.get(User_.TOKEN), usuario.getToken()));
         }
 
         if (usuario.getObservacao() != null) {
-            predicate = builder.and(predicate,
-                    builder.equal(from.<String>get("observacao"), usuario.getObservacao()));
+            if (usuario.getObservacao().contains("%")) {
+                predicate = builder.and(predicate,
+                        builder.like(from.get(User_.OBSERVACAO), "%" + usuario.getObservacao() + "%"));
+            } else {
+                predicate = builder.and(predicate,
+                        builder.equal(from.get(User_.OBSERVACAO), usuario.getObservacao()));
+            }
         }
-        
+
         if (usuario.getActive() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<String>get("active"), usuario.getActive()));
+                    builder.equal(from.get(User_.ACTIVE), usuario.getActive()));
         }
-        
+
         if (usuario.getIncludedIn() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<Date>get("includedIn"), new DateTime(usuario.getIncludedIn(), DateTimeZone.UTC)));
+                    builder.equal(from.get(User_.INCLUDED_IN), new DateTime(usuario.getIncludedIn(), DateTimeZone.UTC)));
         }
 
         if (usuario.getChangedIn() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<Date>get("changedIn"), new DateTime(usuario.getChangedIn(), DateTimeZone.UTC)));
+                    builder.equal(from.get(User_.CHANGED_IN), new DateTime(usuario.getChangedIn(), DateTimeZone.UTC)));
         }
         if (usuario.getIncludedBy() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<String>get("includedBy"), (usuario.getIncludedBy())));
+                    builder.equal(from.get(User_.INCLUDED_BY), (usuario.getIncludedBy())));
         }
 
         if (usuario.getChangedBy() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<String>get("chancedBy"), (usuario.getChangedBy())));
+                    builder.equal(from.get(User_.CHANGED_BY), (usuario.getChangedBy())));
         }
 
         TypedQuery<User> typedQuery = this.em.createQuery(
                 query.select(from)
                         .where(predicate)
-                        .orderBy(builder.asc(from.get("id")))
+                        .orderBy(builder.asc(from.get(User_.ID)))
         );
 
         List<User> results = typedQuery.getResultList();

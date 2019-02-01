@@ -5,7 +5,7 @@
     <artifactId>proj-wsf-mod-user</artifactId>
     <version>1.0-SNAPSHOT</version>
     <packaging>jar</packaging>
-   <dependencies>
+    <dependencies>
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>proj-wsf-model</artifactId>
@@ -21,10 +21,171 @@
             <artifactId>proj-wsf-view</artifactId>
             <version>${project.version}</version>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>4.12</version>
+            <scope>test</scope>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-core</artifactId>
+            <version>1.3</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.assertj</groupId>
+            <artifactId>assertj-core</artifactId>
+            <version>3.9.1</version>
+            <scope>test</scope>
+            <type>jar</type>
+        </dependency>
     </dependencies>
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
         <maven.compiler.source>1.8</maven.compiler.source>
         <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
+    <build>
+     
+        <testResources>
+            <testResource>
+                <directory>${project.basedir}/src/test/java</directory>
+            </testResource>          
+        </testResources>   
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                    <compilerArguments>
+                        <processor>org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor</processor>
+                    </compilerArguments>
+                </configuration>
+            </plugin>
+        </plugins>  
+    </build>
+    
+    <distributionManagement>
+        <repository>
+            <id>releases</id>
+            <name>Releases</name>
+            <url>http://172.16.20.18:8081/repository/repo-proj-wsf-release/</url>		
+        </repository>
+        <snapshotRepository>
+            <id>snapshots</id>
+            <name>Snapshots</name>
+            <url>http://172.16.20.18:8081/repository/repo-proj-wsf-snapshot/</url>		
+        </snapshotRepository>
+    </distributionManagement>
+    
+    <reporting>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-surefire-report-plugin</artifactId>
+                <version>2.21.0</version>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-site-plugin</artifactId>
+                <version>3.3</version>
+                <configuration>
+                    <reportPlugins>
+                        <plugin>
+                            <groupId>org.apache.maven.plugins</groupId>
+                            <artifactId>maven-javadoc-plugin</artifactId>
+                            <executions>
+                                <execution>
+                                    <id>attach-javadocs</id>
+                                    <goals>
+                                        <goal>jar</goal>
+                                    </goals>
+                                    <configuration>
+                                        <additionalparam>${javadoc.opts}</additionalparam>
+                                    </configuration>
+                                </execution>
+                            </executions>
+                        </plugin>
+                    </reportPlugins>
+                </configuration>
+            </plugin>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-project-info-reports-plugin</artifactId>
+                <version>2.7</version>
+            </plugin>
+            <plugin>
+                <!-- The JXR Plugin generates a cross-reference of the project's sources. -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-jxr-plugin</artifactId>
+                <version>2.5</version>
+            </plugin>
+            <plugin>               
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-javadoc-plugin</artifactId>
+                <version>2.10.3</version>
+                <configuration>
+                    <additionalparam>-Xdoclint:none</additionalparam>
+                </configuration>
+            </plugin>            
+            <plugin>
+                <!-- The PMD plugin generates PMD and CPD reports using the PMD code 
+                analysis tool. -->
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-pmd-plugin</artifactId>
+                <version>3.6</version>
+                <configuration>
+                    <skipEmptyReport>false</skipEmptyReport>
+                    <linkXref>true</linkXref>
+                    <minimumTokens>50</minimumTokens>
+                    <rulesets>
+                        <ruleset>rulesets/java/android.xml</ruleset>
+                        <ruleset>rulesets/java/basic.xml</ruleset>
+                        <ruleset>rulesets/java/braces.xml</ruleset>
+                        <ruleset>rulesets/java/clone.xml</ruleset>
+                        <ruleset>rulesets/java/codesize.xml</ruleset>
+                        <ruleset>rulesets/java/comments.xml</ruleset>
+                        <!-- <ruleset>rulesets/java/controversial.xml</ruleset> -->
+                        <ruleset>rulesets/java/coupling.xml</ruleset>
+                        <ruleset>rulesets/java/design.xml</ruleset>
+                        <ruleset>rulesets/java/empty.xml</ruleset>
+                        <ruleset>rulesets/java/finalizers.xml</ruleset>
+                        <ruleset>rulesets/java/imports.xml</ruleset>
+                        <ruleset>rulesets/java/j2ee.xml</ruleset>
+                        <ruleset>rulesets/java/javabeans.xml</ruleset>
+                        <ruleset>rulesets/java/junit.xml</ruleset>
+                        <ruleset>rulesets/java/logging-jakarta-commons.xml</ruleset>
+                        <ruleset>rulesets/java/logging-java.xml</ruleset>
+                        <ruleset>rulesets/java/migrating.xml</ruleset>
+                        <ruleset>rulesets/java/migrating_to_13.xml</ruleset>
+                        <ruleset>rulesets/java/migrating_to_14.xml</ruleset>
+                        <ruleset>rulesets/java/migrating_to_15.xml</ruleset>
+                        <ruleset>rulesets/java/migrating_to_junit4.xml</ruleset>
+                        <ruleset>rulesets/java/naming.xml</ruleset>
+                        <ruleset>rulesets/java/optimizations.xml</ruleset>
+                        <ruleset>rulesets/java/strictexception.xml</ruleset>
+                        <ruleset>rulesets/java/strings.xml</ruleset>
+                        <ruleset>rulesets/java/sunsecure.xml</ruleset>
+                        <ruleset>rulesets/java/typeresolution.xml</ruleset>
+                        <ruleset>rulesets/java/unnecessary.xml</ruleset>
+                        <ruleset>rulesets/java/unusedcode.xml</ruleset>
+                    </rulesets>
+                </configuration>
+            </plugin>     
+            <plugin>
+                <!-- FindBugs Plugin looks for bugs in Java programs. It is based on 
+                the concept of bug patterns. -->
+                <groupId>org.codehaus.mojo</groupId>
+                <artifactId>findbugs-maven-plugin</artifactId>
+                <version>3.0.0</version>
+            </plugin>
+       
+        </plugins>
+    </reporting>
 </project>

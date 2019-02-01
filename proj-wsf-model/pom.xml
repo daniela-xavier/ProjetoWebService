@@ -47,7 +47,23 @@
             <testResource>
                 <directory>${project.basedir}/src/test/java</directory>
             </testResource>          
-        </testResources>              
+        </testResources>   
+        
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.7.0</version>
+                <configuration>
+                    <source>1.8</source>
+                    <target>1.8</target>
+                    <encoding>UTF-8</encoding>
+                    <compilerArguments>
+                        <processor>org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor</processor>
+                    </compilerArguments>
+                </configuration>
+            </plugin>
+        </plugins>          
     </build>
   
     <dependencies>
@@ -104,6 +120,12 @@
             <version>5.2.11.Final</version>
         </dependency>
                
+         <dependency>
+            <groupId>org.hibernate</groupId>
+            <artifactId>hibernate-jpamodelgen</artifactId>
+            <version>5.4.0.Final</version>
+        </dependency>                     
+               
         <dependency>
             <groupId>com.h2database</groupId>
             <artifactId>h2</artifactId>
@@ -155,7 +177,7 @@
         <dependency>
             <groupId>com.fasterxml.jackson.core</groupId>
             <artifactId>jackson-databind</artifactId>
-            <version>2.9.4</version>
+            <version>2.9.7</version>
         </dependency>
         
         <dependency>
@@ -175,7 +197,7 @@
             <artifactId>joda-time</artifactId>
             <version>2.9.9</version>
         </dependency>
-        
+                
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-test-autoconfigure</artifactId>
@@ -248,6 +270,23 @@
             <artifactId>spring-test</artifactId>
             <version>5.0.9.RELEASE</version>
             <type>jar</type>
+        </dependency>
+        
+        <!-- logging -->
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-core</artifactId>
+            <version>2.11.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.apache.logging.log4j</groupId>
+            <artifactId>log4j-1.2-api</artifactId>
+            <version>2.11.1</version>
+        </dependency>
+        <dependency>
+            <groupId>org.slf4j</groupId>
+            <artifactId>slf4j-log4j12</artifactId>
+            <version>1.7.21</version>
         </dependency>
     </dependencies>
     

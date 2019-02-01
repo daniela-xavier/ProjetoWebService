@@ -14,9 +14,14 @@ import com.proj.wsf.model.DomainEntity;
 import java.util.Date;
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
@@ -59,5 +64,15 @@ public class UserProfile extends DomainEntity {
     @Column(name = "TEMPORARIO")
     private String temporario;
 
+    @Expose(serialize = false, deserialize = false)
+    @OneToOne(fetch = FetchType.EAGER, targetEntity = Profile.class, cascade = CascadeType.ALL)
+    @JoinColumn(name = "PE_ID", nullable = false, insertable = false, updatable = false)
+    private Profile profile;
+
+    public Profile getProfile() {
+        return profile;
+    }
+
+    
 
 }

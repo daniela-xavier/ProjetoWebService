@@ -2,7 +2,9 @@ E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj
 E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\application\EntityApplication.java
 E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\service\impl\AbstractService.java
 E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\strategy\impl\AuthorizedByPassword.java
+E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\test\IRepositoryTest.java
 E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\IStrategy.java
+E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\test\IControllerTest.java
 E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\strategy\impl\ComplementaryEntityChangedInBy.java
 E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\strategy\impl\ComplementaryEntityActive.java
 E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\strategy\impl\DisableAction.java
@@ -10,7 +12,9 @@ E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj
 E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\strategy\impl\PasswordAuthorizedExclusion.java
 E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\facade\impl\Facade.java
 E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\strategy\impl\LogExclude.java
+E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\test\IDAOTest.java
 E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\IFacade.java
+E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\test\IServiceTest.java
 E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\IRepository.java
 E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\application\Result.java
 E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\IServico.java

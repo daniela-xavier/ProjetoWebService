@@ -7,13 +7,12 @@
  * This software is the proprietary information of Foz Sociedade de Advogados Company.
  *
  */
-
 package com.proj.wsf.mod.user.core.dao;
 
 import com.proj.wsf.core.IDAO;
 import com.proj.wsf.core.dao.impl.DAOImp;
 import com.proj.wsf.mod.user.model.Profile;
-import java.util.Date;
+import com.proj.wsf.mod.user.model.Profile_;
 import java.util.List;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
@@ -26,9 +25,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 /**
- * Description the class  ProfileDAO - xxxxx
+ * Description the class ProfileDAO - xxxxx
+ *
  * @author Daniela Xavier Conceição - sistemas@fozadvogados.com.br
- * @version $v rev. $rev  $Revision$
+ * @version $v rev. $rev $Revision$
  * @since Build 1.1 29/01/2019
  */
 @Component("perfilDAO")
@@ -76,47 +76,53 @@ public class ProfileDAO extends DAOImp<Profile> implements IDAO<Profile> {
 
         if (perfil.getId() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<Long>get("id"), perfil.getId()));
+                    builder.equal(from.get(Profile_.ID), perfil.getId()));
         }
 
         if (perfil.getNome() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<String>get("nome"), perfil.getNome()));
+                    builder.equal(from.get(Profile_.NOME), perfil.getNome()));
         }
 
-        if (perfil.getDescricao()!= null) {
-            predicate = builder.and(predicate,
-                    builder.equal(from.<String>get("descricao"), perfil.getDescricao()));
+        if (perfil.getDescricao() != null) {
+
+            if (perfil.getDescricao().contains("%")) {
+                predicate = builder.and(predicate,
+                        builder.like(from.get(Profile_.DESCRICAO), "%" + perfil.getDescricao() + "%"));
+            } else {
+                predicate = builder.and(predicate,
+                        builder.equal(from.get(Profile_.DESCRICAO), perfil.getDescricao()));
+            }
         }
-        
+
         if (perfil.getActive() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<String>get("active"), perfil.getActive()));
+                    builder.equal(from.get(Profile_.ACTIVE), perfil.getActive()));
         }
-        
+
         if (perfil.getIncludedIn() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<Date>get("includedIn"), new DateTime(perfil.getIncludedIn(), DateTimeZone.UTC)));
+                    builder.equal(from.get(Profile_.INCLUDED_IN), new DateTime(perfil.getIncludedIn(), DateTimeZone.UTC)));
         }
 
         if (perfil.getChangedIn() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<Date>get("changedIn"), new DateTime(perfil.getChangedIn(), DateTimeZone.UTC)));
+                    builder.equal(from.get(Profile_.CHANGED_IN), new DateTime(perfil.getChangedIn(), DateTimeZone.UTC)));
         }
         if (perfil.getIncludedBy() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<String>get("includedBy"), (perfil.getIncludedBy())));
+                    builder.equal(from.get(Profile_.INCLUDED_BY), (perfil.getIncludedBy())));
         }
 
         if (perfil.getChangedBy() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<String>get("chancedBy"), (perfil.getChangedBy())));
+                    builder.equal(from.get(Profile_.CHANGED_BY), (perfil.getChangedBy())));
         }
 
         TypedQuery<Profile> typedQuery = this.em.createQuery(
                 query.select(from)
                         .where(predicate)
-                        .orderBy(builder.asc(from.get("id")))
+                        .orderBy(builder.asc(from.get(Profile_.ID)))
         );
 
         List<Profile> results = typedQuery.getResultList();
@@ -124,4 +130,3 @@ public class ProfileDAO extends DAOImp<Profile> implements IDAO<Profile> {
     }
 
 }
-

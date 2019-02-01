@@ -71,9 +71,7 @@ public class JPAConfiguration {
         factoryBean.setDataSource(dataSource);
 
         //factoryBean.setJpaProperties(aditionalProperties());
-        factoryBean.setPackagesToScan("com.proj.wsf.core");
-        factoryBean.setPackagesToScan("com.proj.wsf.model");
-        //   factoryBean.setPackagesToScan("com.proj.wsf.mod");
+        factoryBean.setPackagesToScan("com.proj.wsf");
 
         return factoryBean;
 
@@ -90,6 +88,7 @@ public class JPAConfiguration {
         properties.setProperty("hibernate.dialect", "org.hibernate.dialect.OracleDialect");
         properties.setProperty("hibernate.show_sql", "true");
         properties.setProperty("hibernate.format_sql", "true");
+        properties.setProperty("hibernate.use_sql_comments", "true");
         properties.setProperty("user", springDatasourceUsername);
         properties.setProperty("password", springDatasourcePassword);
         properties.setProperty("useSSL", "false");

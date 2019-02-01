@@ -7,7 +7,6 @@
  * This software is the proprietary information of Foz Sociedade de Advogados Company.
  *
  */
-
 package com.proj.wsf.core.strategy.impl;
 
 import com.proj.wsf.core.IStrategy;
@@ -16,29 +15,33 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * Description the class  ComplementaryEntityChangedInBy - Classe que implementa o método
- process do contrato com IStrategy.
+ * Description the class ComplementaryEntityChangedInBy - Classe que implementa
+ * o método process do contrato com IStrategy.
+ *
  * @author Daniela Xavier Conceição - sistemas@fozadvogados.com.br
- * @version $v rev. $rev  $Revision$
+ * @version $v rev. $rev $Revision$
  * @since Build 1.1 23/01/2019
  */
 public class ComplementaryEntityChangedInBy implements IStrategy {
 
-     /**
+    /**
      * Método que realiza o process do método strategy, Adiciona usuario
- 'FOZWEBSERVICE' e a data atual na entity passada por parametro, atributos
- de alteração.
+     * 'FOZWEBSERVICE' e a data atual na entity passada por parametro, atributos
+     * de alteração.
      *
      * @param entity
      * @return String
      */
     @Override
     public String process(DomainEntity entity) {
-        entity.setChangedBy("FOZWSF");
+        if (entity.getUser().isEmpty()) {
+            entity.setChangedBy("FOZWSF");
+        } else {
+            entity.setChangedBy(entity.getUser());
+        }
         Date data = Calendar.getInstance().getTime();
         entity.setChangedIn(data);
         return null;
     }
 
 }
-

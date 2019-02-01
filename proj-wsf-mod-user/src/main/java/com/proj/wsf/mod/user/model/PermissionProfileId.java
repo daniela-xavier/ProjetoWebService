@@ -10,6 +10,8 @@
 package com.proj.wsf.mod.user.model;
 
 import java.io.Serializable;
+import java.util.Objects;
+import javax.persistence.Column;
 import javax.persistence.Embeddable;
 
 /**
@@ -19,11 +21,13 @@ import javax.persistence.Embeddable;
  * @version $v rev. $rev $Revision$
  * @since Build 1.1 29/01/2019
  */
-
 @Embeddable
 public class PermissionProfileId implements Serializable {
 
+    @Column(name = "PE_ID", nullable = false, insertable = false, updatable = false)
     private Long idProfile;
+
+    @Column(name = "MS_AC_ID", nullable = false, insertable = false, updatable = false)
     private Long idActMicroService;
 
     // must have a default construcot
@@ -34,21 +38,20 @@ public class PermissionProfileId implements Serializable {
         this.idProfile = idProfile;
         this.idActMicroService = idActMicroService;
     }
-
-    public Long getIdProfile() {
-        return idProfile;
+     
+    @Override
+    public int hashCode() {
+        return (int) (idProfile + idActMicroService);
     }
 
-    public Long getIdActMicroService() {
-        return idActMicroService;
-    }
-
-    public void setIdProfile(Long idProfile) {
-        this.idProfile = idProfile;
-    }
-
-    public void setIdActMicroService(Long idActMicroService) {
-        this.idActMicroService = idActMicroService;
+    @Override
+    public boolean equals(Object obj) {
+        if (obj instanceof PermissionProfileId) {
+            PermissionProfileId permissionProfileId = (PermissionProfileId) obj;
+            return Objects.equals(permissionProfileId.idProfile, idProfile)
+                    && Objects.equals(permissionProfileId.idActMicroService, idActMicroService);
+        }
+        return false;
     }
 
 }

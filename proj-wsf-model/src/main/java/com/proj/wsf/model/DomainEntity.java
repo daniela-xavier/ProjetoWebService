@@ -7,7 +7,6 @@
  * This software is the proprietary information of Foz Sociedade de Advogados Company.
  *
  */
-
 package com.proj.wsf.model;
 
 import com.google.gson.annotations.Expose;
@@ -20,9 +19,10 @@ import javax.persistence.TemporalType;
 import javax.persistence.Transient;
 
 /**
- * Description the class  DomainEntity - Classe de objeto real DomainEntity.
+ * Description the class DomainEntity - Classe de objeto real DomainEntity.
+ *
  * @author Daniela Xavier Conceição - sistemas@fozadvogados.com.br
- * @version $v rev. $rev  $Revision$
+ * @version $v rev. $rev $Revision$
  * @since Build 1.1 23/01/2019
  */
 @MappedSuperclass
@@ -52,6 +52,13 @@ public class DomainEntity implements IEntity, Serializable {
     @Column(name = "ATIVO")
     private String active;
 
+    @Transient
+    @Expose
+    private String token;
+
+    @Transient
+    @Expose
+    private String user;
 
     /**
      * Método para retorno de data de inclusão.
@@ -142,5 +149,29 @@ public class DomainEntity implements IEntity, Serializable {
     public void setChangedBy(String changedBy) {
         this.changedBy = changedBy;
     }
-  
+
+    /**
+     * Método para inserção do token.
+     *
+     * @param token
+     */
+    public void setToken(String token) {
+        this.token = token;
+    }
+
+    /**
+     * Método para inserção do user.
+     *
+     * @param user
+     */
+    public void setUser(String user) {
+        this.user = user;
+    }
+
+    public String getUser() {
+        return user;
+    }
+    
+    
+
 }

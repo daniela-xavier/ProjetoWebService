@@ -1,8 +1,10 @@
+com\proj\wsf\core\test\IControllerTest.class
 com\proj\wsf\core\IStrategy.class
 com\proj\wsf\core\facade\impl\Facade.class
 com\proj\wsf\core\strategy\impl\ComplementaryEntityActive.class
 com\proj\wsf\core\application\EntityApplication.class
 com\proj\wsf\core\strategy\impl\AuthorizedByPassword.class
+com\proj\wsf\core\test\IDAOTest.class
 com\proj\wsf\core\strategy\impl\LogExclude.class
 com\proj\wsf\core\IFacade.class
 com\proj\wsf\core\dao\impl\DAOImp.class
@@ -15,3 +17,5 @@ com\proj\wsf\core\strategy\impl\PasswordAuthorizedExclusion.class
 com\proj\wsf\core\service\impl\AbstractService.class
 com\proj\wsf\core\strategy\impl\ComplementaryEntityIncludedInBy.class
 com\proj\wsf\core\strategy\impl\DisableAction.class
+com\proj\wsf\core\test\IRepositoryTest.class
+com\proj\wsf\core\test\IServiceTest.class
