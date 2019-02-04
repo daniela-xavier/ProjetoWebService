@@ -11,12 +11,16 @@ package com.proj.wsf.mod.user.core.dao;
 
 import com.proj.wsf.core.IDAO;
 import com.proj.wsf.core.dao.impl.DAOImp;
+import com.proj.wsf.mod.user.model.PermissionProfile;
+import com.proj.wsf.mod.user.model.PermissionProfile_;
 import com.proj.wsf.mod.user.model.Profile;
 import com.proj.wsf.mod.user.model.Profile_;
+import com.proj.wsf.mod.user.model.User;
 import java.util.List;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.ListJoin;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import org.joda.time.DateTime;
@@ -118,6 +122,7 @@ public class ProfileDAO extends DAOImp<Profile> implements IDAO<Profile> {
             predicate = builder.and(predicate,
                     builder.equal(from.get(Profile_.CHANGED_BY), (perfil.getChangedBy())));
         }
+
 
         TypedQuery<Profile> typedQuery = this.em.createQuery(
                 query.select(from)

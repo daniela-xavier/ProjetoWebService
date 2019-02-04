@@ -11,11 +11,12 @@ package com.proj.wsf.mod.user.model;
 
 import com.google.gson.annotations.Expose;
 import com.proj.wsf.model.DomainEntity;
+import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Optional;
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -96,11 +97,6 @@ public class User extends DomainEntity {
         return token;
     }
 
-    public Collection<UserProfile> getUserProfiles() {
-        Collection<UserProfile> listaSegura = Collections.unmodifiableCollection(this.userProfiles);
-        return listaSegura;
-    }
-
     public void setId(Long id) {
         this.id = id;
     }
@@ -115,6 +111,43 @@ public class User extends DomainEntity {
 
     public void setObservacao(String observacao) {
         this.observacao = observacao;
+    }
+
+    public void addProfileCollectionUserProfile(Profile profile) {
+        Collection<UserProfile> userProfs;
+
+        if (this.userProfiles == null) {
+            userProfs = new ArrayList<>();
+        } else {
+            userProfs = this.userProfiles;
+        }
+
+        UserProfile userProfile = new UserProfile();
+        userProfile.setProfile(profile);
+        userProfs.add(userProfile);
+        this.userProfiles = userProfs;
+
+    }
+
+    public Collection<UserProfile> getUserProfile() {
+        Collection<UserProfile> listaSegura = Collections.unmodifiableCollection(this.userProfiles);
+        return listaSegura;
+    }
+
+    public UserProfile getFirstUserProfile() {
+        Collection<UserProfile> listaSegura = Collections.unmodifiableCollection(this.userProfiles);
+        Optional<UserProfile> firstElement = listaSegura.stream().findFirst();
+        return firstElement.get();
+    }
+
+    public UserProfile getSearchNameProfile(Profile profile) {
+        Collection<UserProfile> listaSegura = Collections.unmodifiableCollection(this.userProfiles);
+        UserProfile userProfile
+                = listaSegura.stream()
+                        .filter(x -> profile.getNome().equals(x.getProfile().getNome()))
+                        .findAny()
+                        .orElse(null);
+        return userProfile;
     }
 
 }

@@ -11,12 +11,17 @@ package com.proj.wsf.mod.user.core.dao;
 
 import com.proj.wsf.core.IDAO;
 import com.proj.wsf.core.dao.impl.DAOImp;
+import com.proj.wsf.mod.user.model.Profile;
+import com.proj.wsf.mod.user.model.Profile_;
 import com.proj.wsf.mod.user.model.User;
+import com.proj.wsf.mod.user.model.UserProfile;
+import com.proj.wsf.mod.user.model.UserProfile_;
 import com.proj.wsf.mod.user.model.User_;
 import java.util.List;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
 import javax.persistence.criteria.CriteriaQuery;
+import javax.persistence.criteria.Join;
 import javax.persistence.criteria.Predicate;
 import javax.persistence.criteria.Root;
 import org.joda.time.DateTime;
@@ -126,6 +131,13 @@ public class UserDAO extends DAOImp<User> implements IDAO<User> {
         if (usuario.getChangedBy() != null) {
             predicate = builder.and(predicate,
                     builder.equal(from.get(User_.CHANGED_BY), (usuario.getChangedBy())));
+        }
+
+        if (!usuario.getUserProfile().isEmpty()) {
+            Root<UserProfile> fromUserProfile = query.from(UserProfile.class);
+            Join<UserProfile, Profile> profileJoin = fromUserProfile.join(UserProfile_.PROFILE);
+            predicate = builder.and(predicate,
+                    builder.equal(from, profileJoin));
         }
 
         TypedQuery<User> typedQuery = this.em.createQuery(

@@ -9,12 +9,16 @@
  */
 package com.proj.wsf.mod.user.model;
 
+import com.google.gson.annotations.Expose;
 import com.proj.wsf.model.DomainEntity;
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
 import javax.persistence.Table;
 
 /**
@@ -40,6 +44,11 @@ public class PermissionProfile extends DomainEntity {
 
     @EmbeddedId
     private PermissionProfileId id;
+
+    @Expose(serialize = false, deserialize = false)
+    @ManyToOne(fetch = FetchType.EAGER, targetEntity = Profile.class)
+    @JoinColumn(name = "PE_ID", nullable = false, insertable = false, updatable = false)
+    private Profile profile;
     
     
 }

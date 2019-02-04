@@ -13,9 +13,9 @@ import com.google.gson.annotations.Expose;
 import com.proj.wsf.model.DomainEntity;
 import java.util.Collection;
 import java.util.Collections;
+import java.util.Optional;
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
-import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -62,10 +62,13 @@ public class Profile extends DomainEntity {
     @Column(name = "PE_DESCRICAO")
     private String descricao;
 
-    @Expose(serialize = false, deserialize = false)
-    @OneToMany(fetch = FetchType.EAGER, targetEntity = PermissionProfile.class)
-    @JoinColumn(name = "PE_ID")
-    private Collection<PermissionProfile> permissions;
+    public Profile() {
+    }
+    
+    public Profile(String nome) {
+       this.nome = nome;    
+    }
+ 
 
     public Long getId() {
         return id;
@@ -90,11 +93,16 @@ public class Profile extends DomainEntity {
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }
-
     
+    /*
     public Collection<PermissionProfile> getPermissionProfile() {
-        Collection<PermissionProfile> listaSegura = Collections.unmodifiableCollection(this.permissions);
-        return listaSegura;
+    Collection<PermissionProfile> listaSegura = Collections.unmodifiableCollection(this.permissions);
+    return listaSegura;
     }
-
+    
+    public PermissionProfile getFirstPermissionProfile() {
+    Collection<PermissionProfile> listaSegura = Collections.unmodifiableCollection(this.permissions);
+    Optional<PermissionProfile> firstElement = listaSegura.stream().findFirst();
+    return firstElement.get();
+    }*/
 }

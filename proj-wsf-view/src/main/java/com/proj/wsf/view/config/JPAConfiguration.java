@@ -10,11 +10,7 @@
 package com.proj.wsf.view.config;
 
 import com.mchange.v2.c3p0.ComboPooledDataSource;
-import java.sql.Connection;
-import java.sql.SQLException;
 import java.util.Properties;
-import java.util.logging.Level;
-import java.util.logging.Logger;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Value;
@@ -83,7 +79,8 @@ public class JPAConfiguration {
      * @return Properties
      */
     private Properties aditionalProperties() {
-
+       
+        
         Properties properties = new Properties();
         properties.setProperty("hibernate.dialect", "org.hibernate.dialect.OracleDialect");
         properties.setProperty("hibernate.show_sql", "true");

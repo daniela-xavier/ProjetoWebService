@@ -73,6 +73,10 @@ public class UserProfile extends DomainEntity {
         return profile;
     }
 
+    public void setProfile(Profile profile) {
+        this.profile = profile;
+    }
+
     
 
 }

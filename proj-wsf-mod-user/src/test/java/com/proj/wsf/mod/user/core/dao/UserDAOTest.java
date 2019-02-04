@@ -1,6 +1,7 @@
 package com.proj.wsf.mod.user.core.dao;
 
 import com.proj.wsf.core.test.IDAOTest;
+import com.proj.wsf.mod.user.model.Profile;
 import com.proj.wsf.mod.user.model.User;
 import com.proj.wsf.mod.user.model.UserProfile;
 import com.proj.wsf.view.config.JPAConfiguration;
@@ -166,10 +167,35 @@ public class UserDAOTest implements IDAOTest {
         User u = new User();
         u.setId(Long.parseLong("1")); 
         List<User> findByCriteria = this.usuarioDAO.findByCriteria(u);
-        Assertions.assertThat(findByCriteria.get(0).getUserProfiles().size()).isEqualTo(1);
-        List<UserProfile> userProfiles = new ArrayList(findByCriteria.get(0).getUserProfiles());
-        Assertions.assertThat(userProfiles.get(0).getProfile().getNome()).isEqualTo("Perfil teste");
+        User user = findByCriteria.get(0);
+        Assertions.assertThat(user.getSearchNameProfile(new Profile("Perfil teste"))).isNotNull();
+        List<UserProfile> userProfiles = new ArrayList(user.getUserProfile());
+        Assertions.assertThat(userProfiles.size()).isEqualTo(1);
+        Assertions.assertThat(user.getFirstUserProfile().getProfile().getNome()).isEqualTo("Perfil teste");
 
+    }
+    
+    @Test
+    @Transactional
+    public void testFindByCriteriaProfile() {
+        User u = new User();
+        u.addProfileCollectionUserProfile(new Profile("Perfil teste"));
+        List<User> findByCriteria = this.usuarioDAO.findByCriteria(u);
+        User user = findByCriteria.get(0);
+        Assertions.assertThat(user.getUserProfile()).isNotNull();
+        Assertions.assertThat(user.getUserProfile().size()).isEqualTo(1);
+        Assertions.assertThat(user.getFirstUserProfile().getProfile().getNome()).isEqualTo("Perfil teste");
+        Assertions.assertThat(user.getFirstUserProfile().getProfile().getDescricao()).isEqualTo("perfil para teste");
+
+    }
+    
+    @Test
+    @Transactional
+    public void testFindByCriteriaOtherProfile() {
+        User u = new User();
+        u.addProfileCollectionUserProfile(new Profile("Perfil teste 2"));
+        List<User> findByCriteria = this.usuarioDAO.findByCriteria(u);
+        Assertions.assertThat(findByCriteria).isNull();
     }
 
 }
