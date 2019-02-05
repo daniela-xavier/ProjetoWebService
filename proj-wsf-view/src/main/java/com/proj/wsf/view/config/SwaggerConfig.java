@@ -14,9 +14,8 @@ import springfox.documentation.swagger2.annotations.EnableSwagger2;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.EnableWebMvc;
-import org.springframework.web.servlet.config.annotation.ResourceHandlerRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurationSupport;
-import static springfox.documentation.builders.PathSelectors.regex;
+import springfox.documentation.builders.PathSelectors;
 
 import springfox.documentation.builders.RequestHandlerSelectors;
 import springfox.documentation.service.ApiInfo;
@@ -43,7 +42,7 @@ public class SwaggerConfig extends WebMvcConfigurationSupport {
                 .select()
                 // .apis(RequestHandlerSelectors.basePackage("com.proj.wsf"))
                 .apis(RequestHandlerSelectors.any())
-                .paths(regex("/*"))
+                .paths(PathSelectors.any())
                 .build()
                 .apiInfo(metaInfo());
     }

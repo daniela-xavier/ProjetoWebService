@@ -13,6 +13,8 @@ import com.mchange.v2.c3p0.ComboPooledDataSource;
 import java.util.Properties;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -33,6 +35,8 @@ import org.springframework.transaction.annotation.EnableTransactionManagement;
 @Configuration
 @EnableTransactionManagement
 public class JPAConfiguration {
+    
+    private static final Logger logger = LogManager.getLogger(JPAConfiguration.class);
 
     @Value("${spring.datasource.url}")
     private String springDatasourceUrl;
@@ -85,10 +89,10 @@ public class JPAConfiguration {
         properties.setProperty("hibernate.dialect", "org.hibernate.dialect.OracleDialect");
         properties.setProperty("hibernate.show_sql", "true");
         properties.setProperty("hibernate.format_sql", "true");
-        properties.setProperty("hibernate.use_sql_comments", "true");
+       // properties.setProperty("hibernate.use_sql_comments", "true");
         properties.setProperty("user", springDatasourceUsername);
         properties.setProperty("password", springDatasourcePassword);
-        properties.setProperty("useSSL", "false");
+      //  properties.setProperty("useSSL", "false");
         properties.setProperty("autoReconnect", "true");
         properties.setProperty("serverTimezone", "UTC");
 

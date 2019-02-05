@@ -71,6 +71,19 @@ public class ActRepository implements IRepository {
         this.actDAO.deleteById(id);
         return returnEntitys(act);
     }
+    
+    /**
+     * Método que desativa a entidade, por meio do id fornecido no método.
+     *
+     * @param entity 
+     * @return List<'DomainEntity'>
+     */
+    @Override
+    public List<DomainEntity> disable(DomainEntity entity) {
+         Act acao = (Act) entity;
+        this.actDAO.delete(acao);
+        return returnEntitys(entity);
+    }
 
     /**
      * Método que busca a entidade fornecida, com filtro em seus atributos.

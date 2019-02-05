@@ -130,6 +130,11 @@ public class User extends DomainEntity {
     }
 
     public Collection<UserProfile> getUserProfile() {
+        
+        if (this.userProfiles == null) {
+            return null;
+        }
+        
         Collection<UserProfile> listaSegura = Collections.unmodifiableCollection(this.userProfiles);
         return listaSegura;
     }

@@ -50,6 +50,14 @@ public interface IRepository {
      * @return List<'DomainEntity'>
      */
     public List<DomainEntity> delete(Long id);
+    
+     /**
+     * Método que desativa a entidade fornecida no método.
+     *
+     * @param entity
+     * @return List<'DomainEntity'>
+     */
+    public List<DomainEntity> disable(DomainEntity entity);
 
     /**
      * Método que busca a entidade fornecida, com filtro em seus atributos.

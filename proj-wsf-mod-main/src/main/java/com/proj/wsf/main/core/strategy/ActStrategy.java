@@ -69,6 +69,13 @@ public class ActStrategy {
         List<IStrategy> rnsVisualizarAct = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao visualizar do Act */
         rnsVisualizarAct.add(desabilitarAcao);
+        
+        /* Criando uma lista para conter as regras de negocio de act
+         * quando a operacao for desativar
+         */
+        List<IStrategy> rnsDesativarAct = new ArrayList<IStrategy>();
+        /* Adicionando as regras a serem utilizadas na operacao desativar do Act */
+        rnsDesativarAct.add(desabilitarAcao);
 
         /*
          * Adiciona a listra de regras na operacao salvar no mapa do Act 
@@ -86,6 +93,10 @@ public class ActStrategy {
          * Adiciona a listra de regras na operacao excluir no mapa do Act 
          */
         rnsAct.put("EXCLUIR", rnsExcluirAct);
+        /*
+         * Adiciona a listra de regras na operacao desativar no mapa do Act 
+         */
+        rnsAct.put("DESATIVAR", rnsDesativarAct);
         /*
          * Adiciona a listra de regras na operacao visualizar no mapa do Act 
          */

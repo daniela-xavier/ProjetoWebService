@@ -35,7 +35,7 @@ import org.springframework.stereotype.Repository;
  * @version $v rev. $rev $Revision$
  * @since Build 1.1 29/01/2019
  */
-@Component("perfilDAO")
+@Component("profileDAO")
 @Repository
 public class ProfileDAO extends DAOImp<Profile> implements IDAO<Profile> {
 
@@ -123,7 +123,6 @@ public class ProfileDAO extends DAOImp<Profile> implements IDAO<Profile> {
                     builder.equal(from.get(Profile_.CHANGED_BY), (perfil.getChangedBy())));
         }
 
-
         TypedQuery<Profile> typedQuery = this.em.createQuery(
                 query.select(from)
                         .where(predicate)
@@ -132,6 +131,12 @@ public class ProfileDAO extends DAOImp<Profile> implements IDAO<Profile> {
 
         List<Profile> results = typedQuery.getResultList();
         return results;
+    }
+
+    @Override
+    public void delete(Profile entity) {
+        entity.setActive("n");
+        super.delete(entity);
     }
 
 }

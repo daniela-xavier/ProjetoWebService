@@ -1,19 +1,18 @@
 /*
- * MicroServiceRepository.java
+ * UserRepository.java
  *
- * Created on 24-01-2019
+ * Created on 05-02-2019
  *
  * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
  * This software is the proprietary information of Foz Sociedade de Advogados Company.
  *
  */
 
-package com.proj.wsf.main.core.repository;
+package com.proj.wsf.mod.user.core.repository;
 
 import com.proj.wsf.core.IRepository;
-import com.proj.wsf.main.core.dao.MicroServiceDAO;
-import com.proj.wsf.main.model.MainConfiguration;
-import com.proj.wsf.main.model.MicroService;
+import com.proj.wsf.mod.user.core.dao.UserDAO;
+import com.proj.wsf.mod.user.model.User;
 import com.proj.wsf.model.DomainEntity;
 import java.util.ArrayList;
 import java.util.List;
@@ -22,17 +21,17 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
- * Description the class  MicroServiceRepository - xxxxx
+ * Description the class  UserRepository - xxxxx
  * @author Daniela Xavier Conceição - sistemas@fozadvogados.com.br
  * @version $v rev. $rev  $Revision$
- * @since Build 1.1 24/01/2019
+ * @since Build 1.1 05/02/2019
  */
-@Component("microServiceRepository")
-public class MicroServiceRepository implements IRepository {
+@Component("userRepository")
+public class UserRepository implements IRepository {
 
     @Autowired
-    @Qualifier(value = "microServiceDAO")
-    MicroServiceDAO microServiceDAO;
+    @Qualifier(value = "userDAO")
+    UserDAO userDAO;
 
     /**
      * Método que salva a entity fornecida no método.
@@ -42,9 +41,9 @@ public class MicroServiceRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> save(DomainEntity entity) {
-        MicroService u = (MicroService) entity;
-        microServiceDAO.save(u);
-        return returnEntitys(u);
+        User usuario = (User) entity;
+        userDAO.save(usuario);
+        return returnEntitys(usuario);
     }
 
     /**
@@ -55,8 +54,8 @@ public class MicroServiceRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> update(DomainEntity entity) {
-        MicroService u = (MicroService) entity;
-        this.microServiceDAO.update(u);
+        User usuario = (User) entity;
+        this.userDAO.update(usuario);
         return returnEntitys(entity);
     }
 
@@ -68,25 +67,11 @@ public class MicroServiceRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> delete(Long id) {
-        MicroService microService = this.microServiceDAO.findOne(id);
-        this.microServiceDAO.deleteById(id);
-        return returnEntitys(microService);
+        User act = this.userDAO.findOne(id);
+        this.userDAO.deleteById(id);
+        return returnEntitys(act);
     }
 
-    
-    /**
-     * Método que desativa a entidade, por meio do id fornecido no método.
-     *
-     * @param entity
-     * @return List<'DomainEntity'>
-     */
-    @Override
-    public List<DomainEntity> disable(DomainEntity entity) {
-        MicroService ms = (MicroService) entity;
-        this.microServiceDAO.delete(ms);
-        return returnEntitys(entity);
-    }
-    
     /**
      * Método que busca a entidade fornecida, com filtro em seus atributos.
      *
@@ -95,8 +80,8 @@ public class MicroServiceRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> findByFilter(DomainEntity entity) {
-        MicroService u = (MicroService) entity;
-        List<MicroService> entitys = this.microServiceDAO.findByCriteria(u);
+        User usuario = (User) entity;
+        List<User> entitys = this.userDAO.findByCriteria(usuario);
         return returnEntitys(entitys);
     }
 
@@ -107,7 +92,7 @@ public class MicroServiceRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> findAll() {
-        List<MicroService> entitys = this.microServiceDAO.findAll();
+        List<User> entitys = this.userDAO.findAll();
         return returnEntitys(entitys);
     }
 
@@ -119,14 +104,15 @@ public class MicroServiceRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> findById(Long id) {
-        MicroService microService = this.microServiceDAO.findOne(id);
-        return returnEntitys(microService);
+        User act = this.userDAO.findOne(id);
+        return returnEntitys(act);
     }
 
     /**
+     * Método que retorna a entidade de modo correto.
      * 
      * @param entity
-     * @return 
+     * @return List<DomainEntity>
      */
     public List<DomainEntity> returnEntitys(DomainEntity entity) {
         List<DomainEntity> entitys = new ArrayList<DomainEntity>();
@@ -135,15 +121,15 @@ public class MicroServiceRepository implements IRepository {
     }
 
     /**
+     *  Método que adiciona a entidade a lista de entidades correta.
      * 
      * @param entitys
-     * @return 
+     * @return List<DomainEntity>
      */
-    public List<DomainEntity> returnEntitys(List<MicroService> entitys) {
+    public List<DomainEntity> returnEntitys(List<User> entitys) {
         List<DomainEntity> ents = new ArrayList<DomainEntity>();
         ents.addAll(entitys);
         return ents;
     }
-
 }
 

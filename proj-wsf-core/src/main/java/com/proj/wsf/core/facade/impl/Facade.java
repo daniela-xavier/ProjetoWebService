@@ -149,6 +149,41 @@ public class Facade implements IFacade {
         return resultado;
     }
 
+     /**
+     * Método que realiza as regras para a operação alterar para a entity
+     * passada por parametro e metodo alterar do repositorio do serviço.
+     *
+     * @param entity
+     * @param servico
+     * @return Result
+     */
+    @Override
+    public Result disable(DomainEntity entity, IServico servico) {
+
+        resultado = new Result();
+
+        String msg = executarRegras(entity, "ALTERAR", servico.getStrategys());
+
+        if (msg != null) {
+            resultado.setError();
+            resultado.setMsg(msg);
+        } else {
+            try {
+                servico.getRepository().disable(entity);
+                List<DomainEntity> entitys = new ArrayList<DomainEntity>();
+                entitys.add(entity);
+                resultado.setEntity(entitys);
+            } catch (Exception e) {
+                resultado.setError();
+                resultado.setMsg("Exception: " + e.toString() + " Message: " + e.getMessage());
+            }
+        }
+        return resultado;
+    }
+
+    
+    
+    
     /**
      * Método que realiza as regras para a operação consultar para a entity
      * passada por parametro e metodo consultar todos do repositorio do serviço.

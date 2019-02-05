@@ -12,10 +12,10 @@ package com.proj.wsf.mod.user.core.dao;
 import com.proj.wsf.core.IDAO;
 import com.proj.wsf.core.dao.impl.DAOImp;
 import com.proj.wsf.mod.user.model.Profile;
-import com.proj.wsf.mod.user.model.Profile_;
 import com.proj.wsf.mod.user.model.User;
 import com.proj.wsf.mod.user.model.UserProfile;
 import com.proj.wsf.mod.user.model.UserProfile_;
+import com.proj.wsf.mod.user.model.Profile_;
 import com.proj.wsf.mod.user.model.User_;
 import java.util.List;
 import javax.persistence.TypedQuery;
@@ -36,7 +36,7 @@ import org.springframework.stereotype.Repository;
  * @version $v rev. $rev $Revision$
  * @since Build 1.1 29/01/2019
  */
-@Component("usuarioDAO")
+@Component("userDAO")
 @Repository
 public class UserDAO extends DAOImp<User> implements IDAO<User> {
 
@@ -133,11 +133,20 @@ public class UserDAO extends DAOImp<User> implements IDAO<User> {
                     builder.equal(from.get(User_.CHANGED_BY), (usuario.getChangedBy())));
         }
 
-        if (!usuario.getUserProfile().isEmpty()) {
-            Root<UserProfile> fromUserProfile = query.from(UserProfile.class);
-            Join<UserProfile, Profile> profileJoin = fromUserProfile.join(UserProfile_.PROFILE);
-            predicate = builder.and(predicate,
-                    builder.equal(from, profileJoin));
+        if (usuario.getUserProfile() != null) {
+
+            Join<User, UserProfile> userProfiles = from.join(User_.USER_PROFILES);
+            Join<UserProfile, Profile> userProfilesProfile = userProfiles.join(UserProfile_.PROFILE);
+
+            Profile profile = usuario.getFirstUserProfile().getProfile();
+            if (profile.getId() != null) {
+                predicate = builder.and(predicate,
+                        builder.equal(userProfilesProfile.get(Profile_.ID), profile.getId()));
+            }
+            if (profile.getNome() != null) {
+                predicate = builder.and(predicate,
+                        builder.equal(userProfilesProfile.get(Profile_.NOME), profile.getNome()));
+            }
         }
 
         TypedQuery<User> typedQuery = this.em.createQuery(
@@ -150,4 +159,11 @@ public class UserDAO extends DAOImp<User> implements IDAO<User> {
         return results;
     }
 
+    @Override
+    public void delete(User entity) {
+        entity.setActive("n");
+        super.delete(entity); 
+    }
+
+    
 }

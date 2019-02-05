@@ -36,7 +36,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 public class ProfileDAOTest implements IDAOTest {
 
     @Autowired
-    @Qualifier(value = "perfilDAO")
+    @Qualifier(value = "profileDAO")
     private ProfileDAO profileDAO;
 
     @Rule
@@ -96,6 +96,7 @@ public class ProfileDAOTest implements IDAOTest {
     public void testDelete() {
         Profile u = new Profile();
         u.setNome("Perfil Y");
+        u.setActive("s");
         u.setDescricao("Descricao do perfil Y");
         this.profileDAO.save(u);
         Assertions.assertThat(u.getId()).isNotNull();
@@ -103,7 +104,7 @@ public class ProfileDAOTest implements IDAOTest {
         this.profileDAO.delete(u);
 
         Profile u2 = this.profileDAO.findOne(u.getId());
-        Assertions.assertThat(u2).isNull();
+        Assertions.assertThat(u2.getActive()).isEqualTo("n");
 
     }
 

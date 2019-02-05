@@ -51,6 +51,15 @@ public interface IFacade {
      * @return Result
      */
     public Result delete(Long id, IServico service);
+    
+    /**
+     * Método que desativa entity.
+     *
+     * @param entity
+     * @param service
+     * @return Result
+     */
+    public Result disable(DomainEntity entity, IServico service);
 
     /**
      * Método que consulta entity.

@@ -266,6 +266,41 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
         }
 
     }
+    
+    /**
+     * Método para requisiçães DELETE com parametro entity preenchido, que
+     * aceita entradas em JSON e retorno em JSON.
+     *
+     * @param entity - RequestBody Entidade da classe.
+     * @return ResponseEntity - RequestBody.
+     */
+    @RequestMapping(method = RequestMethod.DELETE, consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
+    @ApiOperation(value="Desativa uma entidade")
+    @Transactional
+    public @ResponseBody
+    ResponseEntity disableEntity(@RequestBody T entity) {
+      try {
+            IServico entidadeServico = getServico(clazz.getSimpleName());
+            Result resultado = fachada.disable(entity, entidadeServico);
+
+            if (resultado.hasError()) {
+                return new ResponseEntity<>(new ResponseMessage(Boolean.TRUE, resultado.getMsg()),
+                        HttpStatus.INTERNAL_SERVER_ERROR);
+            }
+            return new ResponseEntity<>(entity, HttpStatus.OK);
+
+        } catch (ExceptionResponse e) {
+            return new ResponseEntity<>(
+                    new ResponseMessage(Boolean.TRUE, "Erro.".concat(e.getMessage())),
+                    HttpStatus.INTERNAL_SERVER_ERROR);
+        } catch (Exception e) {
+            System.out.println("Error.: " + e.getMessage());
+            return new ResponseEntity<>(
+                    new ResponseMessage(Boolean.TRUE, "Erro ao atualizar ".concat(clazz.getSimpleName().toLowerCase())),
+                    HttpStatus.INTERNAL_SERVER_ERROR);
+        }
+
+    }
 
     /**
      * Método que recupera o Servico de acordo com nome da classe.

@@ -69,6 +69,13 @@ public class MainConfigurationStrategy {
         List<IStrategy> rnsVisualizarMainConfiguration = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao visualizar do MainConfiguration */
         rnsVisualizarMainConfiguration.add(desabilitarAcao);
+        
+        /* Criando uma lista para conter as regras de negocio de mainConfiguration
+         * quando a operacao for desativar
+         */
+        List<IStrategy> rnsDesativarMainConfiguration = new ArrayList<IStrategy>();
+        /* Adicionando as regras a serem utilizadas na operacao desativar do MainConfiguration */
+        rnsDesativarMainConfiguration.add(desabilitarAcao);
 
         /*
          * Adiciona a listra de regras na operacao salvar no mapa do MainConfiguration 
@@ -90,6 +97,10 @@ public class MainConfigurationStrategy {
          * Adiciona a listra de regras na operacao visualizar no mapa do MainConfiguration 
          */
         rnsMainConfiguration.put("VISUALIZAR", rnsVisualizarMainConfiguration);
+        /*
+         * Adiciona a listra de regras na operacao desativar no mapa do MainConfiguration 
+         */
+        rnsMainConfiguration.put("DESATIVAR", rnsDesativarMainConfiguration);
 
     }
 

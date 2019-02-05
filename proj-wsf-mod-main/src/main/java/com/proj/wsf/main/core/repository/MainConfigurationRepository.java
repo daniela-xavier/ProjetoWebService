@@ -7,7 +7,6 @@
  * This software is the proprietary information of Foz Sociedade de Advogados Company.
  *
  */
-
 package com.proj.wsf.main.core.repository;
 
 import com.proj.wsf.core.IRepository;
@@ -21,9 +20,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
- * Description the class  MainConfigurationRepository - xxxxx
+ * Description the class MainConfigurationRepository - xxxxx
+ *
  * @author Daniela Xavier Conceição - sistemas@fozadvogados.com.br
- * @version $v rev. $rev  $Revision$
+ * @version $v rev. $rev $Revision$
  * @since Build 1.1 24/01/2019
  */
 @Component("mainConfigurationRepository")
@@ -73,6 +73,19 @@ public class MainConfigurationRepository implements IRepository {
     }
 
     /**
+     * Método que desativa a entidade, por meio do id fornecido no método.
+     *
+     * @param entity
+     * @return List<'DomainEntity'>
+     */
+    @Override
+    public List<DomainEntity> disable(DomainEntity entity) {
+        MainConfiguration mc = (MainConfiguration) entity;
+        this.mainConfigurationDAO.delete(mc);
+        return returnEntitys(entity);
+    }
+
+    /**
      * Método que busca a entidade fornecida, com filtro em seus atributos.
      *
      * @param entity
@@ -109,9 +122,9 @@ public class MainConfigurationRepository implements IRepository {
     }
 
     /**
-     * 
+     *
      * @param entity
-     * @return 
+     * @return
      */
     public List<DomainEntity> returnEntitys(DomainEntity entity) {
         List<DomainEntity> entitys = new ArrayList<DomainEntity>();
@@ -120,9 +133,9 @@ public class MainConfigurationRepository implements IRepository {
     }
 
     /**
-     * 
+     *
      * @param entitys
-     * @return 
+     * @return
      */
     public List<DomainEntity> returnEntitys(List<MainConfiguration> entitys) {
         List<DomainEntity> ents = new ArrayList<DomainEntity>();
@@ -131,4 +144,3 @@ public class MainConfigurationRepository implements IRepository {
     }
 
 }
-

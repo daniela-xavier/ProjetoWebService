@@ -7,6 +7,8 @@ import com.proj.wsf.mod.user.model.UserProfile;
 import com.proj.wsf.view.config.JPAConfiguration;
 import java.util.ArrayList;
 import java.util.List;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import javax.transaction.Transactional;
 import org.assertj.core.api.Assertions;
 import org.junit.Test;
@@ -33,10 +35,12 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 @ContextConfiguration(classes = {UserDAO.class, User.class})
 @ActiveProfiles("dev")
 public class UserDAOTest implements IDAOTest {
-
+    
+    private static final Logger logger = LogManager.getLogger(UserDAOTest.class);
+    
     @Autowired
-    @Qualifier(value = "usuarioDAO")
-    private UserDAO usuarioDAO;
+    @Qualifier(value = "userDAO")
+    private UserDAO userDAO;
 
     @Rule
     public ExpectedException thrown = ExpectedException.none();
@@ -49,7 +53,7 @@ public class UserDAOTest implements IDAOTest {
         u.setEmail("teste@fozadvogados.com.br");
         u.setUsuario("teste.teste");
         u.setToken("token");
-        this.usuarioDAO.save(u);
+        this.userDAO.save(u);
         Assertions.assertThat(u.getId()).isNotNull();
     }
 
@@ -63,10 +67,10 @@ public class UserDAOTest implements IDAOTest {
             u.setUsuario("teste" + i + ".teste" + i);
             u.setActive("s");
             u.setToken("token");
-            this.usuarioDAO.save(u);
+            this.userDAO.save(u);
         }
 
-        List<User> f = this.usuarioDAO.findAll();
+        List<User> f = this.userDAO.findAll();
         Assertions.assertThat(f.size()).isNotEqualTo(0);
         Assertions.assertThat(f.size()).isNotNull();
     }
@@ -78,14 +82,14 @@ public class UserDAOTest implements IDAOTest {
         User u = new User();
         u.setEmail("teste2@fozadvogados.com.br");
         u.setUsuario("teste2.teste2");
-        this.usuarioDAO.save(u);
+        this.userDAO.save(u);
         Assertions.assertThat(u.getId()).isNotNull();
 
         u.setEmail("teste2@teste.com.br");
         u.setObservacao("observacao");
-        this.usuarioDAO.update(u);
+        this.userDAO.update(u);
 
-        User u2 = this.usuarioDAO.findOne(u.getId());
+        User u2 = this.userDAO.findOne(u.getId());
         Assertions.assertThat(u2.getId()).isNotNull();
         Assertions.assertThat(u2.getUsuario()).isNotNull();
         Assertions.assertThat(u2.getEmail()).isNotNull();
@@ -100,13 +104,14 @@ public class UserDAOTest implements IDAOTest {
         User u = new User();
         u.setEmail("teste3@fozadvogados.com.br");
         u.setUsuario("teste3.teste3");
-        this.usuarioDAO.save(u);
+        u.setActive("s");
+        this.userDAO.save(u);
         Assertions.assertThat(u.getId()).isNotNull();
 
-        this.usuarioDAO.delete(u);
+        this.userDAO.delete(u);
 
-        User u2 = this.usuarioDAO.findOne(u.getId());
-        Assertions.assertThat(u2).isNull();
+        User u2 = this.userDAO.findOne(u.getId());
+        Assertions.assertThat(u2.getActive()).isEqualTo("n");
 
     }
 
@@ -117,12 +122,12 @@ public class UserDAOTest implements IDAOTest {
         User u = new User();
         u.setEmail("teste4@fozadvogados.com.br");
         u.setUsuario("teste4.teste4");
-        this.usuarioDAO.save(u);
+        this.userDAO.save(u);
         Assertions.assertThat(u.getId()).isNotNull();
 
-        this.usuarioDAO.deleteById(u.getId());
+        this.userDAO.deleteById(u.getId());
 
-        User u4 = this.usuarioDAO.findOne(u.getId());
+        User u4 = this.userDAO.findOne(u.getId());
         Assertions.assertThat(u4).isNull();
     }
 
@@ -133,10 +138,10 @@ public class UserDAOTest implements IDAOTest {
         User u = new User();
         u.setEmail("teste5@fozadvogados.com.br");
 
-        this.usuarioDAO.save(u);
+        this.userDAO.save(u);
         Assertions.assertThat(u.getId()).isNotNull();
 
-        User u4 = this.usuarioDAO.findOne(u.getId());
+        User u4 = this.userDAO.findOne(u.getId());
         Assertions.assertThat(u4).isNotNull();
         Assertions.assertThat(u4.getEmail()).isNotNull();
         Assertions.assertThat(u4).isEqualTo(u);
@@ -152,11 +157,11 @@ public class UserDAOTest implements IDAOTest {
         u.setActive("S");
         u.setObservacao("observacao do usuario");
         u.setToken("token");
-        this.usuarioDAO.save(u);
+        this.userDAO.save(u);
 
         User u2 = new User();
         u2.setObservacao("observacao do usuario");
-        List<User> findByCriteria = this.usuarioDAO.findByCriteria(u2);
+        List<User> findByCriteria = this.userDAO.findByCriteria(u2);
         Assertions.assertThat(findByCriteria.size()).isEqualTo(1);
 
     }
@@ -166,7 +171,7 @@ public class UserDAOTest implements IDAOTest {
     public void testFindByCriteriaCollection() {
         User u = new User();
         u.setId(Long.parseLong("1")); 
-        List<User> findByCriteria = this.usuarioDAO.findByCriteria(u);
+        List<User> findByCriteria = this.userDAO.findByCriteria(u);
         User user = findByCriteria.get(0);
         Assertions.assertThat(user.getSearchNameProfile(new Profile("Perfil teste"))).isNotNull();
         List<UserProfile> userProfiles = new ArrayList(user.getUserProfile());
@@ -180,7 +185,7 @@ public class UserDAOTest implements IDAOTest {
     public void testFindByCriteriaProfile() {
         User u = new User();
         u.addProfileCollectionUserProfile(new Profile("Perfil teste"));
-        List<User> findByCriteria = this.usuarioDAO.findByCriteria(u);
+        List<User> findByCriteria = this.userDAO.findByCriteria(u);
         User user = findByCriteria.get(0);
         Assertions.assertThat(user.getUserProfile()).isNotNull();
         Assertions.assertThat(user.getUserProfile().size()).isEqualTo(1);
@@ -193,9 +198,13 @@ public class UserDAOTest implements IDAOTest {
     @Transactional
     public void testFindByCriteriaOtherProfile() {
         User u = new User();
-        u.addProfileCollectionUserProfile(new Profile("Perfil teste 2"));
-        List<User> findByCriteria = this.usuarioDAO.findByCriteria(u);
-        Assertions.assertThat(findByCriteria).isNull();
+        u.setId(Long.parseLong("1"));
+        Profile p = new Profile();
+        //p.setId(Long.parseLong("2"));
+        p.setNome("Perfil teste 2");
+        u.addProfileCollectionUserProfile(p);
+        List<User> findByCriteria = this.userDAO.findByCriteria(u);
+        Assertions.assertThat(findByCriteria.size()).isEqualTo(0);
     }
 
 }

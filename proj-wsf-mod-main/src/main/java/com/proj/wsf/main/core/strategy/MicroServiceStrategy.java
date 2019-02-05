@@ -70,6 +70,13 @@ public class MicroServiceStrategy {
         /* Adicionando as regras a serem utilizadas na operacao visualizar do MicroService */
         rnsVisualizarMicroService.add(desabilitarAcao);
 
+        /* Criando uma lista para conter as regras de negocio de mainConfiguration
+         * quando a operacao for desativar
+         */
+        List<IStrategy> rnsDesativarMicroService = new ArrayList<IStrategy>();
+        /* Adicionando as regras a serem utilizadas na operacao desativar do MicroService */
+        rnsDesativarMicroService.add(desabilitarAcao);
+
         /*
          * Adiciona a listra de regras na operacao salvar no mapa do MicroService 
          */
@@ -90,6 +97,10 @@ public class MicroServiceStrategy {
          * Adiciona a listra de regras na operacao visualizar no mapa do MicroService 
          */
         rnsMicroService.put("VISUALIZAR", rnsVisualizarMicroService);
+        /*
+         * Adiciona a listra de regras na operacao desativar no mapa do MicroService 
+         */
+        rnsMicroService.put("DESATIVAR", rnsDesativarMicroService);
 
     }
 

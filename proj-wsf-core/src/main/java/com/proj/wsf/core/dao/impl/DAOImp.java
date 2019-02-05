@@ -125,8 +125,9 @@ public abstract class DAOImp<DomainEntity> implements IDAO<DomainEntity> {
      * @param entity
      */
     @Override
-    public void delete(final DomainEntity entity) {
-        this.em.remove(entity);
+    public void delete(DomainEntity entity) {
+        //this.em.remove(entity);
+        this.em.merge(entity);
     }
 
     /**
