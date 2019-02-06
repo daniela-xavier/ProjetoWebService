@@ -73,6 +73,19 @@ public class ProfileRepository implements IRepository {
     }
 
     /**
+     * Método que desabilita a entidade fornecida no método.
+     *
+     * @param entity
+     * @return List<'DomainEntity'>
+     */
+    @Override
+    public List<DomainEntity> disable(DomainEntity entity) {
+        Profile perfil = (Profile) entity;
+        this.profileDAO.delete(perfil);
+        return returnEntitys(entity);
+    }
+    
+    /**
      * Método que busca a entidade fornecida, com filtro em seus atributos.
      *
      * @param entity

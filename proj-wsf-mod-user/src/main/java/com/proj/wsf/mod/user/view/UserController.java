@@ -13,16 +13,19 @@ import com.proj.wsf.mod.user.model.User;
 import com.proj.wsf.view.controller.DomainEntityController;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
-import static javafx.scene.input.KeyCode.T;
 import javax.transaction.Transactional;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Description the class UserController - xxxxx
@@ -31,6 +34,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @version $v rev. $rev $Revision$
  * @since Build 1.1 05/02/2019
  */
+@RestController
 @Controller(value = "userController")
 @RequestMapping("/user")
 @Api(value = "API REST FOZ - USER")
@@ -39,7 +43,8 @@ public class UserController extends DomainEntityController<User> {
     public UserController() {
         super(User.class);
     }
-
+    
+    
     /**
      * Método para requisições GET com parametro id preenchido, que aceita
      * entradas em JSON e retorno em JSON.
@@ -47,7 +52,8 @@ public class UserController extends DomainEntityController<User> {
      * @param id - Identificador da classe.
      * @return ResponseEntity - Entidade resposta.
      */
-    @RequestMapping(value = "{id}", method = RequestMethod.GET, consumes = {MediaType.APPLICATION_JSON_VALUE},
+    @GetMapping(value = "{id}", 
+            consumes = {MediaType.APPLICATION_JSON_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value = "Retorna a entidade usuário")
     @Transactional
@@ -64,7 +70,8 @@ public class UserController extends DomainEntityController<User> {
      * @param entity - RequestBody Entidade da classe
      * @return ResponseEntity - ResponseBody.
      */
-    @RequestMapping(method = RequestMethod.GET, consumes = {MediaType.APPLICATION_JSON_VALUE},
+    @GetMapping(
+            consumes = {MediaType.APPLICATION_JSON_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value = "Retorna uma lista de usuários")
     @Transactional
@@ -81,7 +88,8 @@ public class UserController extends DomainEntityController<User> {
      * @param entity - RequestBody Entidade da classe.
      * @return ResponseEntity - RequestBody.
      */
-    @RequestMapping(method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE},
+    @PostMapping(
+            consumes = {MediaType.APPLICATION_JSON_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value = "Cria um usuário no sistema")
     @Transactional
@@ -98,7 +106,8 @@ public class UserController extends DomainEntityController<User> {
      * @param entity - RequestBody Entidade da classe.
      * @return ResponseEntity - RequestBody.
      */
-    @RequestMapping(method = RequestMethod.PUT, consumes = {MediaType.APPLICATION_JSON_VALUE},
+    @PutMapping(
+            consumes = {MediaType.APPLICATION_JSON_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value = "Altera o usuario enviado")
     @Transactional
@@ -115,7 +124,9 @@ public class UserController extends DomainEntityController<User> {
      * @param id - Identificador da classe.
      * @return ResponseEntity - RequestBody.
      */
-    @RequestMapping(value = "{id}", method = RequestMethod.DELETE, consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
+    @DeleteMapping(value = "{id}", 
+            consumes = {MediaType.APPLICATION_JSON_VALUE},
+            produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value = "Deleta uma entidade")
     @Transactional
     @Override
@@ -132,7 +143,9 @@ public class UserController extends DomainEntityController<User> {
      * @param entity - RequestBody Entidade da classe.
      * @return ResponseEntity - RequestBody.
      */
-    @RequestMapping(method = RequestMethod.DELETE, consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
+    @DeleteMapping(
+            consumes = {MediaType.APPLICATION_JSON_VALUE}, 
+            produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="Desativa uma entidade")
     @Transactional
     @Override
@@ -142,5 +155,4 @@ public class UserController extends DomainEntityController<User> {
     }
     
     
-
 }

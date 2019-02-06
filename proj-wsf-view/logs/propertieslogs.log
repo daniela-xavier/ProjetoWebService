@@ -1,0 +1,170 @@
+[INFO ] 2019-02-06 15:23:30.587 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 2852 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 15:23:30.588 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 15:23:30.589 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 15:23:53.369 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 24.397 seconds (JVM running for 26.196)
+[INFO ] 2019-02-06 15:32:03.542 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 3556 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 15:32:03.543 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 15:32:03.543 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 15:32:16.674 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 14.777 seconds (JVM running for 17.238)
+[INFO ] 2019-02-06 15:33:31.957 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 3556 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 15:33:31.957 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 15:33:31.957 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 15:33:39.945 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 8.181 seconds (JVM running for 100.506)
+[INFO ] 2019-02-06 15:33:48.471 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4892 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 15:33:48.472 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 15:33:48.472 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 15:34:32.033 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 3556 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 15:34:32.034 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 15:34:32.035 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 15:34:36.366 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 4.437 seconds (JVM running for 156.924)
+[INFO ] 2019-02-06 15:34:43.261 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 3556 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 15:34:43.261 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 15:34:43.265 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 15:34:46.912 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 3.755 seconds (JVM running for 167.469)
+[INFO ] 2019-02-06 16:14:21.399 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4576 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 16:14:21.400 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 16:14:21.400 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 16:15:56.994 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4676 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 16:15:56.996 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 16:15:56.996 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 16:16:19.918 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 25.031 seconds (JVM running for 27.429)
+[INFO ] 2019-02-06 16:22:42.922 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4676 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 16:22:42.922 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 16:22:42.922 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 16:22:46.453 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 3.618 seconds (JVM running for 413.949)
+[INFO ] 2019-02-06 16:24:44.050 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4676 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 16:24:44.050 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 16:24:44.051 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 16:24:47.391 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 3.407 seconds (JVM running for 534.881)
+[INFO ] 2019-02-06 16:26:14.501 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4676 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 16:26:14.501 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 16:26:14.503 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 16:26:19.433 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 5.292 seconds (JVM running for 626.919)
+[INFO ] 2019-02-06 16:34:22.148 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4676 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 16:34:22.148 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 16:34:22.148 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 16:34:48.419 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4676 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 16:34:48.419 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 16:34:48.419 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 16:34:51.540 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 3.277 seconds (JVM running for 1138.982)
+[INFO ] 2019-02-06 16:35:34.558 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4676 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 16:35:34.558 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 16:35:34.558 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 16:35:38.201 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 3.712 seconds (JVM running for 1185.648)
+[INFO ] 2019-02-06 16:38:46.407 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4676 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 16:38:46.407 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 16:38:46.407 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 16:38:49.765 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 3.493 seconds (JVM running for 1377.227)
+[INFO ] 2019-02-06 16:43:41.228 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 5548 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 16:43:41.229 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 16:43:41.230 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 16:43:53.371 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 13.638 seconds (JVM running for 15.107)
+[INFO ] 2019-02-06 16:47:55.642 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4000 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 16:47:55.642 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 16:47:55.642 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 16:48:10.297 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 16.759 seconds (JVM running for 19.625)
+[INFO ] 2019-02-06 16:54:08.345 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 5292 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 16:54:08.345 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 16:54:08.345 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 16:54:20.713 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 13.837 seconds (JVM running for 15.584)
+[INFO ] 2019-02-06 16:57:49.383 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 2084 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 16:57:49.383 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 16:57:49.383 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 16:58:01.472 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 13.561 seconds (JVM running for 15.137)
+[INFO ] 2019-02-06 17:01:47.789 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 2084 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 17:01:47.790 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 17:01:47.790 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 17:01:52.536 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 4.9 seconds (JVM running for 246.209)
+[INFO ] 2019-02-06 17:02:48.286 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 2084 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 17:02:48.286 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 17:02:48.301 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 17:02:52.551 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 4.421 seconds (JVM running for 306.198)
+[INFO ] 2019-02-06 17:06:25.355 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 2084 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 17:06:25.355 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 17:06:25.358 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 17:06:29.063 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 3.844 seconds (JVM running for 522.73)
+[INFO ] 2019-02-06 17:06:45.989 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 2084 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 17:06:45.989 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 17:06:45.990 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 17:06:48.996 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 3.106 seconds (JVM running for 542.662)
+[INFO ] 2019-02-06 17:07:22.039 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 2084 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 17:07:22.039 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 17:07:22.039 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 17:07:24.767 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 2.841 seconds (JVM running for 578.432)
+[INFO ] 2019-02-06 17:09:42.780 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 2084 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 17:09:42.780 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 17:09:42.780 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 17:09:45.664 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 2.93 seconds (JVM running for 719.328)
+[INFO ] 2019-02-06 17:11:33.241 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 2084 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 17:11:33.241 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 17:11:33.241 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 17:11:36.453 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 3.274 seconds (JVM running for 830.089)
+[INFO ] 2019-02-06 17:15:05.416 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 2084 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 17:15:05.416 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 17:15:05.416 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 17:18:35.541 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 1108 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 17:18:35.541 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 17:18:35.541 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 17:18:49.925 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 15.84 seconds (JVM running for 18.643)
+[INFO ] 2019-02-06 17:20:35.236 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 1108 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 17:20:35.236 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 17:20:35.236 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 17:23:34.635 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 1824 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 17:23:34.635 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 17:23:34.635 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 17:23:46.904 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 13.974 seconds (JVM running for 15.382)
+[INFO ] 2019-02-06 17:54:57.573 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4268 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 17:54:57.574 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 17:54:57.575 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 17:55:09.663 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 13.422 seconds (JVM running for 14.907)
+[INFO ] 2019-02-06 17:57:00.033 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4268 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 17:57:00.033 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 17:57:00.033 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 17:57:06.663 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 6.906 seconds (JVM running for 131.881)
+[INFO ] 2019-02-06 17:57:16.714 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4268 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 17:57:16.714 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 17:57:16.714 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 17:57:19.975 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 3.483 seconds (JVM running for 145.202)
+[INFO ] 2019-02-06 17:57:23.376 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4268 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 17:57:23.376 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 17:57:23.376 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 17:57:26.536 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 3.207 seconds (JVM running for 151.779)
+[INFO ] 2019-02-06 17:57:36.623 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4268 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 17:57:36.623 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 17:57:36.623 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 17:57:39.323 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 2.789 seconds (JVM running for 164.565)
+[INFO ] 2019-02-06 17:57:41.592 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4268 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 17:57:41.592 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 17:57:41.592 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 17:57:44.504 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 3.006 seconds (JVM running for 169.728)
+[INFO ] 2019-02-06 17:59:24.322 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4268 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 17:59:24.322 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 17:59:24.322 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 17:59:31.158 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 6.904 seconds (JVM running for 276.399)
+[INFO ] 2019-02-06 17:59:40.088 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 5816 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 17:59:40.088 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 17:59:40.088 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 18:00:29.558 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4268 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 18:00:29.558 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 18:00:29.558 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 18:00:34.509 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 5.027 seconds (JVM running for 339.748)
+[INFO ] 2019-02-06 18:00:44.022 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4268 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 18:00:44.023 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 18:00:44.023 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 18:00:48.112 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 4.172 seconds (JVM running for 353.339)
+[INFO ] 2019-02-06 18:03:12.121 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 1760 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 18:03:12.121 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 18:03:12.121 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 18:03:29.900 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 19.347 seconds (JVM running for 23.624)
+[INFO ] 2019-02-06 18:12:30.854 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 1760 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 18:12:30.854 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 18:12:30.854 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 18:12:39.800 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 9.04 seconds (JVM running for 573.534)
+[INFO ] 2019-02-06 18:12:48.274 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 1760 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 18:12:48.274 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 18:12:48.274 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 18:12:56.105 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 7.94 seconds (JVM running for 589.819)
+[INFO ] 2019-02-06 18:19:13.065 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 440 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-06 18:19:13.065 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-06 18:19:13.065 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-06 18:19:27.241 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 15.993 seconds (JVM running for 17.64)

@@ -18,7 +18,7 @@ import org.springframework.core.env.ConfigurableEnvironment;
 import org.springframework.core.env.StandardEnvironment;
 
 @SpringBootApplication
-@ComponentScan("com.proj.wsf")
+@ComponentScan(basePackages = {"com.proj.wsf", "com.proj.wsf.mod"})
 @EnableAutoConfiguration(exclude = {ErrorMvcAutoConfiguration.class, SecurityAutoConfiguration.class})
 public class ProjWsfViewApplication {
 
@@ -35,16 +35,18 @@ public class ProjWsfViewApplication {
         context = application.run(args);
     }
 
-    @Value( "${server.servlet.contextPath}" )
-    private String path;    
-    
+    @Value("${server.servlet.contextPath}")
+    private String path;
+
+    @Value("${server.port}")
+    private String port;
+
     @Bean
     public CommandLineRunner commandLineRunner(ApplicationContext ctx) {
         return args -> {
-        
-            
+
             System.out.println("WebServiceFoz concluido");
-            System.out.println("http://localhost:1221"+path);
+            System.out.println("http://localhost:" + port + path);
         };
     }
 
@@ -61,15 +63,12 @@ public class ProjWsfViewApplication {
     }
 
     public static void restart() {
-        ApplicationArguments args = context.getBean(ApplicationArguments.class);
-
-        Thread thread = new Thread(() -> {
-            context.close();
-            context = SpringApplication.run(ProjWsfViewApplication.class, args.getSourceArgs());
-        });
-
-        thread.setDaemon(false);
-        thread.start();
+        //context.refresh();
+        //Codigo para reiniciar o sistema
     }
 
+    public static void shutdown() {
+        //context.close();
+         //Codigo para desligar o sistema
+    }
 }

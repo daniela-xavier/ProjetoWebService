@@ -28,8 +28,9 @@ import org.springframework.web.bind.annotation.RestController;
 public class RestartController {
 
     @PostMapping("/restartContext")
-    public void restartContext() {
-        ProjWsfViewApplication.restart();
+    public String restartContext() {
+       // ProjWsfViewApplication.restart();
+        return "Web Service sendo reiniciado.";
     }
 
 }

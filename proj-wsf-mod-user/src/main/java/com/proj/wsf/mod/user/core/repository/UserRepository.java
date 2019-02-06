@@ -72,6 +72,19 @@ public class UserRepository implements IRepository {
         return returnEntitys(act);
     }
 
+     /**
+     * Método que desabilita a entidade fornecida no método.
+     *
+     * @param entity
+     * @return List<'DomainEntity'>
+     */
+    @Override
+    public List<DomainEntity> disable(DomainEntity entity) {
+        User usuario = (User) entity;
+        this.userDAO.delete(usuario);
+        return returnEntitys(entity);
+    }
+    
     /**
      * Método que busca a entidade fornecida, com filtro em seus atributos.
      *

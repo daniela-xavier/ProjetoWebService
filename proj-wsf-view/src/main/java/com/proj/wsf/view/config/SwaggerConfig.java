@@ -33,8 +33,7 @@ import springfox.documentation.spring.web.plugins.Docket;
  */
 @Configuration
 @EnableSwagger2
-@EnableWebMvc
-public class SwaggerConfig extends WebMvcConfigurationSupport {
+public class SwaggerConfig {
 
     @Bean
     public Docket productApi() {

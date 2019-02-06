@@ -25,8 +25,11 @@ import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.CrossOrigin;
+import org.springframework.web.bind.annotation.DeleteMapping;
+import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -42,21 +45,20 @@ import org.springframework.web.bind.annotation.RestController;
  * @since Build 1.1 23/01/2019
  */
 @RestController
-@CrossOrigin(origins = "*")
-@RequestMapping(value="/")
+@RequestMapping(value="/api/v1")
 @Api(value="API REST FOZ")
 @Controller(value = "domainEntityController")
 public class DomainEntityController<T extends DomainEntity> extends BaseController {
 
     /**
-     * Variável para o padrão facade.
+     * Variavel para o padrao facade.
      */
     @Autowired
     @Qualifier("facade")
     protected IFacade fachada;
 
     /**
-     * Variável para os mapas de serviços das classes.
+     * Variavel para os mapas de servicos das classes.
      */
     @Autowired
     protected Map<String, IServico> servico;
@@ -81,17 +83,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
     public DomainEntityController() {
     }
 
-    /**
-     * Método para requisiçães GET na raiz do projeto.
-     *
-     * @return String
-     */
-    @RequestMapping("/")
-    @ApiOperation(value="Index da aplica��o")
-    public String index() {
-        return "Bem vindo(a) ao WebServiceFoz";
-    }
-
+    
     /**
      * Método para requisiçães GET com parametro id preenchido, que aceita
      * entradas em JSON e retorno em JSON.
@@ -99,7 +91,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
      * @param id - Identificador da classe.
      * @return ResponseEntity - Entidade resposta.
      */
-    @RequestMapping(value = "{id}", method = RequestMethod.GET, consumes = {MediaType.APPLICATION_JSON_VALUE},
+    @GetMapping(value = "/{id}", consumes = {MediaType.APPLICATION_JSON_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="Retorna uma entidade")
     @Transactional
@@ -112,6 +104,11 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
             Result resultado = fachada.findById(longId, entidadeServico);
             Iterable<DomainEntity> t = resultado.getEntity();
 
+            if (resultado.hasError()) {
+                return new ResponseEntity<>(new ResponseMessage(Boolean.TRUE, resultado.getMsg()),
+                        HttpStatus.INTERNAL_SERVER_ERROR);
+            }
+            
             return new ResponseEntity<>(t, HttpStatus.OK);
 
         } catch (ExceptionResponse e) {
@@ -132,7 +129,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
      * @param entity - RequestBody Entidade da classe
      * @return ResponseEntity - ResponseBody.
      */
-    @RequestMapping(method = RequestMethod.GET, consumes = {MediaType.APPLICATION_JSON_VALUE},
+    @GetMapping( consumes = {MediaType.APPLICATION_JSON_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="Retorna uma lista de entidades")
     @Transactional
@@ -169,7 +166,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
      * @param entity - RequestBody Entidade da classe.
      * @return ResponseEntity - RequestBody.
      */
-    @RequestMapping(method = RequestMethod.POST, consumes = {MediaType.APPLICATION_JSON_VALUE},
+    @PostMapping( consumes = {MediaType.APPLICATION_JSON_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="Cria uma entidade")
     @Transactional
@@ -206,7 +203,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
      * @param entity - RequestBody Entidade da classe.
      * @return ResponseEntity - RequestBody.
      */
-    @RequestMapping(method = RequestMethod.PUT, consumes = {MediaType.APPLICATION_JSON_VALUE},
+    @PutMapping( consumes = {MediaType.APPLICATION_JSON_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="Altera uma entidade")
     @Transactional
@@ -243,7 +240,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
      * @param id - Identificador da classe.
      * @return ResponseEntity - RequestBody.
      */
-    @RequestMapping(value = "{id}", method = RequestMethod.DELETE, consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
+    @DeleteMapping(value = "/{id}", consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="Deleta uma entidade")
     @Transactional
     public @ResponseBody
@@ -274,7 +271,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
      * @param entity - RequestBody Entidade da classe.
      * @return ResponseEntity - RequestBody.
      */
-    @RequestMapping(method = RequestMethod.DELETE, consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
+    @DeleteMapping( consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value="Desativa uma entidade")
     @Transactional
     public @ResponseBody
