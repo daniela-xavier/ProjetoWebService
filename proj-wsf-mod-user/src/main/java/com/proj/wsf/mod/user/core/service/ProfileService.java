@@ -55,7 +55,7 @@ public class ProfileService extends AbstractService implements IServico {
 
     /**
      * 
-     * @return Map<String, List<IStrategy>>
+     * @return Map String, List IStrategy
      */
     @Override
     public Map<String, List<IStrategy>> getStrategys() {

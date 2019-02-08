@@ -46,9 +46,12 @@ public class MainConfigurationRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> save(DomainEntity entity) {
-        final MainConfiguration mc = (MainConfiguration) entity;
-        mainConfigurationDAO.save(mc);
-        return returnEntitys(mc);
+        if (entity instanceof MainConfiguration) {
+            final MainConfiguration mc = (MainConfiguration) entity;
+            mainConfigurationDAO.save(mc);
+            return returnEntitys(mc);
+        }
+        return null;
     }
 
     /**
@@ -59,9 +62,12 @@ public class MainConfigurationRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> update(DomainEntity entity) {
-        final MainConfiguration mc = (MainConfiguration) entity;
-        this.mainConfigurationDAO.update(mc);
-        return returnEntitys(entity);
+        if (entity instanceof MainConfiguration) {
+            final MainConfiguration mc = (MainConfiguration) entity;
+            this.mainConfigurationDAO.update(mc);
+            return returnEntitys(entity);
+        }
+        return null;
     }
 
     /**
@@ -85,9 +91,12 @@ public class MainConfigurationRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> disable(DomainEntity entity) {
-        MainConfiguration mc = (MainConfiguration) entity;
-        this.mainConfigurationDAO.delete(mc);
-        return returnEntitys(entity);
+        if (entity instanceof MainConfiguration) {
+            MainConfiguration mc = (MainConfiguration) entity;
+            this.mainConfigurationDAO.delete(mc);
+            return returnEntitys(entity);
+        }
+        return null;
     }
 
     /**
@@ -98,9 +107,12 @@ public class MainConfigurationRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> findByFilter(DomainEntity entity) {
-        final MainConfiguration mc = (MainConfiguration) entity;
-        List<MainConfiguration> entitys = this.mainConfigurationDAO.findByCriteria(mc);
-        return returnEntitys(entitys);
+        if (entity instanceof MainConfiguration) {
+            final MainConfiguration mc = (MainConfiguration) entity;
+            List<MainConfiguration> entitys = this.mainConfigurationDAO.findByCriteria(mc);
+            return returnEntitys(entitys);
+        }
+        return null;
     }
 
     /**

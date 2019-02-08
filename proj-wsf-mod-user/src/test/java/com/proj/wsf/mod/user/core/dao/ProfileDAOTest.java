@@ -2,15 +2,13 @@
 package com.proj.wsf.mod.user.core.dao;
 
 import com.proj.wsf.core.test.IDAOTest;
-import com.proj.wsf.mod.user.model.PermissionProfile;
 import com.proj.wsf.mod.user.model.Profile;
 import com.proj.wsf.view.config.JPAConfiguration;
-import java.util.ArrayList;
 import java.util.List;
 import javax.transaction.Transactional;
 import org.assertj.core.api.Assertions;
-import org.junit.Test;
 import org.junit.Rule;
+import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -39,6 +37,9 @@ public class ProfileDAOTest implements IDAOTest {
     @Qualifier(value = "profileDAO")
     private ProfileDAO profileDAO;
 
+    /**
+     * Thrown ExpectedException role.
+     */
     @Rule
     public ExpectedException thrown = ExpectedException.none();
 

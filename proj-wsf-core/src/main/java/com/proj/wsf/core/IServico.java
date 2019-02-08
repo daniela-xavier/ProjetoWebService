@@ -40,7 +40,7 @@ public interface IServico {
      * Método que retorna o mapa com as operações e a lista de Strategys
      * correspondentes.
      *
-     * @return Map<String, List<IStrategy>>
+     * @return Map com String, List -> IStrategy
      */
     public Map<String, List<IStrategy>> getStrategys();
 
@@ -48,7 +48,7 @@ public interface IServico {
      * Método que retorna a Classe da Entidade com base da anotação
      * @ADomainEntity, no atributo classe.
      *
-     * @return Class<DomainEntity>
+     * @return Class DomainEntity
      */
     public Class<?> getClasse();
 

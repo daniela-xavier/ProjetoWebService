@@ -46,9 +46,12 @@ public class ActRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> save(DomainEntity entity) {
-        final Act acao =(Act) entity;
-        actDAO.save(acao);
-        return returnEntitys(acao);
+        if (entity instanceof Act) {
+            final Act acao = (Act) entity;
+            actDAO.save(acao);
+            return returnEntitys(acao);
+        }
+        return null;
     }
 
     /**
@@ -59,9 +62,12 @@ public class ActRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> update(DomainEntity entity) {
-        final Act acao =(Act) entity;
-        this.actDAO.update(acao);
-        return returnEntitys(entity);
+        if (entity instanceof Act) {
+            final Act acao = (Act) entity;
+            this.actDAO.update(acao);
+            return returnEntitys(entity);
+        }
+        return null;
     }
 
     /**
@@ -72,9 +78,11 @@ public class ActRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> delete(Long id) {
+
         Act act = this.actDAO.findOne(id);
         this.actDAO.deleteById(id);
         return returnEntitys(act);
+
     }
 
     /**
@@ -85,9 +93,12 @@ public class ActRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> disable(DomainEntity entity) {
-        final Act acao =(Act) entity;
-        this.actDAO.delete(acao);
-        return returnEntitys(entity);
+        if (entity instanceof Act) {
+            final Act acao = (Act) entity;
+            this.actDAO.delete(acao);
+            return returnEntitys(entity);
+        }
+        return null;
     }
 
     /**
@@ -98,9 +109,12 @@ public class ActRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> findByFilter(DomainEntity entity) {
-        final Act acao =(Act) entity;
-        List<Act> entitys = this.actDAO.findByCriteria(acao);
-        return returnEntitys(entitys);
+        if (entity instanceof Act) {
+            final Act acao = (Act) entity;
+            List<Act> entitys = this.actDAO.findByCriteria(acao);
+            return returnEntitys(entitys);
+        }
+        return null;
     }
 
     /**

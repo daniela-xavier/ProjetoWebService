@@ -27,6 +27,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class RestartController {
 
+    /**
+     *
+     * @return
+     */
     @PostMapping("/restartContext")
     public String restartContext() {
        // ProjWsfViewApplication.restart();

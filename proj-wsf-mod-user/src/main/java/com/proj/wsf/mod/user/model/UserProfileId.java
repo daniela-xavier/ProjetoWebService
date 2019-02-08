@@ -24,13 +24,17 @@ import javax.persistence.Embeddable;
 @Embeddable
 public class UserProfileId implements Serializable {
 
+    static final long serialVersionUID = 42L;
+    
     @Column(name = "PE_ID", nullable = false, insertable = false, updatable = false)
     private Long idProfile;
 
     @Column(name = "US_ID", nullable = false, insertable = false, updatable = false)
     private Long idUser;
 
-    // must have a default construcot
+    /**
+     * default constructor
+     */
     public UserProfileId() {
     }
 
@@ -39,7 +43,7 @@ public class UserProfileId implements Serializable {
      * @param idProfile
      * @param idUser
      */
-    public UserProfileId(Long idProfile, Long idUser) {
+    public UserProfileId(final Long idProfile,final Long idUser) {
         this.idProfile = idProfile;
         this.idUser = idUser;
     }
@@ -64,7 +68,7 @@ public class UserProfileId implements Serializable {
      *
      * @param idProfile
      */
-    public void setIdProfile(Long idProfile) {
+    public void setIdProfile(final Long idProfile) {
         this.idProfile = idProfile;
     }
 
@@ -72,7 +76,7 @@ public class UserProfileId implements Serializable {
      * 
      * @param idUser 
      */
-    public void setIdUser(Long idUser) {
+    public void setIdUser(final Long idUser) {
         this.idUser = idUser;
     }
 

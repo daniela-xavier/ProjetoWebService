@@ -48,20 +48,20 @@ public class ProfileController extends DomainEntityController<Profile> {
     }
 
     /**
-     * Método para requisições GET com parametro id preenchido, que aceita
+     * Método para requisições GET com parametro idProfile preenchido, que aceita
      * entradas em JSON e retorno em JSON.
      *
-     * @param id - Identificador da classe.
+     * @param idProfile - Identificador da classe.
      * @return ResponseEntity - Entidade resposta.
      */
-    @GetMapping(value = "{id}", consumes = {MediaType.APPLICATION_JSON_VALUE},
+    @GetMapping(value = "{idProfile}", consumes = {MediaType.APPLICATION_JSON_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value = "Retorna a entidade perfil")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity getEntityById(@PathVariable final String id) {
-        return super.getEntityById(id);
+    ResponseEntity getEntityById(@PathVariable final String idProfile) {
+        return super.getEntityById(idProfile);
     }
 
     /**
@@ -119,16 +119,16 @@ public class ProfileController extends DomainEntityController<Profile> {
      * Método para requisições DELETE com parametro entity preenchido, que
      * aceita entradas em JSON e retorno em JSON.
      *
-     * @param id - Identificador da classe.
+     * @param idProfile - Identificador da classe.
      * @return ResponseEntity - RequestBody.
      */
-    @DeleteMapping(value = "{id}", consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
+    @DeleteMapping(value = "{idProfile}", consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value = "Deleta um perfil")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity deleteEntity(@PathVariable final String id) {
-        return super.deleteEntity(id);
+    ResponseEntity deleteEntity(@PathVariable final String idProfile) {
+        return super.deleteEntity(idProfile);
     }
 
     /**

@@ -41,7 +41,7 @@ public class MainConfigurationDAO extends DAOImp<MainConfiguration> implements I
      *
      * @param begin
      * @param end
-     * @return List<MainConfiguration>
+     * @return List MainConfiguration
      */
     @Override
     public List<MainConfiguration> findByMaxList(final int begin, final int end) {
@@ -63,14 +63,14 @@ public class MainConfigurationDAO extends DAOImp<MainConfiguration> implements I
      * preenchidos.
      *
      * @param mc
-     * @return List<MainConfiguration>
+     * @return List MainConfiguration
      */
     @Override
     public List<MainConfiguration> findByCriteria(final MainConfiguration mc) {
 
         final CriteriaBuilder builder = this.em.getCriteriaBuilder();
         final CriteriaQuery<MainConfiguration> query = builder.createQuery(MainConfiguration.class);
-        Root from = query.from(MainConfiguration.class);
+        final Root from = query.from(MainConfiguration.class);
 
         Predicate predicate = builder.and();
 
@@ -123,6 +123,15 @@ public class MainConfigurationDAO extends DAOImp<MainConfiguration> implements I
         );
 
        return (List<MainConfiguration>) typedQuery.getResultList();
+    }
+     /**
+     * Método para desativar ao inves de deletar a entidade
+     * @param entity 
+     */
+    @Override
+    public void delete(MainConfiguration entity) {
+        entity.desativarDomainEntity();
+        super.delete(entity); 
     }
 
 }

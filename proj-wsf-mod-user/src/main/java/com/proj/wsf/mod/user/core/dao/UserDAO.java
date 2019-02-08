@@ -46,7 +46,7 @@ public class UserDAO extends DAOImp<User> implements IDAO<User> {
      *
      * @param begin
      * @param end
-     * @return List<User>
+     * @return List User
      */
     @Override
     public List<User> findByMaxList(final int begin,final int end) {
@@ -67,14 +67,14 @@ public class UserDAO extends DAOImp<User> implements IDAO<User> {
      * Método que consulta usuário de acordo com os atributos preenchidos.
      *
      * @param usuario
-     * @return List<User>
+     * @return List User
      */
     @Override
     public List<User> findByCriteria(final User usuario) {
 
         final CriteriaBuilder builder = this.em.getCriteriaBuilder();
         final CriteriaQuery<User> query = builder.createQuery(User.class);
-        Root from = query.from(User.class);
+        final Root from = query.from(User.class);
 
         Predicate predicate = builder.and();
 
@@ -134,17 +134,17 @@ public class UserDAO extends DAOImp<User> implements IDAO<User> {
 
         if (usuario.getUserProfile() != null) {
 
-            Join<User, UserProfile> userProfiles = from.join(User_.USER_PROFILES);
-            Join<UserProfile, Profile> userProfilesProfile = userProfiles.join(UserProfile_.PROFILE);
+            final Join<User, UserProfile> userProfiles = from.join(User_.USER_PROFILES);
+            final Join<UserProfile, Profile> userProfProfile = userProfiles.join(UserProfile_.PROFILE);
 
-            Profile profile = usuario.getFirstUserProfile().getProfile();
+            final Profile profile = usuario.getFirstUserProfile().getProfile();
             if (profile.getIdentifier() != null) {
                 predicate = builder.and(predicate,
-                        builder.equal(userProfilesProfile.get(Profile_.IDENTIFIER), profile.getIdentifier()));
+                        builder.equal(userProfProfile.get(Profile_.IDENTIFIER), profile.getIdentifier()));
             }
             if (profile.getNome() != null) {
                 predicate = builder.and(predicate,
-                        builder.equal(userProfilesProfile.get(Profile_.NOME), profile.getNome()));
+                        builder.equal(userProfProfile.get(Profile_.NOME), profile.getNome()));
             }
         }
 
@@ -157,9 +157,13 @@ public class UserDAO extends DAOImp<User> implements IDAO<User> {
         return (List<User>) typedQuery.getResultList();
     }
 
+    /**
+     * Método para desativar ao inves de deletar a entidade
+     * @param entity 
+     */
     @Override
     public void delete(User entity) {
-        entity.setActive("n");
+        entity.desativarDomainEntity();
         super.delete(entity); 
     }
 

@@ -240,3 +240,120 @@
 [DEBUG] 2019-02-07 15:59:40.156 [main] ProjWsfViewApplicationTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
 [INFO ] 2019-02-07 15:59:40.156 [main] ProjWsfViewApplicationTest - The following profiles are active: dev
 [INFO ] 2019-02-07 15:59:43.042 [main] ProjWsfViewApplicationTest - Started ProjWsfViewApplicationTest in 2.98 seconds (JVM running for 18.726)
+[INFO ] 2019-02-08 12:56:57.923 [main] IndexControllerTest - Starting IndexControllerTest on Empousa-Desenv with PID 2888 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-08 12:56:57.924 [main] IndexControllerTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-08 12:56:57.924 [main] IndexControllerTest - The following profiles are active: dev
+[INFO ] 2019-02-08 12:57:12.732 [main] IndexControllerTest - Started IndexControllerTest in 16.67 seconds (JVM running for 19.167)
+[DEBUG] 2019-02-08 12:57:13.572 [main] Log4J2PropertiesConf - This is a debug message
+[INFO ] 2019-02-08 12:57:13.572 [main] Log4J2PropertiesConf - This is an info message
+[WARN ] 2019-02-08 12:57:13.572 [main] Log4J2PropertiesConf - This is a warn message
+[ERROR] 2019-02-08 12:57:13.572 [main] Log4J2PropertiesConf - This is an error message
+[FATAL] 2019-02-08 12:57:13.572 [main] Log4J2PropertiesConf - This is a fatal message
+[INFO ] 2019-02-08 12:57:13.638 [main] ProjWsfViewApplicationTest - Starting ProjWsfViewApplicationTest on Empousa-Desenv with PID 2888 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-08 12:57:13.638 [main] ProjWsfViewApplicationTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-08 12:57:13.638 [main] ProjWsfViewApplicationTest - The following profiles are active: dev
+[INFO ] 2019-02-08 12:57:17.340 [main] ProjWsfViewApplicationTest - Started ProjWsfViewApplicationTest in 3.757 seconds (JVM running for 23.776)
+[INFO ] 2019-02-08 12:59:05.586 [main] IndexControllerTest - Starting IndexControllerTest on Empousa-Desenv with PID 3116 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-08 12:59:05.588 [main] IndexControllerTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-08 12:59:05.588 [main] IndexControllerTest - The following profiles are active: dev
+[INFO ] 2019-02-08 12:59:18.686 [main] IndexControllerTest - Started IndexControllerTest in 14.161 seconds (JVM running for 16.032)
+[DEBUG] 2019-02-08 12:59:19.094 [main] Log4J2PropertiesConf - This is a debug message
+[INFO ] 2019-02-08 12:59:19.094 [main] Log4J2PropertiesConf - This is an info message
+[WARN ] 2019-02-08 12:59:19.094 [main] Log4J2PropertiesConf - This is a warn message
+[ERROR] 2019-02-08 12:59:19.094 [main] Log4J2PropertiesConf - This is an error message
+[FATAL] 2019-02-08 12:59:19.094 [main] Log4J2PropertiesConf - This is a fatal message
+[INFO ] 2019-02-08 12:59:19.168 [main] ProjWsfViewApplicationTest - Starting ProjWsfViewApplicationTest on Empousa-Desenv with PID 3116 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-08 12:59:19.168 [main] ProjWsfViewApplicationTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-08 12:59:19.169 [main] ProjWsfViewApplicationTest - The following profiles are active: dev
+[INFO ] 2019-02-08 12:59:22.147 [main] ProjWsfViewApplicationTest - Started ProjWsfViewApplicationTest in 3.042 seconds (JVM running for 19.465)
+[INFO ] 2019-02-08 13:21:02.488 [main] IndexControllerTest - Starting IndexControllerTest on Empousa-Desenv with PID 5952 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-08 13:21:02.507 [main] IndexControllerTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-08 13:21:02.508 [main] IndexControllerTest - The following profiles are active: dev
+[INFO ] 2019-02-08 13:21:16.494 [main] IndexControllerTest - Started IndexControllerTest in 15.63 seconds (JVM running for 17.874)
+[DEBUG] 2019-02-08 13:21:17.611 [main] Log4J2PropertiesConf - This is a debug message
+[INFO ] 2019-02-08 13:21:17.612 [main] Log4J2PropertiesConf - This is an info message
+[WARN ] 2019-02-08 13:21:17.613 [main] Log4J2PropertiesConf - This is a warn message
+[ERROR] 2019-02-08 13:21:17.613 [main] Log4J2PropertiesConf - This is an error message
+[FATAL] 2019-02-08 13:21:17.613 [main] Log4J2PropertiesConf - This is a fatal message
+[INFO ] 2019-02-08 13:21:17.722 [main] ProjWsfViewApplicationTest - Starting ProjWsfViewApplicationTest on Empousa-Desenv with PID 5952 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-08 13:21:17.722 [main] ProjWsfViewApplicationTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-08 13:21:17.722 [main] ProjWsfViewApplicationTest - The following profiles are active: dev
+[INFO ] 2019-02-08 13:21:21.275 [main] ProjWsfViewApplicationTest - Started ProjWsfViewApplicationTest in 3.647 seconds (JVM running for 22.654)
+[INFO ] 2019-02-08 13:30:10.702 [main] IndexControllerTest - Starting IndexControllerTest on Empousa-Desenv with PID 5432 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-08 13:30:10.705 [main] IndexControllerTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-08 13:30:10.705 [main] IndexControllerTest - The following profiles are active: dev
+[INFO ] 2019-02-08 13:30:22.803 [main] IndexControllerTest - Started IndexControllerTest in 13.118 seconds (JVM running for 15.288)
+[DEBUG] 2019-02-08 13:30:23.226 [main] Log4J2PropertiesConf - This is a debug message
+[INFO ] 2019-02-08 13:30:23.226 [main] Log4J2PropertiesConf - This is an info message
+[WARN ] 2019-02-08 13:30:23.227 [main] Log4J2PropertiesConf - This is a warn message
+[ERROR] 2019-02-08 13:30:23.227 [main] Log4J2PropertiesConf - This is an error message
+[FATAL] 2019-02-08 13:30:23.227 [main] Log4J2PropertiesConf - This is a fatal message
+[INFO ] 2019-02-08 13:30:23.332 [main] ProjWsfViewApplicationTest - Starting ProjWsfViewApplicationTest on Empousa-Desenv with PID 5432 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-08 13:30:23.333 [main] ProjWsfViewApplicationTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-08 13:30:23.333 [main] ProjWsfViewApplicationTest - The following profiles are active: dev
+[INFO ] 2019-02-08 13:30:26.685 [main] ProjWsfViewApplicationTest - Started ProjWsfViewApplicationTest in 3.412 seconds (JVM running for 19.171)
+[INFO ] 2019-02-08 15:57:32.186 [main] IndexControllerTest - Starting IndexControllerTest on Empousa-Desenv with PID 2032 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-08 15:57:32.188 [main] IndexControllerTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-08 15:57:32.188 [main] IndexControllerTest - The following profiles are active: dev
+[INFO ] 2019-02-08 15:57:44.619 [main] IndexControllerTest - Started IndexControllerTest in 13.485 seconds (JVM running for 15.373)
+[DEBUG] 2019-02-08 15:57:45.276 [main] Log4J2PropertiesConf - This is a debug message
+[INFO ] 2019-02-08 15:57:45.277 [main] Log4J2PropertiesConf - This is an info message
+[WARN ] 2019-02-08 15:57:45.279 [main] Log4J2PropertiesConf - This is a warn message
+[ERROR] 2019-02-08 15:57:45.279 [main] Log4J2PropertiesConf - This is an error message
+[FATAL] 2019-02-08 15:57:45.279 [main] Log4J2PropertiesConf - This is a fatal message
+[INFO ] 2019-02-08 15:57:45.351 [main] ProjWsfViewApplicationTest - Starting ProjWsfViewApplicationTest on Empousa-Desenv with PID 2032 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-08 15:57:45.354 [main] ProjWsfViewApplicationTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-08 15:57:45.354 [main] ProjWsfViewApplicationTest - The following profiles are active: dev
+[INFO ] 2019-02-08 15:57:48.399 [main] ProjWsfViewApplicationTest - Started ProjWsfViewApplicationTest in 3.101 seconds (JVM running for 19.154)
+[INFO ] 2019-02-08 16:09:13.524 [main] IndexControllerTest - Starting IndexControllerTest on Empousa-Desenv with PID 3740 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-08 16:09:13.525 [main] IndexControllerTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-08 16:09:13.526 [main] IndexControllerTest - The following profiles are active: dev
+[INFO ] 2019-02-08 16:09:26.692 [main] IndexControllerTest - Started IndexControllerTest in 14.412 seconds (JVM running for 16.37)
+[DEBUG] 2019-02-08 16:09:27.126 [main] Log4J2PropertiesConf - This is a debug message
+[INFO ] 2019-02-08 16:09:27.127 [main] Log4J2PropertiesConf - This is an info message
+[WARN ] 2019-02-08 16:09:27.127 [main] Log4J2PropertiesConf - This is a warn message
+[ERROR] 2019-02-08 16:09:27.128 [main] Log4J2PropertiesConf - This is an error message
+[FATAL] 2019-02-08 16:09:27.128 [main] Log4J2PropertiesConf - This is a fatal message
+[INFO ] 2019-02-08 16:09:27.284 [main] ProjWsfViewApplicationTest - Starting ProjWsfViewApplicationTest on Empousa-Desenv with PID 3740 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-08 16:09:27.294 [main] ProjWsfViewApplicationTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-08 16:09:27.294 [main] ProjWsfViewApplicationTest - The following profiles are active: dev
+[INFO ] 2019-02-08 16:09:30.619 [main] ProjWsfViewApplicationTest - Started ProjWsfViewApplicationTest in 3.473 seconds (JVM running for 20.296)
+[INFO ] 2019-02-08 17:08:07.874 [main] IndexControllerTest - Starting IndexControllerTest on Empousa-Desenv with PID 3192 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-08 17:08:07.876 [main] IndexControllerTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-08 17:08:07.877 [main] IndexControllerTest - The following profiles are active: dev
+[INFO ] 2019-02-08 17:08:32.975 [main] IndexControllerTest - Started IndexControllerTest in 26.55 seconds (JVM running for 29.217)
+[DEBUG] 2019-02-08 17:08:33.996 [main] Log4J2PropertiesConf - This is a debug message
+[INFO ] 2019-02-08 17:08:33.996 [main] Log4J2PropertiesConf - This is an info message
+[WARN ] 2019-02-08 17:08:33.996 [main] Log4J2PropertiesConf - This is a warn message
+[ERROR] 2019-02-08 17:08:33.996 [main] Log4J2PropertiesConf - This is an error message
+[FATAL] 2019-02-08 17:08:33.997 [main] Log4J2PropertiesConf - This is a fatal message
+[INFO ] 2019-02-08 17:08:34.101 [main] ProjWsfViewApplicationTest - Starting ProjWsfViewApplicationTest on Empousa-Desenv with PID 3192 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-08 17:08:34.101 [main] ProjWsfViewApplicationTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-08 17:08:34.101 [main] ProjWsfViewApplicationTest - The following profiles are active: dev
+[INFO ] 2019-02-08 17:08:37.413 [main] ProjWsfViewApplicationTest - Started ProjWsfViewApplicationTest in 3.406 seconds (JVM running for 33.655)
+[INFO ] 2019-02-08 17:19:10.355 [main] IndexControllerTest - Starting IndexControllerTest on Empousa-Desenv with PID 5620 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-08 17:19:10.356 [main] IndexControllerTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-08 17:19:10.357 [main] IndexControllerTest - The following profiles are active: dev
+[INFO ] 2019-02-08 17:19:24.189 [main] IndexControllerTest - Started IndexControllerTest in 17.39 seconds (JVM running for 22.777)
+[DEBUG] 2019-02-08 17:19:24.996 [main] Log4J2PropertiesConf - This is a debug message
+[INFO ] 2019-02-08 17:19:24.998 [main] Log4J2PropertiesConf - This is an info message
+[WARN ] 2019-02-08 17:19:25.000 [main] Log4J2PropertiesConf - This is a warn message
+[ERROR] 2019-02-08 17:19:25.000 [main] Log4J2PropertiesConf - This is an error message
+[FATAL] 2019-02-08 17:19:25.001 [main] Log4J2PropertiesConf - This is a fatal message
+[INFO ] 2019-02-08 17:19:25.166 [main] ProjWsfViewApplicationTest - Starting ProjWsfViewApplicationTest on Empousa-Desenv with PID 5620 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-08 17:19:25.166 [main] ProjWsfViewApplicationTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-08 17:19:25.166 [main] ProjWsfViewApplicationTest - The following profiles are active: dev
+[INFO ] 2019-02-08 17:19:30.805 [main] ProjWsfViewApplicationTest - Started ProjWsfViewApplicationTest in 5.769 seconds (JVM running for 29.393)
+[INFO ] 2019-02-08 17:35:03.265 [main] IndexControllerTest - Starting IndexControllerTest on Empousa-Desenv with PID 5396 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-08 17:35:03.266 [main] IndexControllerTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-08 17:35:03.267 [main] IndexControllerTest - The following profiles are active: dev
+[INFO ] 2019-02-08 17:35:15.326 [main] IndexControllerTest - Started IndexControllerTest in 12.921 seconds (JVM running for 14.861)
+[DEBUG] 2019-02-08 17:35:15.705 [main] Log4J2PropertiesConf - This is a debug message
+[INFO ] 2019-02-08 17:35:15.705 [main] Log4J2PropertiesConf - This is an info message
+[WARN ] 2019-02-08 17:35:15.706 [main] Log4J2PropertiesConf - This is a warn message
+[ERROR] 2019-02-08 17:35:15.706 [main] Log4J2PropertiesConf - This is an error message
+[FATAL] 2019-02-08 17:35:15.706 [main] Log4J2PropertiesConf - This is a fatal message
+[INFO ] 2019-02-08 17:35:15.755 [main] ProjWsfViewApplicationTest - Starting ProjWsfViewApplicationTest on Empousa-Desenv with PID 5396 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-08 17:35:15.755 [main] ProjWsfViewApplicationTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-08 17:35:15.755 [main] ProjWsfViewApplicationTest - The following profiles are active: dev
+[INFO ] 2019-02-08 17:35:19.747 [main] ProjWsfViewApplicationTest - Started ProjWsfViewApplicationTest in 4.029 seconds (JVM running for 19.282)

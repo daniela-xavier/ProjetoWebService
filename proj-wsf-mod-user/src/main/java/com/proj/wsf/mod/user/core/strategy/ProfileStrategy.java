@@ -29,6 +29,9 @@ public class ProfileStrategy {
 
     Map<String, List<IStrategy>> rnsProfile = new HashMap<>();
 
+    /**
+     * Contrutor da classe para inicializar as strategys.
+     */
     public ProfileStrategy() {
         //Regras para entidade profile    
         DisableAction desabilitarAcao = new DisableAction();
@@ -104,8 +107,8 @@ public class ProfileStrategy {
     }
 
     /**
-     *
-     * @return Map<String, List<IStrategy>>
+     * Retorna regras da entidade.
+     * @return Map String, List -> IStrategy
      */
     public Map<String, List<IStrategy>> getRnsProfile() {
         return rnsProfile;

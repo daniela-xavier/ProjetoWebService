@@ -1,0 +1,798 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd version="5.3.5" timestamp="2019-02-08T17:06:51.663">
+<file name="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\IDAO.java">
+<violation beginline="24" endline="93" begincolumn="8" endcolumn="1" rule="ShortClassName" ruleset="Naming" package="com.proj.wsf.core" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortClassName" priority="4">
+Avoid short class names like IDAO
+</violation>
+<violation beginline="24" endline="24" begincolumn="23" endcolumn="34" rule="GenericsNaming" ruleset="Naming" package="com.proj.wsf.core" class="IDAO" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#GenericsNaming" priority="4">
+Generics names should be a one letter long and upper case.
+</violation>
+<violation beginline="38" endline="38" begincolumn="12" endcolumn="47" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IDAO" method="findOne" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="38" endline="38" begincolumn="44" endcolumn="45" rule="ShortVariable" ruleset="Naming" package="com.proj.wsf.core" class="IDAO" method="findOne" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="45" endline="45" begincolumn="12" endcolumn="40" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IDAO" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="55" endline="55" begincolumn="12" endcolumn="75" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IDAO" method="findByMaxList" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="63" endline="63" begincolumn="12" endcolumn="72" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IDAO" method="findByCriteria" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="70" endline="70" begincolumn="12" endcolumn="48" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IDAO" method="save" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="78" endline="78" begincolumn="12" endcolumn="58" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IDAO" method="update" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="85" endline="85" begincolumn="12" endcolumn="50" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IDAO" method="delete" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="92" endline="92" begincolumn="12" endcolumn="42" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IDAO" method="deleteById" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="92" endline="92" begincolumn="39" endcolumn="40" rule="ShortVariable" ruleset="Naming" package="com.proj.wsf.core" class="IDAO" method="deleteById" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like id
+</violation>
+</file>
+<file name="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\IFacade.java">
+<violation beginline="35" endline="35" begincolumn="12" endcolumn="62" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IFacade" method="save" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="44" endline="44" begincolumn="12" endcolumn="64" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IFacade" method="update" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="53" endline="53" begincolumn="12" endcolumn="52" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IFacade" method="delete" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="53" endline="53" begincolumn="31" endcolumn="32" rule="ShortVariable" ruleset="Naming" package="com.proj.wsf.core" class="IFacade" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="62" endline="62" begincolumn="12" endcolumn="65" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IFacade" method="disable" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="71" endline="71" begincolumn="12" endcolumn="58" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IFacade" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="79" endline="79" begincolumn="12" endcolumn="54" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IFacade" method="findById" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="79" endline="79" begincolumn="33" endcolumn="34" rule="ShortVariable" ruleset="Naming" package="com.proj.wsf.core" class="IFacade" method="findById" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="87" endline="87" begincolumn="12" endcolumn="70" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IFacade" method="FindByFilter" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="87" endline="87" begincolumn="19" endcolumn="69" rule="MethodNamingConventions" ruleset="Naming" package="com.proj.wsf.core" class="IFacade" method="FindByFilter" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#MethodNamingConventions" priority="1">
+Method names should not start with capital letters
+</violation>
+<violation beginline="97" endline="97" begincolumn="12" endcolumn="62" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IFacade" method="view" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+</file>
+<file name="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\IRepository.java">
+<violation beginline="36" endline="36" begincolumn="12" endcolumn="62" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IRepository" method="save" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="44" endline="44" begincolumn="12" endcolumn="64" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IRepository" method="update" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="52" endline="52" begincolumn="12" endcolumn="52" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IRepository" method="delete" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="52" endline="52" begincolumn="49" endcolumn="50" rule="ShortVariable" ruleset="Naming" package="com.proj.wsf.core" class="IRepository" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="60" endline="60" begincolumn="12" endcolumn="65" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IRepository" method="disable" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="68" endline="68" begincolumn="12" endcolumn="70" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IRepository" method="findByFilter" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="75" endline="75" begincolumn="12" endcolumn="40" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IRepository" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="83" endline="83" begincolumn="12" endcolumn="54" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IRepository" method="findById" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="83" endline="83" begincolumn="51" endcolumn="52" rule="ShortVariable" ruleset="Naming" package="com.proj.wsf.core" class="IRepository" method="findById" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like id
+</violation>
+</file>
+<file name="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\IServico.java">
+<violation beginline="37" endline="37" begincolumn="12" endcolumn="39" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IServico" method="getRepository" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="45" endline="45" begincolumn="12" endcolumn="55" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IServico" method="getStrategys" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="53" endline="53" begincolumn="12" endcolumn="32" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IServico" method="getClasse" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="61" endline="61" begincolumn="12" endcolumn="36" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IServico" method="getEntidadeNome" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+</file>
+<file name="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\IStrategy.java">
+<violation beginline="29" endline="29" begincolumn="12" endcolumn="49" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core" class="IStrategy" method="process" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+</file>
+<file name="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\application\EntityApplication.java">
+<violation beginline="29" endline="29" begincolumn="29" endcolumn="42" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.application" class="EntityApplication" method="getLogger" variable="clazz" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'clazz' is not assigned and could be declared final
+</violation>
+</file>
+<file name="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\application\Result.java">
+<violation beginline="24" endline="24" begincolumn="13" endcolumn="23" rule="CommentRequired" ruleset="Comments" package="com.proj.wsf.core.application" class="Result" variable="msg" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="25" endline="25" begincolumn="13" endcolumn="42" rule="CommentRequired" ruleset="Comments" package="com.proj.wsf.core.application" class="Result" variable="entity" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="26" endline="26" begincolumn="21" endcolumn="25" rule="BeanMembersShouldSerialize" ruleset="JavaBeans" package="com.proj.wsf.core.application" class="Result" variable="error" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/javabeans.html#BeanMembersShouldSerialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="26" endline="26" begincolumn="13" endcolumn="26" rule="CommentRequired" ruleset="Comments" package="com.proj.wsf.core.application" class="Result" variable="error" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="42" endline="42" begincolumn="24" endcolumn="33" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.application" class="Result" method="setMsg" variable="msg" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'msg' is not assigned and could be declared final
+</violation>
+<violation beginline="60" endline="60" begincolumn="27" endcolumn="55" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.application" class="Result" method="setEntity" variable="entity" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'entity' is not assigned and could be declared final
+</violation>
+</file>
+<file name="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\dao\impl\DAOImp.java">
+<violation beginline="22" endline="31" begincolumn="1" endcolumn="2" rule="CommentSize" ruleset="Comments" package="com.proj.wsf.core.dao.impl" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/comments.html#CommentSize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="32" endline="151" begincolumn="17" endcolumn="1" rule="AbstractNaming" ruleset="Naming" package="com.proj.wsf.core.dao.impl" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#AbstractNaming" priority="3">
+Abstract classes should be named AbstractXXX
+</violation>
+<violation beginline="32" endline="32" begincolumn="30" endcolumn="41" rule="GenericsNaming" ruleset="Naming" package="com.proj.wsf.core.dao.impl" class="DAOImp" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#GenericsNaming" priority="4">
+Generics names should be a one letter long and upper case.
+</violation>
+<violation beginline="38" endline="38" begincolumn="29" endcolumn="30" rule="ShortVariable" ruleset="Naming" package="com.proj.wsf.core.dao.impl" class="DAOImp" variable="em" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like em
+</violation>
+<violation beginline="38" endline="38" begincolumn="29" endcolumn="30" rule="BeanMembersShouldSerialize" ruleset="JavaBeans" package="com.proj.wsf.core.dao.impl" class="DAOImp" variable="em" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/javabeans.html#BeanMembersShouldSerialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="43" endline="43" begincolumn="39" endcolumn="42" rule="BeanMembersShouldSerialize" ruleset="JavaBeans" package="com.proj.wsf.core.dao.impl" class="DAOImp" variable="type" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/javabeans.html#BeanMembersShouldSerialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="50" endline="50" begincolumn="14" endcolumn="14" rule="ShortVariable" ruleset="Naming" package="com.proj.wsf.core.dao.impl" class="DAOImp" method="DAOImp" variable="t" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like t
+</violation>
+<violation beginline="50" endline="50" begincolumn="9" endcolumn="50" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.dao.impl" class="DAOImp" method="DAOImp" variable="t" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 't' could be declared final
+</violation>
+<violation beginline="51" endline="51" begincolumn="27" endcolumn="28" rule="ShortVariable" ruleset="Naming" package="com.proj.wsf.core.dao.impl" class="DAOImp" method="DAOImp" variable="pt" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like pt
+</violation>
+<violation beginline="51" endline="51" begincolumn="9" endcolumn="52" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.dao.impl" class="DAOImp" method="DAOImp" variable="pt" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'pt' could be declared final
+</violation>
+<violation beginline="62" endline="62" begincolumn="44" endcolumn="45" rule="ShortVariable" ruleset="Naming" package="com.proj.wsf.core.dao.impl" class="DAOImp" method="findOne" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="86" endline="86" begincolumn="9" endcolumn="57" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.dao.impl" class="DAOImp" method="findByMaxList" variable="session" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'session' could be declared final
+</violation>
+<violation beginline="87" endline="87" begincolumn="9" endcolumn="63" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.dao.impl" class="DAOImp" method="findByMaxList" variable="crit" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'crit' could be declared final
+</violation>
+<violation beginline="87" endline="87" begincolumn="25" endcolumn="63" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.dao.impl" class="DAOImp" method="findByMaxList" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="90" endline="90" begincolumn="9" endcolumn="34" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.dao.impl" class="DAOImp" method="findByMaxList" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="91" endline="91" begincolumn="9" endcolumn="31" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.dao.impl" class="DAOImp" method="findByMaxList" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="92" endline="92" begincolumn="18" endcolumn="28" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.dao.impl" class="DAOImp" method="findByMaxList" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="104" endline="106" begincolumn="12" endcolumn="5" rule="EmptyMethodInAbstractClassShouldBeAbstract" ruleset="Design" package="com.proj.wsf.core.dao.impl" class="DAOImp" method="findByCriteria" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/design.html#EmptyMethodInAbstractClassShouldBeAbstract" priority="1">
+An empty method in an abstract class should be abstract instead
+</violation>
+<violation beginline="146" endline="146" begincolumn="39" endcolumn="40" rule="ShortVariable" ruleset="Naming" package="com.proj.wsf.core.dao.impl" class="DAOImp" method="deleteById" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like id
+</violation>
+</file>
+<file name="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\facade\impl\Facade.java">
+<violation beginline="34" endline="34" begincolumn="20" endcolumn="28" rule="BeanMembersShouldSerialize" ruleset="JavaBeans" package="com.proj.wsf.core.facade.impl" class="Facade" variable="resultado" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/javabeans.html#BeanMembersShouldSerialize" priority="3">
+Found non-transient, non-static member. Please mark as transient or provide accessors.
+</violation>
+<violation beginline="34" endline="34" begincolumn="13" endcolumn="29" rule="CommentRequired" ruleset="Comments" package="com.proj.wsf.core.facade.impl" class="Facade" variable="resultado" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/comments.html#CommentRequired" priority="3">
+fieldCommentRequirement Required
+</violation>
+<violation beginline="39" endline="40" begincolumn="12" endcolumn="5" rule="UncommentedEmptyConstructor" ruleset="Design" package="com.proj.wsf.core.facade.impl" class="Facade" method="Facade" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/design.html#UncommentedEmptyConstructor" priority="3">
+Document empty constructor
+</violation>
+<violation beginline="51" endline="51" begincolumn="24" endcolumn="42" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="save" variable="entity" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'entity' is not assigned and could be declared final
+</violation>
+<violation beginline="51" endline="51" begincolumn="45" endcolumn="60" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="save" variable="servico" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'servico' is not assigned and could be declared final
+</violation>
+<violation beginline="55" endline="55" begincolumn="9" endcolumn="77" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="save" variable="msg" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'msg' could be declared final
+</violation>
+<violation beginline="57" endline="70" begincolumn="9" endcolumn="9" rule="ConfusingTernary" ruleset="Design" package="com.proj.wsf.core.facade.impl" class="Facade" method="save" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/design.html#ConfusingTernary" priority="3">
+Avoid if (x != y) ..; else ..;
+</violation>
+<violation beginline="62" endline="62" begincolumn="17" endcolumn="52" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="save" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="63" endline="63" begincolumn="17" endcolumn="74" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="save" variable="entitys" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'entitys' could be declared final
+</violation>
+<violation beginline="66" endline="66" begincolumn="22" endcolumn="30" rule="AvoidCatchingGenericException" ruleset="Strict Exceptions" package="com.proj.wsf.core.facade.impl" class="Facade" method="save" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/strictexception.html#AvoidCatchingGenericException" priority="3">
+Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+</violation>
+<violation beginline="68" endline="68" begincolumn="65" endcolumn="76" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer" package="com.proj.wsf.core.facade.impl" class="Facade" method="save" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot; Message: &quot; appears 10 times in this file; the first occurrence is on line 68
+</violation>
+<violation beginline="68" endline="68" begincolumn="34" endcolumn="46" rule="AvoidDuplicateLiterals" ruleset="String and StringBuffer" package="com.proj.wsf.core.facade.impl" class="Facade" method="save" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/strings.html#AvoidDuplicateLiterals" priority="3">
+The String literal &quot;Exception: &quot; appears 7 times in this file; the first occurrence is on line 68
+</violation>
+<violation beginline="84" endline="84" begincolumn="26" endcolumn="44" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="update" variable="entity" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'entity' is not assigned and could be declared final
+</violation>
+<violation beginline="84" endline="84" begincolumn="47" endcolumn="62" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="update" variable="servico" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'servico' is not assigned and could be declared final
+</violation>
+<violation beginline="88" endline="88" begincolumn="9" endcolumn="78" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="update" variable="msg" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'msg' could be declared final
+</violation>
+<violation beginline="90" endline="103" begincolumn="9" endcolumn="9" rule="ConfusingTernary" ruleset="Design" package="com.proj.wsf.core.facade.impl" class="Facade" method="update" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/design.html#ConfusingTernary" priority="3">
+Avoid if (x != y) ..; else ..;
+</violation>
+<violation beginline="95" endline="95" begincolumn="17" endcolumn="54" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="update" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="96" endline="96" begincolumn="17" endcolumn="74" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="update" variable="entitys" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'entitys' could be declared final
+</violation>
+<violation beginline="99" endline="99" begincolumn="22" endcolumn="30" rule="AvoidCatchingGenericException" ruleset="Strict Exceptions" package="com.proj.wsf.core.facade.impl" class="Facade" method="update" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/strictexception.html#AvoidCatchingGenericException" priority="3">
+Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+</violation>
+<violation beginline="116" endline="116" begincolumn="31" endcolumn="32" rule="ShortVariable" ruleset="Naming" package="com.proj.wsf.core.facade.impl" class="Facade" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="116" endline="116" begincolumn="26" endcolumn="32" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="delete" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+<violation beginline="116" endline="116" begincolumn="35" endcolumn="50" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="delete" variable="servico" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'servico' is not assigned and could be declared final
+</violation>
+<violation beginline="122" endline="122" begincolumn="37" endcolumn="69" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="delete" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="124" endline="124" begincolumn="79" endcolumn="91" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="delete" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="124" endline="124" begincolumn="110" endcolumn="124" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="delete" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="127" endline="127" begincolumn="9" endcolumn="78" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="delete" variable="msg" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'msg' could be declared final
+</violation>
+<violation beginline="129" endline="147" begincolumn="9" endcolumn="9" rule="ConfusingTernary" ruleset="Design" package="com.proj.wsf.core.facade.impl" class="Facade" method="delete" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/design.html#ConfusingTernary" priority="3">
+Avoid if (x != y) ..; else ..;
+</violation>
+<violation beginline="134" endline="134" begincolumn="17" endcolumn="79" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="delete" variable="entitys" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'entitys' could be declared final
+</violation>
+<violation beginline="134" endline="134" begincolumn="46" endcolumn="79" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="delete" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="143" endline="143" begincolumn="22" endcolumn="30" rule="AvoidCatchingGenericException" ruleset="Strict Exceptions" package="com.proj.wsf.core.facade.impl" class="Facade" method="delete" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/strictexception.html#AvoidCatchingGenericException" priority="3">
+Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+</violation>
+<violation beginline="145" endline="145" begincolumn="50" endcolumn="61" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="delete" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="145" endline="145" begincolumn="80" endcolumn="93" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="delete" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="161" endline="161" begincolumn="27" endcolumn="45" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="disable" variable="entity" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'entity' is not assigned and could be declared final
+</violation>
+<violation beginline="161" endline="161" begincolumn="48" endcolumn="63" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="disable" variable="servico" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'servico' is not assigned and could be declared final
+</violation>
+<violation beginline="165" endline="165" begincolumn="9" endcolumn="78" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="disable" variable="msg" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'msg' could be declared final
+</violation>
+<violation beginline="167" endline="180" begincolumn="9" endcolumn="9" rule="ConfusingTernary" ruleset="Design" package="com.proj.wsf.core.facade.impl" class="Facade" method="disable" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/design.html#ConfusingTernary" priority="3">
+Avoid if (x != y) ..; else ..;
+</violation>
+<violation beginline="172" endline="172" begincolumn="17" endcolumn="55" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="disable" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="173" endline="173" begincolumn="17" endcolumn="74" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="disable" variable="entitys" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'entitys' could be declared final
+</violation>
+<violation beginline="176" endline="176" begincolumn="22" endcolumn="30" rule="AvoidCatchingGenericException" ruleset="Strict Exceptions" package="com.proj.wsf.core.facade.impl" class="Facade" method="disable" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/strictexception.html#AvoidCatchingGenericException" priority="3">
+Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+</violation>
+<violation beginline="196" endline="196" begincolumn="27" endcolumn="38" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="findAll" variable="classe" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'classe' is not assigned and could be declared final
+</violation>
+<violation beginline="196" endline="196" begincolumn="41" endcolumn="56" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="findAll" variable="servico" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'servico' is not assigned and could be declared final
+</violation>
+<violation beginline="201" endline="201" begincolumn="37" endcolumn="69" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="203" endline="203" begincolumn="79" endcolumn="91" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="203" endline="203" begincolumn="110" endcolumn="124" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="207" endline="207" begincolumn="9" endcolumn="80" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="findAll" variable="msg" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'msg' could be declared final
+</violation>
+<violation beginline="209" endline="225" begincolumn="9" endcolumn="9" rule="ConfusingTernary" ruleset="Design" package="com.proj.wsf.core.facade.impl" class="Facade" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/design.html#ConfusingTernary" priority="3">
+Avoid if (x != y) ..; else ..;
+</violation>
+<violation beginline="214" endline="214" begincolumn="17" endcolumn="78" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="findAll" variable="findAll" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'findAll' could be declared final
+</violation>
+<violation beginline="214" endline="214" begincolumn="46" endcolumn="78" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="221" endline="221" begincolumn="22" endcolumn="30" rule="AvoidCatchingGenericException" ruleset="Strict Exceptions" package="com.proj.wsf.core.facade.impl" class="Facade" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/strictexception.html#AvoidCatchingGenericException" priority="3">
+Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+</violation>
+<violation beginline="223" endline="223" begincolumn="50" endcolumn="61" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="223" endline="223" begincolumn="80" endcolumn="93" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="231" endline="239" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Comments" package="com.proj.wsf.core.facade.impl" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/comments.html#CommentSize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="241" endline="241" begincolumn="33" endcolumn="34" rule="ShortVariable" ruleset="Naming" package="com.proj.wsf.core.facade.impl" class="Facade" method="findById" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like id
+</violation>
+<violation beginline="241" endline="241" begincolumn="28" endcolumn="34" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="findById" variable="id" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'id' is not assigned and could be declared final
+</violation>
+<violation beginline="241" endline="241" begincolumn="37" endcolumn="52" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="findById" variable="servico" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'servico' is not assigned and could be declared final
+</violation>
+<violation beginline="246" endline="246" begincolumn="37" endcolumn="69" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="findById" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="248" endline="248" begincolumn="79" endcolumn="91" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="findById" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="248" endline="248" begincolumn="110" endcolumn="124" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="findById" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="251" endline="251" begincolumn="9" endcolumn="80" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="findById" variable="msg" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'msg' could be declared final
+</violation>
+<violation beginline="253" endline="269" begincolumn="9" endcolumn="9" rule="ConfusingTernary" ruleset="Design" package="com.proj.wsf.core.facade.impl" class="Facade" method="findById" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/design.html#ConfusingTernary" priority="3">
+Avoid if (x != y) ..; else ..;
+</violation>
+<violation beginline="258" endline="258" begincolumn="17" endcolumn="81" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="findById" variable="entitys" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'entitys' could be declared final
+</violation>
+<violation beginline="258" endline="258" begincolumn="46" endcolumn="81" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="findById" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="265" endline="265" begincolumn="22" endcolumn="30" rule="AvoidCatchingGenericException" ruleset="Strict Exceptions" package="com.proj.wsf.core.facade.impl" class="Facade" method="findById" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/strictexception.html#AvoidCatchingGenericException" priority="3">
+Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+</violation>
+<violation beginline="267" endline="267" begincolumn="50" endcolumn="61" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="findById" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="267" endline="267" begincolumn="80" endcolumn="93" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="findById" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="275" endline="283" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Comments" package="com.proj.wsf.core.facade.impl" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/comments.html#CommentSize" priority="3">
+Comment is too large: Too many lines
+</violation>
+<violation beginline="285" endline="285" begincolumn="32" endcolumn="50" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="FindByFilter" variable="entity" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'entity' is not assigned and could be declared final
+</violation>
+<violation beginline="285" endline="285" begincolumn="53" endcolumn="68" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="FindByFilter" variable="servico" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'servico' is not assigned and could be declared final
+</violation>
+<violation beginline="288" endline="288" begincolumn="9" endcolumn="80" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="FindByFilter" variable="msg" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'msg' could be declared final
+</violation>
+<violation beginline="290" endline="306" begincolumn="9" endcolumn="9" rule="ConfusingTernary" ruleset="Design" package="com.proj.wsf.core.facade.impl" class="Facade" method="FindByFilter" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/design.html#ConfusingTernary" priority="3">
+Avoid if (x != y) ..; else ..;
+</violation>
+<violation beginline="295" endline="295" begincolumn="17" endcolumn="93" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="FindByFilter" variable="findAll" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'findAll' could be declared final
+</violation>
+<violation beginline="295" endline="295" begincolumn="50" endcolumn="93" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.facade.impl" class="Facade" method="FindByFilter" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="302" endline="302" begincolumn="22" endcolumn="30" rule="AvoidCatchingGenericException" ruleset="Strict Exceptions" package="com.proj.wsf.core.facade.impl" class="Facade" method="FindByFilter" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/strictexception.html#AvoidCatchingGenericException" priority="3">
+Avoid catching generic exceptions such as NullPointerException, RuntimeException, Exception in try-catch block
+</violation>
+<violation beginline="319" endline="319" begincolumn="24" endcolumn="42" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="view" variable="entity" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'entity' is not assigned and could be declared final
+</violation>
+<violation beginline="319" endline="319" begincolumn="45" endcolumn="60" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="view" variable="servico" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'servico' is not assigned and could be declared final
+</violation>
+<violation beginline="321" endline="321" begincolumn="9" endcolumn="81" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="view" variable="msg" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'msg' could be declared final
+</violation>
+<violation beginline="323" endline="330" begincolumn="9" endcolumn="9" rule="ConfusingTernary" ruleset="Design" package="com.proj.wsf.core.facade.impl" class="Facade" method="view" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/design.html#ConfusingTernary" priority="3">
+Avoid if (x != y) ..; else ..;
+</violation>
+<violation beginline="327" endline="327" begincolumn="13" endcolumn="67" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="view" variable="list" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'list' could be declared final
+</violation>
+<violation beginline="343" endline="343" begincolumn="56" endcolumn="68" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="executarRegras" variable="action" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'action' is not assigned and could be declared final
+</violation>
+<violation beginline="343" endline="343" begincolumn="35" endcolumn="53" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="executarRegras" variable="entity" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'entity' is not assigned and could be declared final
+</violation>
+<violation beginline="343" endline="343" begincolumn="71" endcolumn="104" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="executarRegras" variable="roles" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'roles' is not assigned and could be declared final
+</violation>
+<violation beginline="345" endline="345" begincolumn="9" endcolumn="47" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="executarRegras" variable="msg" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'msg' could be declared final
+</violation>
+<violation beginline="348" endline="348" begincolumn="13" endcolumn="54" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="executarRegras" variable="regras" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'regras' could be declared final
+</violation>
+<violation beginline="351" endline="351" begincolumn="22" endcolumn="32" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="executarRegras" variable="s" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 's' could be declared final
+</violation>
+<violation beginline="353" endline="353" begincolumn="28" endcolumn="28" rule="ShortVariable" ruleset="Naming" package="com.proj.wsf.core.facade.impl" class="Facade" method="executarRegras" variable="m" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/naming.html#ShortVariable" priority="3">
+Avoid variables with short names like m
+</violation>
+<violation beginline="353" endline="353" begincolumn="21" endcolumn="48" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.facade.impl" class="Facade" method="executarRegras" variable="m" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'm' could be declared final
+</violation>
+<violation beginline="355" endline="355" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Comments" package="com.proj.wsf.core.facade.impl" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/comments.html#CommentSize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="356" endline="356" begincolumn="46" endcolumn="49" rule="AppendCharacterWithChar" ruleset="String and StringBuffer" package="com.proj.wsf.core.facade.impl" class="Facade" method="executarRegras" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/strings.html#AppendCharacterWithChar" priority="3">
+Avoid appending characters as strings in StringBuffer.append.
+</violation>
+</file>
+<file name="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\service\impl\AbstractService.java">
+<violation beginline="22" endline="55" begincolumn="17" endcolumn="1" rule="AbstractClassWithoutAbstractMethod" ruleset="Design" package="com.proj.wsf.core.service.impl" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/design.html#AbstractClassWithoutAbstractMethod" priority="3">
+This abstract class does not have any abstract methods
+</violation>
+<violation beginline="31" endline="31" begincolumn="9" endcolumn="85" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.service.impl" class="AbstractService" method="getClasse" variable="annotation" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'annotation' could be declared final
+</violation>
+<violation beginline="33" endline="33" begincolumn="20" endcolumn="38" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.service.impl" class="AbstractService" method="getClasse" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+<violation beginline="47" endline="47" begincolumn="9" endcolumn="85" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.service.impl" class="AbstractService" method="getEntidadeNome" variable="annotation" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'annotation' could be declared final
+</violation>
+<violation beginline="49" endline="49" begincolumn="20" endcolumn="36" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.service.impl" class="AbstractService" method="getEntidadeNome" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (object not created locally)
+</violation>
+</file>
+<file name="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\strategy\impl\AuthorizedByPassword.java">
+<violation beginline="32" endline="32" begincolumn="27" endcolumn="45" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.strategy.impl" class="AuthorizedByPassword" method="process" variable="entity" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'entity' is not assigned and could be declared final
+</violation>
+</file>
+<file name="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\strategy\impl\ComplementaryEntityActive.java">
+<violation beginline="17" endline="17" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Comments" package="com.proj.wsf.core.strategy.impl" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/comments.html#CommentSize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="32" endline="32" begincolumn="27" endcolumn="45" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.strategy.impl" class="ComplementaryEntityActive" method="process" variable="entity" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'entity' is not assigned and could be declared final
+</violation>
+</file>
+<file name="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\strategy\impl\ComplementaryEntityChangedInBy.java">
+<violation beginline="36" endline="36" begincolumn="27" endcolumn="45" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.strategy.impl" class="ComplementaryEntityChangedInBy" method="process" variable="entity" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'entity' is not assigned and could be declared final
+</violation>
+<violation beginline="37" endline="37" begincolumn="13" endcolumn="38" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.strategy.impl" class="ComplementaryEntityChangedInBy" method="process" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="42" endline="42" begincolumn="9" endcolumn="52" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.strategy.impl" class="ComplementaryEntityChangedInBy" method="process" variable="data" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'data' could be declared final
+</violation>
+<violation beginline="42" endline="42" begincolumn="21" endcolumn="52" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.strategy.impl" class="ComplementaryEntityChangedInBy" method="process" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+</file>
+<file name="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\strategy\impl\ComplementaryEntityIncludedInBy.java">
+<violation beginline="36" endline="36" begincolumn="27" endcolumn="45" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.strategy.impl" class="ComplementaryEntityIncludedInBy" method="process" variable="entity" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'entity' is not assigned and could be declared final
+</violation>
+<violation beginline="37" endline="37" begincolumn="13" endcolumn="38" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.strategy.impl" class="ComplementaryEntityIncludedInBy" method="process" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+<violation beginline="42" endline="42" begincolumn="9" endcolumn="52" rule="LocalVariableCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.strategy.impl" class="ComplementaryEntityIncludedInBy" method="process" variable="data" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#LocalVariableCouldBeFinal" priority="3">
+Local variable 'data' could be declared final
+</violation>
+<violation beginline="42" endline="42" begincolumn="21" endcolumn="52" rule="LawOfDemeter" ruleset="Coupling" package="com.proj.wsf.core.strategy.impl" class="ComplementaryEntityIncludedInBy" method="process" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/coupling.html#LawOfDemeter" priority="3">
+Potential violation of Law of Demeter (method chain calls)
+</violation>
+</file>
+<file name="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\strategy\impl\DisableAction.java">
+<violation beginline="32" endline="32" begincolumn="27" endcolumn="45" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.strategy.impl" class="DisableAction" method="process" variable="entity" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'entity' is not assigned and could be declared final
+</violation>
+</file>
+<file name="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\strategy\impl\LogExclude.java">
+<violation beginline="32" endline="32" begincolumn="27" endcolumn="45" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.strategy.impl" class="LogExclude" method="process" variable="entity" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'entity' is not assigned and could be declared final
+</violation>
+</file>
+<file name="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\strategy\impl\PasswordAuthorizedExclusion.java">
+<violation beginline="17" endline="17" begincolumn="1" endcolumn="1" rule="CommentSize" ruleset="Comments" package="com.proj.wsf.core.strategy.impl" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/comments.html#CommentSize" priority="3">
+Comment is too large: Line too long
+</violation>
+<violation beginline="32" endline="32" begincolumn="27" endcolumn="45" rule="MethodArgumentCouldBeFinal" ruleset="Optimization" package="com.proj.wsf.core.strategy.impl" class="PasswordAuthorizedExclusion" method="process" variable="entity" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/optimizations.html#MethodArgumentCouldBeFinal" priority="3">
+Parameter 'entity' is not assigned and could be declared final
+</violation>
+</file>
+<file name="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\test\IControllerTest.java">
+<violation beginline="19" endline="94" begincolumn="34" endcolumn="1" rule="TooManyMethods" ruleset="Code Size" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/codesize.html#TooManyMethods" priority="3">
+This class has too many methods, consider refactoring it.
+</violation>
+<violation beginline="25" endline="25" begincolumn="42" endcolumn="50" rule="SignatureDeclareThrowsException" ruleset="Type Resolution" package="com.proj.wsf.core.test" class="IControllerTest" method="testGetIdSucess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/typeresolution.html#SignatureDeclareThrowsException" priority="3">
+A method/constructor shouldnt explicitly throw java.lang.Exception
+</violation>
+<violation beginline="25" endline="25" begincolumn="12" endcolumn="51" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IControllerTest" method="testGetIdSucess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="25" endline="25" begincolumn="5" endcolumn="51" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="25" endline="25" begincolumn="5" endcolumn="51" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="31" endline="31" begincolumn="45" endcolumn="53" rule="SignatureDeclareThrowsException" ruleset="Type Resolution" package="com.proj.wsf.core.test" class="IControllerTest" method="testGetIdInsuccess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/typeresolution.html#SignatureDeclareThrowsException" priority="3">
+A method/constructor shouldnt explicitly throw java.lang.Exception
+</violation>
+<violation beginline="31" endline="31" begincolumn="12" endcolumn="54" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IControllerTest" method="testGetIdInsuccess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="31" endline="31" begincolumn="5" endcolumn="54" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="31" endline="31" begincolumn="5" endcolumn="54" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="37" endline="37" begincolumn="46" endcolumn="54" rule="SignatureDeclareThrowsException" ruleset="Type Resolution" package="com.proj.wsf.core.test" class="IControllerTest" method="testGetFilterSucess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/typeresolution.html#SignatureDeclareThrowsException" priority="3">
+A method/constructor shouldnt explicitly throw java.lang.Exception
+</violation>
+<violation beginline="37" endline="37" begincolumn="12" endcolumn="55" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IControllerTest" method="testGetFilterSucess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="37" endline="37" begincolumn="5" endcolumn="55" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="37" endline="37" begincolumn="5" endcolumn="55" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="43" endline="43" begincolumn="49" endcolumn="57" rule="SignatureDeclareThrowsException" ruleset="Type Resolution" package="com.proj.wsf.core.test" class="IControllerTest" method="testGetFilterInsuccess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/typeresolution.html#SignatureDeclareThrowsException" priority="3">
+A method/constructor shouldnt explicitly throw java.lang.Exception
+</violation>
+<violation beginline="43" endline="43" begincolumn="12" endcolumn="58" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IControllerTest" method="testGetFilterInsuccess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="43" endline="43" begincolumn="5" endcolumn="58" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="43" endline="43" begincolumn="5" endcolumn="58" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="49" endline="49" begincolumn="41" endcolumn="49" rule="SignatureDeclareThrowsException" ruleset="Type Resolution" package="com.proj.wsf.core.test" class="IControllerTest" method="testPostSucess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/typeresolution.html#SignatureDeclareThrowsException" priority="3">
+A method/constructor shouldnt explicitly throw java.lang.Exception
+</violation>
+<violation beginline="49" endline="49" begincolumn="12" endcolumn="50" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IControllerTest" method="testPostSucess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="49" endline="49" begincolumn="5" endcolumn="50" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="49" endline="49" begincolumn="5" endcolumn="50" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="55" endline="55" begincolumn="44" endcolumn="52" rule="SignatureDeclareThrowsException" ruleset="Type Resolution" package="com.proj.wsf.core.test" class="IControllerTest" method="testPostInsuccess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/typeresolution.html#SignatureDeclareThrowsException" priority="3">
+A method/constructor shouldnt explicitly throw java.lang.Exception
+</violation>
+<violation beginline="55" endline="55" begincolumn="12" endcolumn="53" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IControllerTest" method="testPostInsuccess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="55" endline="55" begincolumn="5" endcolumn="53" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="55" endline="55" begincolumn="5" endcolumn="53" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="61" endline="61" begincolumn="40" endcolumn="48" rule="SignatureDeclareThrowsException" ruleset="Type Resolution" package="com.proj.wsf.core.test" class="IControllerTest" method="testPutSucess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/typeresolution.html#SignatureDeclareThrowsException" priority="3">
+A method/constructor shouldnt explicitly throw java.lang.Exception
+</violation>
+<violation beginline="61" endline="61" begincolumn="12" endcolumn="49" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IControllerTest" method="testPutSucess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="61" endline="61" begincolumn="5" endcolumn="49" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="61" endline="61" begincolumn="5" endcolumn="49" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="67" endline="67" begincolumn="43" endcolumn="51" rule="SignatureDeclareThrowsException" ruleset="Type Resolution" package="com.proj.wsf.core.test" class="IControllerTest" method="testPutInsuccess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/typeresolution.html#SignatureDeclareThrowsException" priority="3">
+A method/constructor shouldnt explicitly throw java.lang.Exception
+</violation>
+<violation beginline="67" endline="67" begincolumn="12" endcolumn="52" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IControllerTest" method="testPutInsuccess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="67" endline="67" begincolumn="5" endcolumn="52" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="67" endline="67" begincolumn="5" endcolumn="52" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="73" endline="73" begincolumn="45" endcolumn="53" rule="SignatureDeclareThrowsException" ruleset="Type Resolution" package="com.proj.wsf.core.test" class="IControllerTest" method="testDeleteIdSucess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/typeresolution.html#SignatureDeclareThrowsException" priority="3">
+A method/constructor shouldnt explicitly throw java.lang.Exception
+</violation>
+<violation beginline="73" endline="73" begincolumn="12" endcolumn="54" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IControllerTest" method="testDeleteIdSucess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="73" endline="73" begincolumn="5" endcolumn="54" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="73" endline="73" begincolumn="5" endcolumn="54" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="79" endline="79" begincolumn="48" endcolumn="56" rule="SignatureDeclareThrowsException" ruleset="Type Resolution" package="com.proj.wsf.core.test" class="IControllerTest" method="testDeleteIdInsuccess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/typeresolution.html#SignatureDeclareThrowsException" priority="3">
+A method/constructor shouldnt explicitly throw java.lang.Exception
+</violation>
+<violation beginline="79" endline="79" begincolumn="12" endcolumn="57" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IControllerTest" method="testDeleteIdInsuccess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="79" endline="79" begincolumn="5" endcolumn="57" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="79" endline="79" begincolumn="5" endcolumn="57" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="85" endline="85" begincolumn="44" endcolumn="52" rule="SignatureDeclareThrowsException" ruleset="Type Resolution" package="com.proj.wsf.core.test" class="IControllerTest" method="testDisableSucess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/typeresolution.html#SignatureDeclareThrowsException" priority="3">
+A method/constructor shouldnt explicitly throw java.lang.Exception
+</violation>
+<violation beginline="85" endline="85" begincolumn="12" endcolumn="53" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IControllerTest" method="testDisableSucess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="85" endline="85" begincolumn="5" endcolumn="53" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="85" endline="85" begincolumn="5" endcolumn="53" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="91" endline="91" begincolumn="47" endcolumn="55" rule="SignatureDeclareThrowsException" ruleset="Type Resolution" package="com.proj.wsf.core.test" class="IControllerTest" method="testDisableInsuccess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/typeresolution.html#SignatureDeclareThrowsException" priority="3">
+A method/constructor shouldnt explicitly throw java.lang.Exception
+</violation>
+<violation beginline="91" endline="91" begincolumn="12" endcolumn="56" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IControllerTest" method="testDisableInsuccess" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="91" endline="91" begincolumn="5" endcolumn="56" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="91" endline="91" begincolumn="5" endcolumn="56" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IControllerTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+</file>
+<file name="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\test\IDAOTest.java">
+<violation beginline="24" endline="24" begincolumn="12" endcolumn="27" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IDAOTest" method="testSave" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="24" endline="24" begincolumn="5" endcolumn="27" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IDAOTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="24" endline="24" begincolumn="5" endcolumn="27" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IDAOTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="29" endline="29" begincolumn="12" endcolumn="29" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IDAOTest" method="testUpdate" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="29" endline="29" begincolumn="5" endcolumn="29" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IDAOTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="29" endline="29" begincolumn="5" endcolumn="29" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IDAOTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="34" endline="34" begincolumn="12" endcolumn="29" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IDAOTest" method="testDelete" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="34" endline="34" begincolumn="5" endcolumn="29" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IDAOTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="34" endline="34" begincolumn="5" endcolumn="29" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IDAOTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="39" endline="39" begincolumn="12" endcolumn="33" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IDAOTest" method="testDeleteById" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="39" endline="39" begincolumn="5" endcolumn="33" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IDAOTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="39" endline="39" begincolumn="5" endcolumn="33" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IDAOTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="44" endline="44" begincolumn="12" endcolumn="30" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IDAOTest" method="testFindAll" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="44" endline="44" begincolumn="5" endcolumn="30" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IDAOTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="44" endline="44" begincolumn="5" endcolumn="30" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IDAOTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="49" endline="49" begincolumn="12" endcolumn="30" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IDAOTest" method="testFindOne" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="49" endline="49" begincolumn="5" endcolumn="30" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IDAOTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="49" endline="49" begincolumn="5" endcolumn="30" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IDAOTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="54" endline="54" begincolumn="12" endcolumn="37" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IDAOTest" method="testFindByCriteria" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="54" endline="54" begincolumn="5" endcolumn="37" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IDAOTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+<violation beginline="54" endline="54" begincolumn="5" endcolumn="37" rule="JUnit4TestShouldUseTestAnnotation" ruleset="Migration" package="com.proj.wsf.core.test" class="IDAOTest" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/migrating.html#JUnit4TestShouldUseTestAnnotation" priority="3">
+JUnit 4 tests that execute tests should use the @Test annotation
+</violation>
+</file>
+<file name="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\test\IRepositoryTest.java">
+<violation beginline="25" endline="25" begincolumn="12" endcolumn="23" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IRepositoryTest" method="save" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="30" endline="30" begincolumn="12" endcolumn="25" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IRepositoryTest" method="update" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="35" endline="35" begincolumn="12" endcolumn="25" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IRepositoryTest" method="delete" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="40" endline="40" begincolumn="12" endcolumn="31" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IRepositoryTest" method="findByFilter" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="45" endline="45" begincolumn="12" endcolumn="26" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IRepositoryTest" method="findAll" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="50" endline="50" begincolumn="12" endcolumn="27" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IRepositoryTest" method="findById" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+</file>
+<file name="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\test\IServiceTest.java">
+<violation beginline="24" endline="24" begincolumn="12" endcolumn="32" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IServiceTest" method="getRepository" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="29" endline="29" begincolumn="12" endcolumn="31" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IServiceTest" method="getStrategys" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="34" endline="34" begincolumn="12" endcolumn="28" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IServiceTest" method="getClasse" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+<violation beginline="39" endline="39" begincolumn="12" endcolumn="34" rule="UnusedModifier" ruleset="Unused Code" package="com.proj.wsf.core.test" class="IServiceTest" method="getEntidadeNome" externalInfoUrl="https://pmd.github.io/pmd-5.3.5/pmd-java/rules/java/unusedcode.html#UnusedModifier" priority="3">
+Avoid modifiers which are implied by the context
+</violation>
+</file>
+</pmd>

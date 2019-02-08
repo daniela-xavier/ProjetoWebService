@@ -37,6 +37,10 @@ public class UserControllerIT extends AbstractControllerTest implements IControl
 
     private static final String CONTENT_TYPE = "application/json;charset=UTF-8";
 
+    /**
+     * Setup do mockMvc.
+     * @throws Exception
+     */
     @Before
     public void setup() throws Exception {
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();

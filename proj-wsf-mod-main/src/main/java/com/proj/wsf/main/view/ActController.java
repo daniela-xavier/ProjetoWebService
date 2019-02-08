@@ -44,20 +44,20 @@ public class ActController extends DomainEntityController<Act> {
     }
 
     /**
-     * Método para requisições GET com parametro id preenchido, que aceita
+     * Método para requisições GET com parametro idAct preenchido, que aceita
      * entradas em JSON e retorno em JSON.
      *
-     * @param id - Identificador da classe.
+     * @param idAct - Identificador da classe.
      * @return ResponseEntity - Entidade resposta.
      */
-    @GetMapping(value = "{id}", consumes = {MediaType.APPLICATION_JSON_VALUE},
+    @GetMapping(value = "{idAct}", consumes = {MediaType.APPLICATION_JSON_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value = "Retorna o evento do sistema")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity getEntityById(@PathVariable final String id) {
-        return super.getEntityById(id);
+    ResponseEntity getEntityById(@PathVariable final String idAct) {
+        return super.getEntityById(idAct);
     }
 
     /**
@@ -115,16 +115,16 @@ public class ActController extends DomainEntityController<Act> {
      * Método para requisições DELETE com parametro entity preenchido, que
      * aceita entradas em JSON e retorno em JSON.
      *
-     * @param id - Identificador da classe.
+     * @param idAct - Identificador da classe.
      * @return ResponseEntity - RequestBody.
      */
-    @DeleteMapping(value = "{id}", consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
+    @DeleteMapping(value = "{idAct}", consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value = "Deleta um evento do sistema")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity deleteEntity(@PathVariable final String id) {
-        return super.deleteEntity(id);
+    ResponseEntity deleteEntity(@PathVariable final String idAct) {
+        return super.deleteEntity(idAct);
     }
 
     /**

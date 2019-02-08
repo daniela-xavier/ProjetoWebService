@@ -23,10 +23,15 @@ import org.springframework.web.context.WebApplicationContext;
  */
 public class AbstractControllerTest {
 
-    
+    /**
+     *
+     */
     @Autowired
     public WebApplicationContext wac;
 
+    /**
+     *
+     */
     public MockMvc mockMvc;
 
 }

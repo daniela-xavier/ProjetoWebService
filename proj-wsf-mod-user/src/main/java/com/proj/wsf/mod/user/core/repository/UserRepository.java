@@ -7,7 +7,6 @@
  
  *
  */
-
 package com.proj.wsf.mod.user.core.repository;
 
 import com.proj.wsf.core.IRepository;
@@ -22,9 +21,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
- * Description the class  UserRepository - xxxxx
+ * Description the class UserRepository - xxxxx
+ *
  * @author Daniela Xavier Conceição - sistemas@fozadvogados.com.br
- * @version $v rev. $rev  $Revision$
+ * @version $v rev. $rev $Revision$
  * @since Build 1.1 05/02/2019
  */
 @Component("userRepository")
@@ -46,9 +46,12 @@ public class UserRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> save(DomainEntity entity) {
-        final User usuario = (User) entity;
-        userDAO.save(usuario);
-        return returnEntitys(usuario);
+        if (entity instanceof User) {
+            final User usuario = (User) entity;
+            userDAO.save(usuario);
+            return returnEntitys(usuario);
+        }
+        return null;
     }
 
     /**
@@ -59,9 +62,12 @@ public class UserRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> update(DomainEntity entity) {
-        final User usuario = (User) entity;
-        this.userDAO.update(usuario);
-        return returnEntitys(entity);
+        if (entity instanceof User) {
+            final User usuario = (User) entity;
+            this.userDAO.update(usuario);
+            return returnEntitys(entity);
+        }
+        return null;
     }
 
     /**
@@ -77,7 +83,7 @@ public class UserRepository implements IRepository {
         return returnEntitys(user);
     }
 
-     /**
+    /**
      * Método que desabilita a entidade fornecida no método.
      *
      * @param entity
@@ -85,11 +91,14 @@ public class UserRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> disable(DomainEntity entity) {
-        final User usuario = (User) entity;
-        this.userDAO.delete(usuario);
-        return returnEntitys(entity);
+        if (entity instanceof User) {
+            final User usuario = (User) entity;
+            this.userDAO.delete(usuario);
+            return returnEntitys(entity);
+        }
+        return null;
     }
-    
+
     /**
      * Método que busca a entidade fornecida, com filtro em seus atributos.
      *
@@ -98,9 +107,12 @@ public class UserRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> findByFilter(DomainEntity entity) {
-        final User usuario = (User) entity;
-        List<User> entitys = this.userDAO.findByCriteria(usuario);
-        return returnEntitys(entitys);
+        if (entity instanceof User) {
+            final User usuario = (User) entity;
+            List<User> entitys = this.userDAO.findByCriteria(usuario);
+            return returnEntitys(entitys);
+        }
+        return null;
     }
 
     /**
@@ -128,9 +140,9 @@ public class UserRepository implements IRepository {
 
     /**
      * Método que retorna a entidade de modo correto.
-     * 
+     *
      * @param entity
-     * @return List<DomainEntity>
+     * @return List DomainEntity
      */
     public List<DomainEntity> returnEntitys(DomainEntity entity) {
         List<DomainEntity> entitys = new ArrayList<DomainEntity>();
@@ -139,15 +151,15 @@ public class UserRepository implements IRepository {
     }
 
     /**
-     *  Método que adiciona a entidade a lista de entidades correta.
-     * 
+     * Método que adiciona a entidade a lista de entidades correta.
+     *
      * @param entitys
-     * @return List<DomainEntity>
+     * @return List DomainEntity
      */
     public List<DomainEntity> returnEntitys(List<User> entitys) {
+
         List<DomainEntity> ents = new ArrayList<DomainEntity>();
         ents.addAll(entitys);
         return ents;
     }
 }
-

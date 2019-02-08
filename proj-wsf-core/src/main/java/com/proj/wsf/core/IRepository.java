@@ -33,7 +33,7 @@ public interface IRepository {
      * @param entity
      * @return List<'DomainEntity'>
      */
-    public List<DomainEntity> save(DomainEntity entity);
+    public List<DomainEntity> save(final DomainEntity entity);
 
     /**
      * Método que altera a entidade fornecida no método.
@@ -41,7 +41,7 @@ public interface IRepository {
      * @param entity
      * @return List<'DomainEntity'>
      */
-    public List<DomainEntity> update(DomainEntity entity);
+    public List<DomainEntity> update(final DomainEntity entity);
 
     /**
      * Método que deleta a entidade, por meio do id fornecido no método.
@@ -49,7 +49,7 @@ public interface IRepository {
      * @param id
      * @return List<'DomainEntity'>
      */
-    public List<DomainEntity> delete(Long id);
+    public List<DomainEntity> delete(final Long id);
     
      /**
      * Método que desativa a entidade fornecida no método.
@@ -57,7 +57,7 @@ public interface IRepository {
      * @param entity
      * @return List<'DomainEntity'>
      */
-    public List<DomainEntity> disable(DomainEntity entity);
+    public List<DomainEntity> disable(final DomainEntity entity);
 
     /**
      * Método que busca a entidade fornecida, com filtro em seus atributos.
@@ -65,7 +65,7 @@ public interface IRepository {
      * @param entity
      * @return List<'DomainEntity'>
      */
-    public List<DomainEntity> findByFilter(DomainEntity entity);
+    public List<DomainEntity> findByFilter(final DomainEntity entity);
 
     /**
      * Método que busca a entidade fornecida, com filtro em seus atributos.
@@ -80,7 +80,7 @@ public interface IRepository {
      * @param id
      * @return List<'DomainEntity'>
      */
-    public List<DomainEntity> findById(Long id);
+    public List<DomainEntity> findById(final Long id);
 
 }
 

@@ -130,6 +130,7 @@
         </snapshotRepository>
     </distributionManagement>
     
+   
     <reporting>
         <plugins>
             <plugin>
@@ -140,26 +141,7 @@
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
                 <artifactId>maven-site-plugin</artifactId>
-                <version>3.3</version>
-                <configuration>
-                    <reportPlugins>
-                        <plugin>
-                            <groupId>org.apache.maven.plugins</groupId>
-                            <artifactId>maven-javadoc-plugin</artifactId>
-                            <executions>
-                                <execution>
-                                    <id>attach-javadocs</id>
-                                    <goals>
-                                        <goal>jar</goal>
-                                    </goals>
-                                    <configuration>
-                                        <additionalparam>${javadoc.opts}</additionalparam>
-                                    </configuration>
-                                </execution>
-                            </executions>
-                        </plugin>
-                    </reportPlugins>
-                </configuration>
+                <version>3.3</version>                
             </plugin>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>

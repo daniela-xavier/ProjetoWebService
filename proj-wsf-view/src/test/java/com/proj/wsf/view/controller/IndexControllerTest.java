@@ -42,11 +42,19 @@ public class IndexControllerTest {
 
     private MockMvc mockMvc;
 
+    /**
+     *
+     * @throws Exception
+     */
     @Before
     public void setup() throws Exception {
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
     }
 
+    /**
+     * 
+     * @throws Exception
+     */
     @Test
     public void getHello() throws Exception {
           this.mockMvc.perform(MockMvcRequestBuilders.get("/foz")).andDo(print())

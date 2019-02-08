@@ -29,6 +29,9 @@ public class ActStrategy {
 
     Map<String, List<IStrategy>> rnsAct = new HashMap<>();
 
+    /**
+     * Contrutor da classe para inicializar as strategys.
+     */
     public ActStrategy() {
         //Regras para entidade Act    
         DisableAction desabilitarAcao = new DisableAction();
@@ -104,6 +107,10 @@ public class ActStrategy {
 
     }
 
+    /**
+     * Retorna regras da entidade.
+     * @return Map String, List -> IStrategy
+     */
     public Map<String, List<IStrategy>> getRnsAct() {
         return rnsAct;
     }

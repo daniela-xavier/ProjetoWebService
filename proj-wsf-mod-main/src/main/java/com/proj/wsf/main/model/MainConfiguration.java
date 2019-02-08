@@ -62,22 +62,42 @@ public class MainConfiguration extends DomainEntity{
     @Column(name = "CWSF_VALOR", unique = true)
     private String valor;
 
+    /**
+     * Retornar Id
+     * @return long
+     */
     public Long getIdentifier() {
         return identifier;
     }
 
+    /**
+     * Retorna nome
+     * @return string
+     */
     public String getNome() {
         return nome;
     }
 
+    /**
+     * Retorna descricao
+     * @return string
+     */
     public String getDescricao() {
         return descricao;
     }
 
+    /**
+     * Retorna comando
+     * @return string
+     */
     public String getComando() {
         return comando;
     }
 
+    /**
+     * Retorna valor
+     * @return string
+     */
     public String getValor() {
         return valor;
     }

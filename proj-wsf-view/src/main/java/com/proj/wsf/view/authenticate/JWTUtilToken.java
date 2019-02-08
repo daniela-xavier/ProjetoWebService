@@ -28,15 +28,31 @@ import java.util.Date;
 public abstract class JWTUtilToken {
 
     //Váriavel de configuração do token.    
+
+    /**
+     *
+     */
     public static final String KEY = "CONTINUE_A_NADAR";
 
     //Váriavel de auditoria do token.
+
+    /**
+     *
+     */
     public static final String AUD = "PARA_ACHAR_A_SOLUCAO_NADAR";
 
     //Váriavel de identificação do token no header da requisição.    
+
+    /**
+     *
+     */
     public static final String TOKEN_HEADER_AUTHENTICATION = "Authentication";
 
     //Váriavel identificadora da plataforma.
+
+    /**
+     *
+     */
     public static final String TOKEN_HEADER_API = "APIAuthentication";
 
     /**

@@ -22,9 +22,9 @@ import com.proj.wsf.model.anotations.ADomainEntity;
 public abstract class AbstractService {
 
     /**
-     * Método que recupera a classe de <DomainEntity>Service.class instanciada.
+     * Método que recupera a classe de DomainEntity -> Service.class instanciada.
      *
-     * @return Classe<DomainEntity>
+     * @return Classe DomainEntity 
      */
     public Class<?> getClasse() {
 
@@ -37,10 +37,10 @@ public abstract class AbstractService {
     }
 
     /**
-     * Método que recupera o nome da entidade de <DomainEntity>Service.class
+     * Método que recupera o nome da entidade de  DomainEntity Service.class
      * instanciada.
      *
-     * @return <DomainEntity>
+     * @return  DomainEntity 
      */
     public String getEntidadeNome() {
 

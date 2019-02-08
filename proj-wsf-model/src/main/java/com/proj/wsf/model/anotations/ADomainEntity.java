@@ -33,7 +33,7 @@ public @interface ADomainEntity {
     
     /**
      * Retorna a classe da entidade.
-     * @return Class<'Entity'>
+     * @return Class Entity
      */
     Class<?> classe();
 }

@@ -23,6 +23,9 @@ public class Log4J2PropertiesConf {
 
     private static final Logger logger = LogManager.getLogger();
 
+    /**
+     * Perform Some Task Log4J.
+     */
     public void performSomeTask() {
         logger.debug("This is a debug message");
         logger.info("This is an info message");

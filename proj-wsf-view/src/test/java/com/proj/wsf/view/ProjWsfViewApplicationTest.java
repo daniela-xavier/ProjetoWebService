@@ -8,7 +8,6 @@ import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.test.autoconfigure.web.servlet.AutoConfigureMockMvc;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.mock.web.MockServletContext;
 import org.springframework.test.context.ActiveProfiles;
@@ -39,11 +38,18 @@ public class ProjWsfViewApplicationTest {
 
     private MockMvc mockMvc;
 
+    /**
+     *
+     * @throws Exception
+     */
     @Before
     public void setup() throws Exception {
         this.mockMvc = MockMvcBuilders.webAppContextSetup(this.wac).build();
     }
 
+    /**
+     * Teste de ambiente para beans e controller.
+     */
     @Test
     public void givenWac_whenServletContext_thenItProvidesGreetController() {
         ServletContext servletContext = wac.getServletContext();

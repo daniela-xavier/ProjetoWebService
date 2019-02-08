@@ -10,7 +10,6 @@
 package com.proj.wsf.view.controller;
 
 import java.util.Map;
-import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
@@ -20,8 +19,6 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.context.support.PropertySourcesPlaceholderConfigurer;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.context.request.RequestAttributes;
-import org.springframework.web.context.request.ServletRequestAttributes;
 import org.springframework.web.context.request.WebRequest;
 
 /**
@@ -38,6 +35,10 @@ public class CustomErrorController implements ErrorController {
     @Value("${custom-error-controller.debug}")
     private boolean debug;
 
+    /**
+     * Bean para retorno de property Config In Dev.
+     * @return PropertySourcesPlaceholderConfigurer
+     */
     @Bean
     public static PropertySourcesPlaceholderConfigurer propertyConfigInDev() {
         return new PropertySourcesPlaceholderConfigurer();
@@ -55,6 +56,10 @@ public class CustomErrorController implements ErrorController {
                 );
     }
 
+    /**
+     * Retorna Erro path
+     * @return string
+     */
     @Override
     public String getErrorPath() {
         return PATH;

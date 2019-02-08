@@ -52,6 +52,7 @@
     </build>
   
     <dependencies> 
+        
         <dependency>
             <groupId>${project.groupId}</groupId>
             <artifactId>proj-wsf-model</artifactId>
@@ -65,9 +66,7 @@
             <scope>test</scope>
             <type>jar</type>
         </dependency>
-      
-       
-       
+        
     </dependencies>
    
     <distributionManagement>

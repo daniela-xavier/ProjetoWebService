@@ -24,28 +24,51 @@ public class ActMicroServiceId implements Serializable {
 
     private Long idAct;
     private Long idMicroService;
-
-    // must have a default construcot
+    
+    /**
+     * Construtor da classe.
+     */
     public ActMicroServiceId() {
     }
 
+    /**
+     * Metodo construtor do id.
+     * @param idAct
+     * @param idMicroService
+     */
     public ActMicroServiceId(Long idAct, Long idMicroService) {
         this.idAct = idAct;
         this.idMicroService = idMicroService;
     }
 
+    /**
+     * Retorno do Id Act.
+     * @return long
+     */
     public Long getIdAct() {
         return idAct;
     }
 
+    /**
+     * Incluir id Act.
+     * @param idAct
+     */
     public void setIdAct(Long idAct) {
         this.idAct = idAct;
     }
 
+    /**
+     * Retornar Id MicroService.
+     * @return long
+     */
     public Long getIdMicroService() {
         return idMicroService;
     }
 
+    /**
+     * Incluir Id Micro Service.
+     * @param idMicroService
+     */
     public void setIdMicroService(Long idMicroService) {
         this.idMicroService = idMicroService;
     }

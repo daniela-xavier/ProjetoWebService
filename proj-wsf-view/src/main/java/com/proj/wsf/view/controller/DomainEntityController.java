@@ -9,12 +9,12 @@
  */
 package com.proj.wsf.view.controller;
 
-import com.proj.wsf.view.response.ResponseMessage;
-import com.proj.wsf.view.response.ExceptionResponse;
 import com.proj.wsf.core.IFacade;
 import com.proj.wsf.core.IServico;
 import com.proj.wsf.core.application.Result;
 import com.proj.wsf.model.DomainEntity;
+import com.proj.wsf.view.response.ExceptionResponse;
+import com.proj.wsf.view.response.ResponseMessage;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import java.util.Map;
@@ -32,7 +32,6 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
-import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -41,7 +40,8 @@ import org.springframework.web.bind.annotation.RestController;
  * execução das açães, de acordo com métodos HTTP.
  *
  * @author Daniela Xavier Conceição - sistemas@fozadvogados.com.br
- * @version $v rev. $rev $Revision$
+ * @version $v rev. $rev $Revision$ 
+ * @param <T> classe da entidade.
  * @since Build 1.1 23/01/2019
  */
 @RestController

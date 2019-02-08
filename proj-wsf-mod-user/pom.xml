@@ -54,38 +54,8 @@
             <testResource>
                 <directory>${project.basedir}/src/test/java</directory>
             </testResource>          
-        </testResources>   
-        <plugins>
-            
-            <plugin>
-                <groupId>org.bsc.maven</groupId>
-                <artifactId>maven-processor-plugin</artifactId>
-                <version>2.1.0</version>
-                <executions>
-                    <execution>
-                        <id>process</id>
-                        <goals>
-                            <goal>process</goal>
-                        </goals>
-                        <phase>generate-sources</phase>
-                        <configuration>
-                            <processors>
-                                <processor>org.hibernate.jpamodelgen.JPAMetaModelEntityProcessor</processor>
-                            </processors>
-                        </configuration>
-                    </execution>
-                </executions>
-                <dependencies>
-                    <dependency>
-                        <groupId>org.hibernate</groupId>
-                        <artifactId>hibernate-jpamodelgen</artifactId>
-                        <version>5.4.0.Final</version>
-                        <scope>compile</scope>
-                    </dependency>
-                </dependencies>
-            </plugin>
-        
-        </plugins>     
+        </testResources>  
+    
     </build>
     
     <distributionManagement>
@@ -117,17 +87,11 @@
                         <plugin>
                             <groupId>org.apache.maven.plugins</groupId>
                             <artifactId>maven-javadoc-plugin</artifactId>
-                            <executions>
-                                <execution>
-                                    <id>attach-javadocs</id>
-                                    <goals>
-                                        <goal>jar</goal>
-                                    </goals>
-                                    <configuration>
-                                        <additionalparam>${javadoc.opts}</additionalparam>
-                                    </configuration>
-                                </execution>
-                            </executions>
+                            <version>3.0.1</version>
+                            <configuration>
+                                <stylesheetfile>${basedir}/src/main/javadoc/stylesheet.css</stylesheetfile>
+                                <show>public</show>
+                            </configuration>
                         </plugin>
                     </reportPlugins>
                 </configuration>

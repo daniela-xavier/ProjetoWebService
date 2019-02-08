@@ -18,8 +18,23 @@ package com.proj.wsf.core.test;
  */
 public interface IServiceTest {
     
+    /**
+     * Repositorio do serviço
+     */
     public void getRepository();
+
+    /**
+     * Strategys do serviços
+     */
     public void getStrategys();
+
+    /**
+     * Recuperar classe da entidade por anotação
+     */
     public void getClasse();
+
+    /**
+     * Recuperar nome da entidade da entidade por anotação
+     */
     public void getEntidadeNome();
 }

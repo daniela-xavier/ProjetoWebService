@@ -72,7 +72,7 @@ public class DomainEntity implements IEntity, Serializable {
     /**
      * Método para inserção de data de inclusão.
      *
-     * @param includedIn
+     * @param includedIn - Data de inclusão
      */
     public void setIncludedIn(Date includedIn) {
         this.includedIn = includedIn;
@@ -81,7 +81,7 @@ public class DomainEntity implements IEntity, Serializable {
     /**
      * Método para retorno de active (S - sim ou N - não).
      *
-     * @return active
+     * @return active 
      */
     public String getActive() {
         return active;
@@ -90,7 +90,7 @@ public class DomainEntity implements IEntity, Serializable {
     /**
      * Método para inserção de active (S - sim ou N - não).
      *
-     * @param active
+     * @param active - Ativo ou não
      */
     public void setActive(String active) {
         this.active = active;
@@ -108,7 +108,7 @@ public class DomainEntity implements IEntity, Serializable {
     /**
      * Método para insercao de data de alteração.
      *
-     * @param changedIn
+     * @param changedIn - Data de alteração
      */
     public void setChangedIn(Date changedIn) {
         this.changedIn = changedIn;
@@ -126,7 +126,7 @@ public class DomainEntity implements IEntity, Serializable {
     /**
      * Método para inserção de autor da inclusão.
      *
-     * @param includedBy
+     * @param includedBy - Incluido por usuario.
      */
     public void setIncludedBy(String includedBy) {
         this.includedBy = includedBy;
@@ -135,7 +135,7 @@ public class DomainEntity implements IEntity, Serializable {
     /**
      * Método para retorno de autor da alteração.
      *
-     * @return changedBy
+     * @return changedBy - Alterado por usuario.
      */
     public String getChangedBy() {
         return changedBy;
@@ -144,7 +144,7 @@ public class DomainEntity implements IEntity, Serializable {
     /**
      * Método para inserção de autor da alteração.
      *
-     * @param changedBy
+     * @param changedBy - Alterado por usuário
      */
     public void setChangedBy(String changedBy) {
         this.changedBy = changedBy;
@@ -153,7 +153,7 @@ public class DomainEntity implements IEntity, Serializable {
     /**
      * Método para inserção do tk.
      *
-     * @param tk
+     * @param tk - Parametro de token.
      */
     public void setTk(String tk) {
         this.tk = tk;
@@ -162,16 +162,25 @@ public class DomainEntity implements IEntity, Serializable {
     /**
      * Método para inserção do user.
      *
-     * @param user
+     * @param user - Parametro de user da requisição.
      */
     public void setUser(String user) {
         this.user = user;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getUser() {
         return user;
     }
-    
-    
+
+    /**
+     * Inclui o ativo = n, para desativar a entidade.
+     */
+    public void desativarDomainEntity() {
+        this.setActive("n");
+    }
 
 }

@@ -57,7 +57,7 @@ public class Profile extends DomainEntity {
     private String descricao;
 
     /**
-     *
+     * Construtor default.
      */
     public Profile() {
     }

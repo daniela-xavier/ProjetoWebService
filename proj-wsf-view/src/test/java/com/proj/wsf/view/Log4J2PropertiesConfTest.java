@@ -21,6 +21,10 @@ import org.junit.Test;
  */
 public class Log4J2PropertiesConfTest {
 
+    /**
+     *
+     * @throws Exception
+     */
     @Test
     public void testPerformSomeTask() throws Exception {
         Log4J2PropertiesConf log4J2PropertiesConf = new Log4J2PropertiesConf();

@@ -29,6 +29,9 @@ public class MicroServiceStrategy {
 
     Map<String, List<IStrategy>> rnsMicroService = new HashMap<>();
 
+    /**
+     * Contrutor da classe para inicializar as strategys.
+     */
     public MicroServiceStrategy() {
         //Regras para entidade MicroService    
         DisableAction desabilitarAcao = new DisableAction();
@@ -104,6 +107,10 @@ public class MicroServiceStrategy {
 
     }
 
+    /**
+     * Retorna regras da entidade.
+     * @return Map String, List -> IStrategy
+     */
     public Map<String, List<IStrategy>> getRnsMicroService() {
         return rnsMicroService;
     }

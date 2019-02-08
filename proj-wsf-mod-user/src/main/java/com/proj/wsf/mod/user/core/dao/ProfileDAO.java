@@ -41,7 +41,7 @@ public class ProfileDAO extends DAOImp<Profile> implements IDAO<Profile> {
      *
      * @param begin
      * @param end
-     * @return List<Profile>
+     * @return List Profile
      */
     @Override
     public List<Profile> findByMaxList(final int begin,final int end) {
@@ -62,14 +62,14 @@ public class ProfileDAO extends DAOImp<Profile> implements IDAO<Profile> {
      * Método que consulta usuário de acordo com os atributos preenchidos.
      *
      * @param perfil
-     * @return List<Profile>
+     * @return List Profile
      */
     @Override
     public List<Profile> findByCriteria(final Profile perfil) {
 
         final CriteriaBuilder builder = this.em.getCriteriaBuilder();
         final CriteriaQuery<Profile> query = builder.createQuery(Profile.class);
-        Root from = query.from(Profile.class);
+        final Root from = query.from(Profile.class);
 
         Predicate predicate = builder.and();
 
@@ -127,10 +127,14 @@ public class ProfileDAO extends DAOImp<Profile> implements IDAO<Profile> {
         return (List<Profile>) typedQuery.getResultList();
     }
 
+     /**
+     * Método para desativar ao inves de deletar a entidade
+     * @param entity 
+     */
     @Override
     public void delete(Profile entity) {
-        entity.setActive("n");
-        super.delete(entity);
+        entity.desativarDomainEntity();
+        super.delete(entity); 
     }
 
 }

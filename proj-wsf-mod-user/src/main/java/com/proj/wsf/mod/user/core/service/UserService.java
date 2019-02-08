@@ -54,8 +54,8 @@ public class UserService extends AbstractService implements IServico {
     }
 
     /**
-     * 
-     * @return Map<String, List<IStrategy>>
+     * Retorna regras da entidade.
+     * @return Map String, List -> IStrategy
      */
     @Override
     public Map<String, List<IStrategy>> getStrategys() {

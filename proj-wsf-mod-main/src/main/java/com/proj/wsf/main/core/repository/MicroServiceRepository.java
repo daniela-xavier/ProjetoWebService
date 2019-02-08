@@ -7,7 +7,6 @@
  
  *
  */
-
 package com.proj.wsf.main.core.repository;
 
 import com.proj.wsf.core.IRepository;
@@ -22,9 +21,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
- * Description the class  MicroServiceRepository - xxxxx
+ * Description the class MicroServiceRepository - xxxxx
+ *
  * @author Daniela Xavier Conceição - sistemas@fozadvogados.com.br
- * @version $v rev. $rev  $Revision$
+ * @version $v rev. $rev $Revision$
  * @since Build 1.1 24/01/2019
  */
 @Component("microServiceRepository")
@@ -46,9 +46,12 @@ public class MicroServiceRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> save(DomainEntity entity) {
-        final MicroService ms = (MicroService) entity;
-        microServiceDAO.save(ms);
-        return returnEntitys(ms);
+        if (entity instanceof MicroService) {
+            final MicroService ms = (MicroService) entity;
+            microServiceDAO.save(ms);
+            return returnEntitys(ms);
+        }
+        return null;
     }
 
     /**
@@ -59,9 +62,12 @@ public class MicroServiceRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> update(DomainEntity entity) {
-        final MicroService ms = (MicroService) entity;
-        this.microServiceDAO.update(ms);
-        return returnEntitys(entity);
+        if (entity instanceof MicroService) {
+            final MicroService ms = (MicroService) entity;
+            this.microServiceDAO.update(ms);
+            return returnEntitys(entity);
+        }
+        return null;
     }
 
     /**
@@ -77,7 +83,6 @@ public class MicroServiceRepository implements IRepository {
         return returnEntitys(microService);
     }
 
-    
     /**
      * Método que desativa a entidade, por meio do id fornecido no método.
      *
@@ -86,11 +91,14 @@ public class MicroServiceRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> disable(DomainEntity entity) {
-        MicroService ms = (MicroService) entity;
-        this.microServiceDAO.delete(ms);
-        return returnEntitys(entity);
+        if (entity instanceof MicroService) {
+            MicroService ms = (MicroService) entity;
+            this.microServiceDAO.delete(ms);
+            return returnEntitys(entity);
+        }
+        return null;
     }
-    
+
     /**
      * Método que busca a entidade fornecida, com filtro em seus atributos.
      *
@@ -99,9 +107,12 @@ public class MicroServiceRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> findByFilter(DomainEntity entity) {
-        final MicroService ms = (MicroService) entity;
-        List<MicroService> entitys = this.microServiceDAO.findByCriteria(ms);
-        return returnEntitys(entitys);
+        if (entity instanceof MicroService) {
+            final MicroService ms = (MicroService) entity;
+            List<MicroService> entitys = this.microServiceDAO.findByCriteria(ms);
+            return returnEntitys(entitys);
+        }
+        return null;
     }
 
     /**
@@ -128,9 +139,9 @@ public class MicroServiceRepository implements IRepository {
     }
 
     /**
-     * 
+     *
      * @param entity
-     * @return 
+     * @return
      */
     public List<DomainEntity> returnEntitys(DomainEntity entity) {
         List<DomainEntity> entitys = new ArrayList<DomainEntity>();
@@ -139,9 +150,9 @@ public class MicroServiceRepository implements IRepository {
     }
 
     /**
-     * 
+     *
      * @param entitys
-     * @return 
+     * @return
      */
     public List<DomainEntity> returnEntitys(List<MicroService> entitys) {
         List<DomainEntity> ents = new ArrayList<DomainEntity>();
@@ -150,4 +161,3 @@ public class MicroServiceRepository implements IRepository {
     }
 
 }
-

@@ -58,18 +58,34 @@ public class MicroService extends DomainEntity{
     @Column(name = "MS_FLUXO_ARQUIVO", unique = true)
     private String fluxo;
 
+    /**
+     * Retorna Id 
+     * @return long
+     */
     public Long getIdentifier() {
         return identifier;
     }
 
+    /**
+     * Retorna nome
+     * @return string
+     */
     public String getNome() {
         return nome;
     }
 
+    /**
+     * Retorna descricao
+     * @return string
+     */
     public String getDescricao() {
         return descricao;
     }
 
+    /**
+     * Retorna fluxo
+     * @return string
+     */
     public String getFluxo() {
         return fluxo;
     }

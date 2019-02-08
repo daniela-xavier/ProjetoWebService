@@ -41,7 +41,7 @@ public class ActDAO extends DAOImp<Act> implements IDAO<Act> {
      *
      * @param begin
      * @param end
-     * @return List<Act>
+     * @return List Act
      */
     @Override
     public List<Act> findByMaxList(final int begin, final int end) {
@@ -62,14 +62,14 @@ public class ActDAO extends DAOImp<Act> implements IDAO<Act> {
      * Método que consulta acao de acordo com os atributos preenchidos.
      *
      * @param acao
-     * @return List<Act>
+     * @return List Act
      */
     @Override
     public List<Act> findByCriteria(final Act acao) {
 
         final CriteriaBuilder builder = this.em.getCriteriaBuilder();
         final CriteriaQuery<Act> query = builder.createQuery(Act.class);
-        Root from = query.from(Act.class);
+        final Root from = query.from(Act.class);
 
         Predicate predicate = builder.and();
 
@@ -116,6 +116,16 @@ public class ActDAO extends DAOImp<Act> implements IDAO<Act> {
 
         
         return (List<Act>) typedQuery.getResultList();
+    }
+    
+     /**
+     * Método para desativar ao inves de deletar a entidade
+     * @param entity 
+     */
+    @Override
+    public void delete(Act entity) {
+        entity.desativarDomainEntity();
+        super.delete(entity); 
     }
 
 }

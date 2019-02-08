@@ -27,6 +27,8 @@ import javax.persistence.JoinColumn;
 import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 /**
  * Description the class User - xxxxx
@@ -58,6 +60,8 @@ public class User extends DomainEntity {
 
     @Expose
     @Column(name = "US_USUARIO", unique = true, nullable = false)
+    @NotNull(message = "Codigo é obrigatório")
+    @NotEmpty(message = "Nome do usuario é obrigatório")
     private String usuario;
 
     @Expose

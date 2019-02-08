@@ -51,18 +51,18 @@ public class UserController extends DomainEntityController<User> {
      * Método para requisições GET com parametro id preenchido, que aceita
      * entradas em JSON e retorno em JSON.
      *
-     * @param id - Identificador da classe.
+     * @param idUser - Identificador da classe.
      * @return ResponseEntity - Entidade resposta.
      */
-    @GetMapping(value = "{id}",
+    @GetMapping(value = "{idUser}",
             consumes = {MediaType.APPLICATION_JSON_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value = "Retorna a entidade usuário")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity getEntityById(@PathVariable final String id) {
-        return super.getEntityById(id);
+    ResponseEntity getEntityById(@PathVariable final String idUser) {
+        return super.getEntityById(idUser);
     }
 
     /**
@@ -123,18 +123,18 @@ public class UserController extends DomainEntityController<User> {
      * Método para requisições DELETE com parametro entity preenchido, que
      * aceita entradas em JSON e retorno em JSON.
      *
-     * @param id - Identificador da classe.
+     * @param idUser - Identificador da classe.
      * @return ResponseEntity - RequestBody.
      */
-    @DeleteMapping(value = "{id}",
+    @DeleteMapping(value = "{idUser}",
             consumes = {MediaType.APPLICATION_JSON_VALUE},
             produces = {MediaType.APPLICATION_JSON_VALUE})
     @ApiOperation(value = "Deleta uma entidade")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity deleteEntity(@PathVariable final String id) {
-        return super.deleteEntity(id);
+    ResponseEntity deleteEntity(@PathVariable final String idUser) {
+        return super.deleteEntity(idUser);
     }
 
     /**

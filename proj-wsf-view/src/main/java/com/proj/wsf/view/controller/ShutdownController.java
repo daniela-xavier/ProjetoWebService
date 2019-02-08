@@ -24,6 +24,10 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 public class ShutdownController {
 
+    /**
+     *
+     * @return
+     */
     @PostMapping("/shutdownContext")
     public String shutdownContext() {
         //ProjWsfViewApplication.shutdown();

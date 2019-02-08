@@ -70,13 +70,19 @@ public class AuthenticFilter implements Filter {
         response.setStatus(404);*/
     }
 
+    /**
+     * Destroi o filtro do autenticação.
+     */
     @Override
     public void destroy() {
        LOGGER.warn("Destroy filtro de Authentic");
     }
 
-  
-
+    /**
+     *
+     * @param filterConfig
+     * @throws ServletException
+     */
     @Override
     public void init(final FilterConfig filterConfig) throws ServletException {
         LOGGER.info("Iniciando filtro de Authentic");

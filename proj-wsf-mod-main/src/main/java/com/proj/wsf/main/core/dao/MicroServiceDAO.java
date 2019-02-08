@@ -41,7 +41,7 @@ public class MicroServiceDAO extends DAOImp<MicroService> implements IDAO<MicroS
      *
      * @param begin
      * @param end
-     * @return List<MicroService>
+     * @return List MicroService
      */
     @Override
     public List<MicroService> findByMaxList(final int begin, final int end) {
@@ -62,14 +62,14 @@ public class MicroServiceDAO extends DAOImp<MicroService> implements IDAO<MicroS
      * Método que consulta MicroService de acordo com os atributos preenchidos.
      *
      * @param microService
-     * @return List<MicroService>
+     * @return List MicroService
      */
     @Override
     public List<MicroService> findByCriteria(final MicroService microService) {
 
         final CriteriaBuilder builder = this.em.getCriteriaBuilder();
         final CriteriaQuery<MicroService> query = builder.createQuery(MicroService.class);
-        Root from = query.from(MicroService.class);
+        final Root from = query.from(MicroService.class);
 
         Predicate predicate = builder.and();
 
@@ -122,4 +122,13 @@ public class MicroServiceDAO extends DAOImp<MicroService> implements IDAO<MicroS
         return (List<MicroService>) typedQuery.getResultList();
     }
 
+     /**
+     * Método para desativar ao inves de deletar a entidade
+     * @param entity 
+     */
+    @Override
+    public void delete(MicroService entity) {
+        entity.desativarDomainEntity();
+        super.delete(entity); 
+    }
 }

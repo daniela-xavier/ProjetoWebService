@@ -7,7 +7,6 @@
  
  *
  */
-
 package com.proj.wsf.core.dao.impl;
 
 import com.proj.wsf.core.IDAO;
@@ -21,19 +20,27 @@ import org.hibernate.Criteria;
 import org.hibernate.Session;
 
 /**
- * Description the class  DAOImp - - Classe que implementa os métodos de IDAO,
- Tornando os mesmos executaveis de modo génerico, as especificações mais detalhadas
- são implementados nas classes filhas de DAOImp.
+ * Description the class DAOImp - - Classe que implementa os métodos de IDAO,
+ * Tornando os mesmos executaveis de modo génerico, as especificações mais
+ * detalhadas são implementados nas classes filhas de DAOImp.
+ *
  * @author Daniela Xavier Conceição - sistemas@fozadvogados.com.br
- * @version $v rev. $rev  $Revision$
+ * @version $v rev. $rev $Revision$
+ * @param <DomainEntity>
  * @since Build 1.1 23/01/2019
  */
 public abstract class DAOImp<DomainEntity> implements IDAO<DomainEntity> {
 
+    /**
+     * EntityManager para conexao e relação com o banco
+     */
     @PersistenceContext
     protected EntityManager em;
 
-    private Class<DomainEntity> type;
+    /**
+     * 
+     */
+    private final Class<DomainEntity> type;
 
     /**
      * Construtor da classe que atribui o tipo da classe implementada pelo
@@ -52,7 +59,7 @@ public abstract class DAOImp<DomainEntity> implements IDAO<DomainEntity> {
      * @return domainEntity
      */
     @Override
-    public DomainEntity findOne(long id) {
+    public DomainEntity findOne(final long id) {
         return (DomainEntity) this.em.find(type, id);
     }
 
@@ -75,7 +82,7 @@ public abstract class DAOImp<DomainEntity> implements IDAO<DomainEntity> {
      * @return List<'DomainEntity'>
      */
     @Override
-    public List<DomainEntity> findByMaxList(final int begin,final int end) {
+    public List<DomainEntity> findByMaxList(final int begin, final int end) {
         Session session = (Session) this.em.getDelegate();
         Criteria crit = session.createCriteria(type.getClass());
 
@@ -94,7 +101,7 @@ public abstract class DAOImp<DomainEntity> implements IDAO<DomainEntity> {
      * @return List<'DomainEntity'>
      */
     @Override
-    public List<DomainEntity> findByCriteria(DomainEntity entity) {
+    public List<DomainEntity> findByCriteria(final DomainEntity entity) {
         return null;
     }
 
@@ -104,7 +111,7 @@ public abstract class DAOImp<DomainEntity> implements IDAO<DomainEntity> {
      * @param entity
      */
     @Override
-    public void save(DomainEntity entity) {
+    public void save(final DomainEntity entity) {
         this.em.persist(entity);
     }
 
@@ -125,7 +132,7 @@ public abstract class DAOImp<DomainEntity> implements IDAO<DomainEntity> {
      * @param entity
      */
     @Override
-    public void delete(DomainEntity entity) {
+    public void delete(final DomainEntity entity) {
         //this.em.remove(entity);
         this.em.merge(entity);
     }
@@ -142,4 +149,3 @@ public abstract class DAOImp<DomainEntity> implements IDAO<DomainEntity> {
     }
 
 }
-

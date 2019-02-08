@@ -17,6 +17,7 @@ import java.util.List;
  * padrão DAO.
  * @author Daniela Xavier Conceição - sistemas@fozadvogados.com.br
  * @version $v rev. $rev  $Revision$
+ * @param <DomainEntity> 
  * @since Build 1.1 23/01/2019
  */
 
@@ -34,7 +35,7 @@ public interface IDAO<DomainEntity> {
      * @param id
      * @return domainEntity
      */
-    public DomainEntity findOne(long id);
+    public DomainEntity findOne(final long id);
 
     /**
      * Método de pesquisa de todas as entidades.
@@ -59,14 +60,14 @@ public interface IDAO<DomainEntity> {
      * @param entity
      * @return List<'DomainEntity'>
      */
-    public List<DomainEntity> findByCriteria(DomainEntity entity);
+    public List<DomainEntity> findByCriteria(final DomainEntity entity);
 
     /**
      * Método que salva a entidade.
      *
      * @param entity
      */
-    public void save(DomainEntity entity);
+    public void save(final DomainEntity entity);
 
     /**
      * Método que atualiza entidade.
@@ -74,19 +75,19 @@ public interface IDAO<DomainEntity> {
      * @param entity
      * @return domainEntity
      */
-    public DomainEntity update(DomainEntity entity);
+    public DomainEntity update(final DomainEntity entity);
 
     /**
      * Método que deleta a entidade.
      *
      * @param entity
      */
-    public void delete(DomainEntity entity);
+    public void delete(final DomainEntity entity);
 
     /**
      * Método que deleta a entidade por id.
      *
      * @param id
      */
-    public void deleteById(long id);
+    public void deleteById(final long id);
 }

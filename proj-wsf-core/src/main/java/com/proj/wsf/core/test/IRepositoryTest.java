@@ -18,11 +18,35 @@ package com.proj.wsf.core.test;
  */
 
 public interface IRepositoryTest {
+
+    /**
+     * Teste do procedimento salvar
+     */
     public void save();  
+
+    /**
+     * Teste do procedimento alterar
+     */
     public void update();  
+
+     /**
+     * Teste do procedimento disabilitar
+     */
     public void delete();
+
+    /**
+     * Teste do procedimento buscar por criterios
+     */
     public void findByFilter();
+
+    /**
+     * Teste do procedimento buscar tudo
+     */
     public void findAll();
+
+     /**
+     * Teste do procedimento buscar por id
+     */
     public void findById();
 }
 

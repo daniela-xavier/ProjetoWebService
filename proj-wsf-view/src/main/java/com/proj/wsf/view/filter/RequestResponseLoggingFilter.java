@@ -38,6 +38,14 @@ public class RequestResponseLoggingFilter implements Filter {
      */
     private final static Logger LOGGER = LoggerFactory.getLogger(RequestResponseLoggingFilter.class);
     
+    /**
+     *
+     * @param request
+     * @param response
+     * @param chain
+     * @throws IOException
+     * @throws ServletException
+     */
     @Override
     public void doFilter(
       ServletRequest request, 
@@ -55,13 +63,19 @@ public class RequestResponseLoggingFilter implements Filter {
           res.getContentType());
     }
  
-  
-
+    /**
+     *
+     * @param fc
+     * @throws ServletException
+     */
     @Override
     public void init(FilterConfig fc) throws ServletException {
          LOGGER.info("Init filtro de RequestResponse");
     }
 
+    /**
+     * Destroi filtro de request response.
+     */
     @Override
     public void destroy() {       
         LOGGER.warn("Destroy filtro de RequestResponse");

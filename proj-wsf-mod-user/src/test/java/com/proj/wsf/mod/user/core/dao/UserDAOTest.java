@@ -7,12 +7,12 @@ import com.proj.wsf.mod.user.model.UserProfile;
 import com.proj.wsf.view.config.JPAConfiguration;
 import java.util.ArrayList;
 import java.util.List;
+import javax.transaction.Transactional;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
-import javax.transaction.Transactional;
 import org.assertj.core.api.Assertions;
-import org.junit.Test;
 import org.junit.Rule;
+import org.junit.Test;
 import org.junit.rules.ExpectedException;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -42,6 +42,9 @@ public class UserDAOTest implements IDAOTest {
     @Qualifier(value = "userDAO")
     private UserDAO userDAO;
 
+    /**
+     * Thrown ExpectedException role.
+     */
     @Rule
     public ExpectedException thrown = ExpectedException.none();
 
@@ -166,6 +169,9 @@ public class UserDAOTest implements IDAOTest {
 
     }
     
+    /**
+     * Teste de busca por critérios com collection.
+     */
     @Test
     @Transactional
     public void testFindByCriteriaCollection() {
@@ -180,6 +186,9 @@ public class UserDAOTest implements IDAOTest {
 
     }
     
+   /**
+     * Teste de busca por critérios.
+     */
     @Test
     @Transactional
     public void testFindByCriteriaProfile() {
@@ -194,6 +203,9 @@ public class UserDAOTest implements IDAOTest {
 
     }
     
+    /**
+     * Teste de busca por critérios.
+     */
     @Test
     @Transactional
     public void testFindByCriteriaOtherProfile() {

@@ -7,7 +7,6 @@
  
  *
  */
-
 package com.proj.wsf.mod.user.core.repository;
 
 import com.proj.wsf.core.IRepository;
@@ -22,9 +21,10 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
- * Description the class  ProfileRepository - xxxxx
+ * Description the class ProfileRepository - xxxxx
+ *
  * @author Daniela Xavier Conceição - sistemas@fozadvogados.com.br
- * @version $v rev. $rev  $Revision$
+ * @version $v rev. $rev $Revision$
  * @since Build 1.1 05/02/2019
  */
 @Component("profileRepository")
@@ -46,9 +46,12 @@ public class ProfileRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> save(DomainEntity entity) {
-        final Profile perfil = (Profile) entity;
-        profileDAO.save(perfil);
-        return returnEntitys(perfil);
+        if (entity instanceof Profile) {
+            final Profile perfil = (Profile) entity;
+            profileDAO.save(perfil);
+            return returnEntitys(perfil);
+        }
+        return null;
     }
 
     /**
@@ -59,9 +62,12 @@ public class ProfileRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> update(DomainEntity entity) {
-        final Profile perfil = (Profile) entity;
-        this.profileDAO.update(perfil);
-        return returnEntitys(entity);
+        if (entity instanceof Profile) {
+            final Profile perfil = (Profile) entity;
+            this.profileDAO.update(perfil);
+            return returnEntitys(entity);
+        }
+        return null;
     }
 
     /**
@@ -85,11 +91,14 @@ public class ProfileRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> disable(DomainEntity entity) {
-        final Profile perfil = (Profile) entity;
-        this.profileDAO.delete(perfil);
-        return returnEntitys(entity);
+        if (entity instanceof Profile) {
+            final Profile perfil = (Profile) entity;
+            this.profileDAO.delete(perfil);
+            return returnEntitys(entity);
+        }
+        return null;
     }
-    
+
     /**
      * Método que busca a entidade fornecida, com filtro em seus atributos.
      *
@@ -98,9 +107,12 @@ public class ProfileRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> findByFilter(DomainEntity entity) {
-        final Profile perfil = (Profile) entity;
-        List<Profile> entitys = this.profileDAO.findByCriteria(perfil);
-        return returnEntitys(entitys);
+        if (entity instanceof Profile) {
+            final Profile perfil = (Profile) entity;
+            List<Profile> entitys = this.profileDAO.findByCriteria(perfil);
+            return returnEntitys(entitys);
+        }
+        return null;
     }
 
     /**
@@ -128,9 +140,9 @@ public class ProfileRepository implements IRepository {
 
     /**
      * Método que retorna a entidade de modo correto.
-     * 
+     *
      * @param entity
-     * @return List<DomainEntity>
+     * @return List DomainEntity
      */
     public List<DomainEntity> returnEntitys(DomainEntity entity) {
         List<DomainEntity> entitys = new ArrayList<DomainEntity>();
@@ -139,10 +151,10 @@ public class ProfileRepository implements IRepository {
     }
 
     /**
-     *  Método que adiciona a entidade a lista de entidades correta.
-     * 
+     * Método que adiciona a entidade a lista de entidades correta.
+     *
      * @param entitys
-     * @return List<DomainEntity>
+     * @return List DomainEntity
      */
     public List<DomainEntity> returnEntitys(List<Profile> entitys) {
         List<DomainEntity> ents = new ArrayList<DomainEntity>();
@@ -151,4 +163,3 @@ public class ProfileRepository implements IRepository {
     }
 
 }
-

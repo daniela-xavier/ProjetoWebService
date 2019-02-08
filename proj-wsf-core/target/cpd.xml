@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pmd-cpd>
+   <duplication lines="19" tokens="105">
+      <file line="196"
+            path="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\facade\impl\Facade.java"/>
+      <file line="241"
+            path="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\facade\impl\Facade.java"/>
+      <codefragment><![CDATA[    public Result findAll(Class classe, IServico servico) {
+
+        resultado = new Result();
+        DomainEntity entity = null;
+        try {
+            entity = (DomainEntity) servico.getClasse().newInstance();
+        } catch (IllegalAccessException | InstantiationException ex) {
+            resultado.setMsg("Entity não pode ser instanciada. Exception: " + ex.toString() + " Message: " + ex.getMessage());
+            return resultado;
+        }
+
+        String msg = executarRegras(entity, "CONSULTAR", servico.getStrategys());
+
+        if (msg != null) {
+            resultado.setError();
+            resultado.setMsg(msg);
+        } else {
+            try {
+                List<DomainEntity> findAll = servico.getRepository().findAll();]]></codefragment>
+   </duplication>
+   <duplication lines="12" tokens="73">
+      <file line="116"
+            path="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\facade\impl\Facade.java"/>
+      <file line="241"
+            path="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\facade\impl\Facade.java"/>
+      <codefragment><![CDATA[    public Result delete(Long id, IServico servico) {
+
+        resultado = new Result();
+
+        DomainEntity entity = null;
+        try {
+            entity = (DomainEntity) servico.getClasse().newInstance();
+        } catch (IllegalAccessException | InstantiationException ex) {
+            resultado.setMsg("Entity não pode ser instanciada. Exception: " + ex.toString() + " Message: " + ex.getMessage());
+            return resultado;
+        }
+        String msg = executarRegras(entity, "EXCLUIR", servico.getStrategys());]]></codefragment>
+   </duplication>
+   <duplication lines="12" tokens="70">
+      <file line="116"
+            path="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\facade\impl\Facade.java"/>
+      <file line="196"
+            path="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\facade\impl\Facade.java"/>
+      <codefragment><![CDATA[    public Result delete(Long id, IServico servico) {
+
+        resultado = new Result();
+
+        DomainEntity entity = null;
+        try {
+            entity = (DomainEntity) servico.getClasse().newInstance();
+        } catch (IllegalAccessException | InstantiationException ex) {
+            resultado.setMsg("Entity não pode ser instanciada. Exception: " + ex.toString() + " Message: " + ex.getMessage());
+            return resultado;
+        }
+        String msg = executarRegras(entity, "EXCLUIR", servico.getStrategys());]]></codefragment>
+   </duplication>
+   <duplication lines="23" tokens="69">
+      <file line="62"
+            path="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\facade\impl\Facade.java"/>
+      <file line="95"
+            path="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\facade\impl\Facade.java"/>
+      <file line="172"
+            path="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\facade\impl\Facade.java"/>
+      <codefragment><![CDATA[                servico.getRepository().save(entity);
+                List<DomainEntity> entitys = new ArrayList<DomainEntity>();
+                entitys.add(entity);
+                resultado.setEntity(entitys);
+            } catch (Exception e) {
+                resultado.setError();
+                resultado.setMsg("Exception: " + e.toString() + " Message: " + e.getMessage());
+            }
+        }
+
+        return resultado;
+    }
+
+    /**
+     * Método que realiza as regras para a operação alterar para a entity
+     * passada por parametro e metodo alterar do repositorio do serviço.
+     *
+     * @param entity
+     * @param servico
+     * @return Result
+     */
+    @Override
+    public Result update(DomainEntity entity, IServico servico) {]]></codefragment>
+   </duplication>
+   <duplication lines="28" tokens="64">
+      <file line="214"
+            path="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\facade\impl\Facade.java"/>
+      <file line="295"
+            path="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\facade\impl\Facade.java"/>
+      <codefragment><![CDATA[                List<DomainEntity> findAll = servico.getRepository().findAll();
+                if (findAll == null) {
+                    resultado.setMsg("Busca não encontrada, por favor verifique as dados digitados!");
+                    return resultado;
+                }
+                resultado.setEntity(findAll);
+
+            } catch (Exception e) {
+                resultado.setError();
+                resultado.setMsg("Exception: " + e.toString() + " Message: " + e.getMessage());
+            }
+        }
+
+        return resultado;
+
+    }
+
+    /**
+     * Método que realiza as regras para a operação consultar para a entity
+     * passada por parametro e metodo consultar por id do repositorio do
+     * serviço.
+     *
+     * @param id
+     * @param servico
+     * @return Result
+     */
+    @Override
+    public Result findById(Long id, IServico servico) {]]></codefragment>
+   </duplication>
+   <duplication lines="12" tokens="58">
+      <file line="84"
+            path="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\facade\impl\Facade.java"/>
+      <file line="161"
+            path="E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-core\src\main\java\com\proj\wsf\core\facade\impl\Facade.java"/>
+      <codefragment><![CDATA[    public Result update(DomainEntity entity, IServico servico) {
+
+        resultado = new Result();
+
+        String msg = executarRegras(entity, "ALTERAR", servico.getStrategys());
+
+        if (msg != null) {
+            resultado.setError();
+            resultado.setMsg(msg);
+        } else {
+            try {
+                servico.getRepository().update(entity);]]></codefragment>
+   </duplication>
+</pmd-cpd>

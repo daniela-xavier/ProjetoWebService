@@ -18,6 +18,10 @@ package com.proj.wsf.model;
  */
 public abstract interface IEntity {
 
+    /**
+     *
+     * @return
+     */
     @Override
     public String toString();
 

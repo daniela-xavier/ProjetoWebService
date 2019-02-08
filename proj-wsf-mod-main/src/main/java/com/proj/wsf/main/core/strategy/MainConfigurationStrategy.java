@@ -29,6 +29,9 @@ public class MainConfigurationStrategy {
 
     Map<String, List<IStrategy>> rnsMainConfiguration = new HashMap<>();
 
+    /**
+     * Contrutor da classe para inicializar as strategys.
+     */
     public MainConfigurationStrategy() {
         //Regras para entidade MainConfiguration    
         DisableAction desabilitarAcao = new DisableAction();
@@ -104,6 +107,10 @@ public class MainConfigurationStrategy {
 
     }
 
+    /**
+     * Retorna regras da entidade.
+     * @return Map String, List -> IStrategy
+     */
     public Map<String, List<IStrategy>> getRnsMainConfiguration() {
         return rnsMainConfiguration;
     }
