@@ -3,8 +3,8 @@
  *
  * Created on 24-01-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 
@@ -44,7 +44,7 @@ public class MicroService extends DomainEntity{
     @Column(name = "MS_ID")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_MICROSERVICO")
     @SequenceGenerator(name = "SEQ_MICROSERVICO", sequenceName = "SEQ_MICROSERVICO", allocationSize=1)
-    private Long id;
+    private Long identifier;
     
     @Expose
     @Column(name = "MS_NOME", unique = true)
@@ -58,4 +58,22 @@ public class MicroService extends DomainEntity{
     @Column(name = "MS_FLUXO_ARQUIVO", unique = true)
     private String fluxo;
 
+    public Long getIdentifier() {
+        return identifier;
+    }
+
+    public String getNome() {
+        return nome;
+    }
+
+    public String getDescricao() {
+        return descricao;
+    }
+
+    public String getFluxo() {
+        return fluxo;
+    }
+
+    
+    
 }

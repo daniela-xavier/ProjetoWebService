@@ -3,8 +3,8 @@
  *
  * Created on 05-02-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 
@@ -44,11 +44,19 @@ public class UserService extends AbstractService implements IServico {
     @Qualifier(value = "userStrategy")
     UserStrategy userStrategy;
 
+    /**
+     * 
+     * @return IRepository
+     */
     @Override
     public IRepository getRepository() {
         return userRepository;
     }
 
+    /**
+     * 
+     * @return Map<String, List<IStrategy>>
+     */
     @Override
     public Map<String, List<IStrategy>> getStrategys() {
         return userStrategy.getRnsUser();

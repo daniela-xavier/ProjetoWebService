@@ -52,9 +52,9 @@ public class UserDAOTest implements IDAOTest {
         User u = new User();
         u.setEmail("teste@fozadvogados.com.br");
         u.setUsuario("teste.teste");
-        u.setToken("token");
+        u.setTk("token");
         this.userDAO.save(u);
-        Assertions.assertThat(u.getId()).isNotNull();
+        Assertions.assertThat(u.getIdentifier()).isNotNull();
     }
 
     @Test
@@ -66,7 +66,7 @@ public class UserDAOTest implements IDAOTest {
             u.setEmail("teste" + i + "@fozadvogados.com.br");
             u.setUsuario("teste" + i + ".teste" + i);
             u.setActive("s");
-            u.setToken("token");
+            u.setTk("token");
             this.userDAO.save(u);
         }
 
@@ -83,14 +83,14 @@ public class UserDAOTest implements IDAOTest {
         u.setEmail("teste2@fozadvogados.com.br");
         u.setUsuario("teste2.teste2");
         this.userDAO.save(u);
-        Assertions.assertThat(u.getId()).isNotNull();
+        Assertions.assertThat(u.getIdentifier()).isNotNull();
 
         u.setEmail("teste2@teste.com.br");
         u.setObservacao("observacao");
         this.userDAO.update(u);
 
-        User u2 = this.userDAO.findOne(u.getId());
-        Assertions.assertThat(u2.getId()).isNotNull();
+        User u2 = this.userDAO.findOne(u.getIdentifier());
+        Assertions.assertThat(u2.getIdentifier()).isNotNull();
         Assertions.assertThat(u2.getUsuario()).isNotNull();
         Assertions.assertThat(u2.getEmail()).isNotNull();
         Assertions.assertThat(u2.getObservacao()).isNotNull();
@@ -106,11 +106,11 @@ public class UserDAOTest implements IDAOTest {
         u.setUsuario("teste3.teste3");
         u.setActive("s");
         this.userDAO.save(u);
-        Assertions.assertThat(u.getId()).isNotNull();
+        Assertions.assertThat(u.getIdentifier()).isNotNull();
 
         this.userDAO.delete(u);
 
-        User u2 = this.userDAO.findOne(u.getId());
+        User u2 = this.userDAO.findOne(u.getIdentifier());
         Assertions.assertThat(u2.getActive()).isEqualTo("n");
 
     }
@@ -123,11 +123,11 @@ public class UserDAOTest implements IDAOTest {
         u.setEmail("teste4@fozadvogados.com.br");
         u.setUsuario("teste4.teste4");
         this.userDAO.save(u);
-        Assertions.assertThat(u.getId()).isNotNull();
+        Assertions.assertThat(u.getIdentifier()).isNotNull();
 
-        this.userDAO.deleteById(u.getId());
+        this.userDAO.deleteById(u.getIdentifier());
 
-        User u4 = this.userDAO.findOne(u.getId());
+        User u4 = this.userDAO.findOne(u.getIdentifier());
         Assertions.assertThat(u4).isNull();
     }
 
@@ -139,9 +139,9 @@ public class UserDAOTest implements IDAOTest {
         u.setEmail("teste5@fozadvogados.com.br");
 
         this.userDAO.save(u);
-        Assertions.assertThat(u.getId()).isNotNull();
+        Assertions.assertThat(u.getIdentifier()).isNotNull();
 
-        User u4 = this.userDAO.findOne(u.getId());
+        User u4 = this.userDAO.findOne(u.getIdentifier());
         Assertions.assertThat(u4).isNotNull();
         Assertions.assertThat(u4.getEmail()).isNotNull();
         Assertions.assertThat(u4).isEqualTo(u);
@@ -156,7 +156,7 @@ public class UserDAOTest implements IDAOTest {
         u.setUsuario("teste6.teste6");
         u.setActive("S");
         u.setObservacao("observacao do usuario");
-        u.setToken("token");
+        u.setTk("token");
         this.userDAO.save(u);
 
         User u2 = new User();
@@ -170,7 +170,7 @@ public class UserDAOTest implements IDAOTest {
     @Transactional
     public void testFindByCriteriaCollection() {
         User u = new User();
-        u.setId(Long.parseLong("1")); 
+        u.setIdentifier(Long.parseLong("1")); 
         List<User> findByCriteria = this.userDAO.findByCriteria(u);
         User user = findByCriteria.get(0);
         Assertions.assertThat(user.getSearchNameProfile(new Profile("Perfil teste"))).isNotNull();
@@ -198,7 +198,7 @@ public class UserDAOTest implements IDAOTest {
     @Transactional
     public void testFindByCriteriaOtherProfile() {
         User u = new User();
-        u.setId(Long.parseLong("1"));
+        u.setIdentifier(Long.parseLong("1"));
         Profile p = new Profile();
         //p.setId(Long.parseLong("2"));
         p.setNome("Perfil teste 2");

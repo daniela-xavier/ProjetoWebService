@@ -3,8 +3,8 @@
  *
  * Created on 29-01-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 package com.proj.wsf.mod.user.core.dao;
@@ -12,10 +12,10 @@ package com.proj.wsf.mod.user.core.dao;
 import com.proj.wsf.core.IDAO;
 import com.proj.wsf.core.dao.impl.DAOImp;
 import com.proj.wsf.mod.user.model.Profile;
+import com.proj.wsf.mod.user.model.Profile_;
 import com.proj.wsf.mod.user.model.User;
 import com.proj.wsf.mod.user.model.UserProfile;
 import com.proj.wsf.mod.user.model.UserProfile_;
-import com.proj.wsf.mod.user.model.Profile_;
 import com.proj.wsf.mod.user.model.User_;
 import java.util.List;
 import javax.persistence.TypedQuery;
@@ -49,18 +49,17 @@ public class UserDAO extends DAOImp<User> implements IDAO<User> {
      * @return List<User>
      */
     @Override
-    public List<User> findByMaxList(int begin, int end) {
-        CriteriaBuilder builder = this.em.getCriteriaBuilder();
-        CriteriaQuery<User> query = builder.createQuery(User.class);
+    public List<User> findByMaxList(final int begin,final int end) {
+        final CriteriaBuilder builder = this.em.getCriteriaBuilder();
+        final CriteriaQuery<User> query = builder.createQuery(User.class);
 
-        TypedQuery<User> typedQuery = this.em.createQuery(
+        final TypedQuery<User> typedQuery = this.em.createQuery(
                 query.select(
                         query.from(User.class))
         ).setFirstResult(begin) // offset
                 .setMaxResults(end); // limit
 
-        List<User> results = typedQuery.getResultList();
-        return results;
+        return (List<User>) typedQuery.getResultList();
 
     }
 
@@ -71,17 +70,17 @@ public class UserDAO extends DAOImp<User> implements IDAO<User> {
      * @return List<User>
      */
     @Override
-    public List<User> findByCriteria(User usuario) {
+    public List<User> findByCriteria(final User usuario) {
 
-        CriteriaBuilder builder = this.em.getCriteriaBuilder();
-        CriteriaQuery<User> query = builder.createQuery(User.class);
+        final CriteriaBuilder builder = this.em.getCriteriaBuilder();
+        final CriteriaQuery<User> query = builder.createQuery(User.class);
         Root from = query.from(User.class);
 
         Predicate predicate = builder.and();
 
-        if (usuario.getId() != null) {
+        if (usuario.getIdentifier() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.get(User_.ID), usuario.getId()));
+                    builder.equal(from.get(User_.IDENTIFIER), usuario.getIdentifier()));
         }
 
         if (usuario.getEmail() != null) {
@@ -125,12 +124,12 @@ public class UserDAO extends DAOImp<User> implements IDAO<User> {
         }
         if (usuario.getIncludedBy() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.get(User_.INCLUDED_BY), (usuario.getIncludedBy())));
+                    builder.equal(from.get(User_.INCLUDED_BY), usuario.getIncludedBy()));
         }
 
         if (usuario.getChangedBy() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.get(User_.CHANGED_BY), (usuario.getChangedBy())));
+                    builder.equal(from.get(User_.CHANGED_BY), usuario.getChangedBy()));
         }
 
         if (usuario.getUserProfile() != null) {
@@ -139,9 +138,9 @@ public class UserDAO extends DAOImp<User> implements IDAO<User> {
             Join<UserProfile, Profile> userProfilesProfile = userProfiles.join(UserProfile_.PROFILE);
 
             Profile profile = usuario.getFirstUserProfile().getProfile();
-            if (profile.getId() != null) {
+            if (profile.getIdentifier() != null) {
                 predicate = builder.and(predicate,
-                        builder.equal(userProfilesProfile.get(Profile_.ID), profile.getId()));
+                        builder.equal(userProfilesProfile.get(Profile_.IDENTIFIER), profile.getIdentifier()));
             }
             if (profile.getNome() != null) {
                 predicate = builder.and(predicate,
@@ -149,14 +148,13 @@ public class UserDAO extends DAOImp<User> implements IDAO<User> {
             }
         }
 
-        TypedQuery<User> typedQuery = this.em.createQuery(
+        final TypedQuery<User> typedQuery = this.em.createQuery(
                 query.select(from)
                         .where(predicate)
-                        .orderBy(builder.asc(from.get(User_.ID)))
+                        .orderBy(builder.asc(from.get(User_.IDENTIFIER)))
         );
-
-        List<User> results = typedQuery.getResultList();
-        return results;
+      
+        return (List<User>) typedQuery.getResultList();
     }
 
     @Override

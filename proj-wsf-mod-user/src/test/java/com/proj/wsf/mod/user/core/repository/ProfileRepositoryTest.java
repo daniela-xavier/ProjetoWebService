@@ -99,7 +99,7 @@ public class ProfileRepositoryTest  implements IRepositoryTest {
         uR.save(entidade);
 
         try {
-            uR.delete(entidade.getId());
+            uR.delete(entidade.getIdentifier());
 
             Profile u = new Profile();
             u.setNome("Perfil ZZZ");
@@ -164,7 +164,7 @@ public class ProfileRepositoryTest  implements IRepositoryTest {
         uR.save(entidade);
 
         try {
-            List<DomainEntity> entidades = uR.findById(entidade.getId());
+            List<DomainEntity> entidades = uR.findById(entidade.getIdentifier());
             resultado.setEntity(entidades);
         } catch (Exception e) {
             System.out.println("Exception: " + e.toString() + " Message: " + e.getMessage());

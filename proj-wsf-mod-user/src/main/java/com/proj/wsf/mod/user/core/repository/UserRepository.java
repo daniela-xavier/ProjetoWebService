@@ -3,8 +3,8 @@
  *
  * Created on 05-02-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 
@@ -16,6 +16,7 @@ import com.proj.wsf.mod.user.model.User;
 import com.proj.wsf.model.DomainEntity;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Transient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -29,9 +30,13 @@ import org.springframework.stereotype.Component;
 @Component("userRepository")
 public class UserRepository implements IRepository {
 
+    /**
+     * Classe de persistencia de dados
+     */
     @Autowired
     @Qualifier(value = "userDAO")
-    UserDAO userDAO;
+    @Transient
+    private UserDAO userDAO;
 
     /**
      * Método que salva a entity fornecida no método.
@@ -41,7 +46,7 @@ public class UserRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> save(DomainEntity entity) {
-        User usuario = (User) entity;
+        final User usuario = (User) entity;
         userDAO.save(usuario);
         return returnEntitys(usuario);
     }
@@ -54,7 +59,7 @@ public class UserRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> update(DomainEntity entity) {
-        User usuario = (User) entity;
+        final User usuario = (User) entity;
         this.userDAO.update(usuario);
         return returnEntitys(entity);
     }
@@ -67,9 +72,9 @@ public class UserRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> delete(Long id) {
-        User act = this.userDAO.findOne(id);
+        User user = this.userDAO.findOne(id);
         this.userDAO.deleteById(id);
-        return returnEntitys(act);
+        return returnEntitys(user);
     }
 
      /**
@@ -80,7 +85,7 @@ public class UserRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> disable(DomainEntity entity) {
-        User usuario = (User) entity;
+        final User usuario = (User) entity;
         this.userDAO.delete(usuario);
         return returnEntitys(entity);
     }
@@ -93,7 +98,7 @@ public class UserRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> findByFilter(DomainEntity entity) {
-        User usuario = (User) entity;
+        final User usuario = (User) entity;
         List<User> entitys = this.userDAO.findByCriteria(usuario);
         return returnEntitys(entitys);
     }
@@ -117,8 +122,8 @@ public class UserRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> findById(Long id) {
-        User act = this.userDAO.findOne(id);
-        return returnEntitys(act);
+        final User usuario = this.userDAO.findOne(id);
+        return returnEntitys(usuario);
     }
 
     /**

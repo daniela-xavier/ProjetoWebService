@@ -3,8 +3,8 @@
  *
  * Created on 23-01-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 
@@ -75,7 +75,7 @@ public abstract class DAOImp<DomainEntity> implements IDAO<DomainEntity> {
      * @return List<'DomainEntity'>
      */
     @Override
-    public List<DomainEntity> findByMaxList(int begin, int end) {
+    public List<DomainEntity> findByMaxList(final int begin,final int end) {
         Session session = (Session) this.em.getDelegate();
         Criteria crit = session.createCriteria(type.getClass());
 
@@ -138,7 +138,7 @@ public abstract class DAOImp<DomainEntity> implements IDAO<DomainEntity> {
     @Override
     public void deleteById(final long id) {
         final DomainEntity entity = findOne(id);
-        delete(entity);
+        this.em.remove(entity);
     }
 
 }

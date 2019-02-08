@@ -3,8 +3,8 @@
  *
  * Created on 05-02-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 package com.proj.wsf.mod.user.core.strategy;
@@ -36,14 +36,14 @@ public class ProfileStrategy {
         /* Criando uma lista para conter as regras de negocio de Profile
          * quando a operacao for salvar
          */
-        List<IStrategy> rnsSalvarProfile = new ArrayList<IStrategy>();
+        final List<IStrategy> rnsSalvarProfile = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao salvar do Profile */
         rnsSalvarProfile.add(desabilitarAcao);
 
         /* Criando uma lista para conter as regras de negocio de Profile
          * quando a operacao for alterar
          */
-        List<IStrategy> rnsAlterarProfile = new ArrayList<IStrategy>();
+        final List<IStrategy> rnsAlterarProfile = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao alterar do Profile */
         rnsAlterarProfile.add(desabilitarAcao);
 
@@ -51,28 +51,28 @@ public class ProfileStrategy {
         /* Criando uma lista para conter as regras de negocio de act
          * quando a operacao for alterar
          */
-        List<IStrategy> rnsConsultarProfile = new ArrayList<IStrategy>();
+        final List<IStrategy> rnsConsultarProfile = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao consultar do Profile */
         rnsConsultarProfile.add(desabilitarAcao);
 
         /* Criando uma lista para conter as regras de negocio de act
          * quando a operacao for excluir
          */
-        List<IStrategy> rnsExcluirProfile = new ArrayList<IStrategy>();
+        final List<IStrategy> rnsExcluirProfile = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao excluir do Profile */
         rnsExcluirProfile.add(desabilitarAcao);
 
         /* Criando uma lista para conter as regras de negocio de act
          * quando a operacao for visualizar
          */
-        List<IStrategy> rnsVisualizarProfile = new ArrayList<IStrategy>();
+        final List<IStrategy> rnsVisualizarProfile = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao visualizar do Profile */
         rnsVisualizarProfile.add(desabilitarAcao);
         
         /* Criando uma lista para conter as regras de negocio de act
          * quando a operacao for desativar
          */
-        List<IStrategy> rnsDesativarProfile = new ArrayList<IStrategy>();
+        final List<IStrategy> rnsDesativarProfile = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao desativar do Profile */
         rnsDesativarProfile.add(desabilitarAcao);
 
@@ -103,6 +103,10 @@ public class ProfileStrategy {
 
     }
 
+    /**
+     *
+     * @return Map<String, List<IStrategy>>
+     */
     public Map<String, List<IStrategy>> getRnsProfile() {
         return rnsProfile;
     }

@@ -3,8 +3,8 @@
  *
  * Created on 29-01-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 package com.proj.wsf.mod.user.model;
@@ -43,7 +43,7 @@ import javax.persistence.Table;
 public class PermissionProfile extends DomainEntity {
 
     @EmbeddedId
-    private PermissionProfileId id;
+    private PermissionProfileId identifier;
 
     @Expose(serialize = false, deserialize = false)
     @ManyToOne(fetch = FetchType.EAGER, targetEntity = Profile.class)

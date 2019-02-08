@@ -3,8 +3,8 @@
  *
  * Created on 24-01-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 
@@ -44,7 +44,7 @@ public class Act extends DomainEntity{
     @Column(name = "AC_ID")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_ACAO")
     @SequenceGenerator(name = "SEQ_ACAO", sequenceName = "SEQ_ACAO", allocationSize=1)
-    private Long id;
+    private Long identifier;
     
     @Expose
     @Column(name = "AC_NOME", unique = true)
@@ -54,4 +54,31 @@ public class Act extends DomainEntity{
     @Column(name = "AC_DESCRICAO", unique = true)
     private String descricao;
 
+    /**
+     *
+     * @return
+     */
+    public Long getIdentifier() {
+        return identifier;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public String getNome() {
+        return nome;
+    }
+
+    /**
+     *
+     * @return
+     */
+    public String getDescricao() {
+        return descricao;
+    }
+
+    
+    
+    
 }

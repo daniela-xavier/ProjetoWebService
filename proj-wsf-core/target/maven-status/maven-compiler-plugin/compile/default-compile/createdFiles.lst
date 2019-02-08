@@ -13,6 +13,7 @@ com\proj\wsf\core\strategy\impl\ComplementaryEntityChangedInBy.class
 com\proj\wsf\core\IServico.class
 com\proj\wsf\core\application\Result.class
 com\proj\wsf\core\IRepository.class
+com\proj\wsf\core\test\AbstractControllerTest.class
 com\proj\wsf\core\strategy\impl\PasswordAuthorizedExclusion.class
 com\proj\wsf\core\service\impl\AbstractService.class
 com\proj\wsf\core\strategy\impl\ComplementaryEntityIncludedInBy.class

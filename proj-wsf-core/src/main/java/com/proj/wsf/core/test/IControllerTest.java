@@ -3,8 +3,8 @@
  *
  * Created on 31-01-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 
@@ -28,6 +28,8 @@ public interface IControllerTest {
     public void testPutInsuccess() throws Exception;
     public void testDeleteIdSucess() throws Exception;
     public void testDeleteIdInsuccess() throws Exception;
+    public void testDisableSucess() throws Exception;
+    public void testDisableInsuccess() throws Exception;
     
 
 }

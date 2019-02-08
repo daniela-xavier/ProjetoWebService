@@ -3,8 +3,8 @@
  *
  * Created on 24-01-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 package com.proj.wsf.main.core.dao;
@@ -12,7 +12,7 @@ package com.proj.wsf.main.core.dao;
 import com.proj.wsf.core.IDAO;
 import com.proj.wsf.core.dao.impl.DAOImp;
 import com.proj.wsf.main.model.Act;
-import java.util.Date;
+import com.proj.wsf.main.model.Act_;
 import java.util.List;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
@@ -44,18 +44,17 @@ public class ActDAO extends DAOImp<Act> implements IDAO<Act> {
      * @return List<Act>
      */
     @Override
-    public List<Act> findByMaxList(int begin, int end) {
-        CriteriaBuilder builder = this.em.getCriteriaBuilder();
-        CriteriaQuery<Act> query = builder.createQuery(Act.class);
+    public List<Act> findByMaxList(final int begin, final int end) {
+        final CriteriaBuilder builder = this.em.getCriteriaBuilder();
+        final CriteriaQuery<Act> query = builder.createQuery(Act.class);
 
-        TypedQuery<Act> typedQuery = this.em.createQuery(
+        final TypedQuery<Act> typedQuery = this.em.createQuery(
                 query.select(
                         query.from(Act.class))
         ).setFirstResult(begin) // offset
                 .setMaxResults(end); // limit
 
-        List<Act> results = typedQuery.getResultList();
-        return results;
+         return (List<Act>) typedQuery.getResultList();
 
     }
 
@@ -66,52 +65,57 @@ public class ActDAO extends DAOImp<Act> implements IDAO<Act> {
      * @return List<Act>
      */
     @Override
-    public List<Act> findByCriteria(Act acao) {
+    public List<Act> findByCriteria(final Act acao) {
 
-        CriteriaBuilder builder = this.em.getCriteriaBuilder();
-        CriteriaQuery<Act> query = builder.createQuery(Act.class);
+        final CriteriaBuilder builder = this.em.getCriteriaBuilder();
+        final CriteriaQuery<Act> query = builder.createQuery(Act.class);
         Root from = query.from(Act.class);
 
         Predicate predicate = builder.and();
 
-        /*if (acao.getId() != null) {
+        if (acao.getIdentifier() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<Long>get("id"), acao.getId()));
+                    builder.equal(from.get(Act_.IDENTIFIER), acao.getIdentifier()));
         }
-    
 
-        if (acao.getNomr() != null) {
-        predicate = builder.and(predicate,
-        builder.equal(from.<String>get("nome"), acao.getNome()));
-        }*/
+        if (acao.getNome() != null) {
+            predicate = builder.and(predicate,
+                    builder.equal(from.get(Act_.NOME), acao.getNome()));
+        }
+
+        if (acao.getDescricao() != null) {
+            predicate = builder.and(predicate,
+                    builder.equal(from.get(Act_.DESCRICAO), acao.getDescricao()));
+        }
+
         if (acao.getIncludedIn() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<Date>get("includedIn"), new DateTime(acao.getIncludedIn(), DateTimeZone.UTC)));
+                    builder.equal(from.get(Act_.INCLUDED_IN), new DateTime(acao.getIncludedIn(), DateTimeZone.UTC)));
         }
 
         if (acao.getChangedIn() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<Date>get("changedIn"), new DateTime(acao.getChangedIn(), DateTimeZone.UTC)));
+                    builder.equal(from.get(Act_.CHANGED_IN), new DateTime(acao.getChangedIn(), DateTimeZone.UTC)));
         }
 
         if (acao.getIncludedBy() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<String>get("includedBy"), (acao.getIncludedBy())));
+                    builder.equal(from.get(Act_.CHANGED_BY), acao.getIncludedBy()));
         }
 
         if (acao.getChangedBy() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<String>get("chancedBy"), (acao.getChangedBy())));
+                    builder.equal(from.get(Act_.CHANGED_BY), acao.getChangedBy()));
         }
 
-        TypedQuery<Act> typedQuery = this.em.createQuery(
+        final TypedQuery<Act> typedQuery = this.em.createQuery(
                 query.select(from)
                         .where(predicate)
-                        .orderBy(builder.asc(from.get("id")))
+                        .orderBy(builder.asc(from.get(Act_.IDENTIFIER)))
         );
 
-        List<Act> results = typedQuery.getResultList();
-        return results;
+        
+        return (List<Act>) typedQuery.getResultList();
     }
 
 }

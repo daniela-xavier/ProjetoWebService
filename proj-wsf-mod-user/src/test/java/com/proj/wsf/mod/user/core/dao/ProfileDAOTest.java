@@ -50,7 +50,7 @@ public class ProfileDAOTest implements IDAOTest {
         u.setNome("Perfil X");
         u.setDescricao("Descricao do perfil X");
         this.profileDAO.save(u);
-        Assertions.assertThat(u.getId()).isNotNull();
+        Assertions.assertThat(u.getIdentifier()).isNotNull();
     }
 
     @Test
@@ -78,13 +78,13 @@ public class ProfileDAOTest implements IDAOTest {
         u.setNome("PERFIL Z");
         u.setDescricao("Descricao do perfil Z");
         this.profileDAO.save(u);
-        Assertions.assertThat(u.getId()).isNotNull();
+        Assertions.assertThat(u.getIdentifier()).isNotNull();
 
         u.setNome("PERFIL Z");
         this.profileDAO.update(u);
 
-        Profile u2 = this.profileDAO.findOne(u.getId());
-        Assertions.assertThat(u2.getId()).isNotNull();
+        Profile u2 = this.profileDAO.findOne(u.getIdentifier());
+        Assertions.assertThat(u2.getIdentifier()).isNotNull();
         Assertions.assertThat(u2.getNome()).isNotNull();
         Assertions.assertThat(u2.getDescricao()).isNotNull();
 
@@ -99,11 +99,11 @@ public class ProfileDAOTest implements IDAOTest {
         u.setActive("s");
         u.setDescricao("Descricao do perfil Y");
         this.profileDAO.save(u);
-        Assertions.assertThat(u.getId()).isNotNull();
+        Assertions.assertThat(u.getIdentifier()).isNotNull();
 
         this.profileDAO.delete(u);
 
-        Profile u2 = this.profileDAO.findOne(u.getId());
+        Profile u2 = this.profileDAO.findOne(u.getIdentifier());
         Assertions.assertThat(u2.getActive()).isEqualTo("n");
 
     }
@@ -115,11 +115,11 @@ public class ProfileDAOTest implements IDAOTest {
         Profile u = new Profile();
         u.setNome("Perfil A");
         this.profileDAO.save(u);
-        Assertions.assertThat(u.getId()).isNotNull();
+        Assertions.assertThat(u.getIdentifier()).isNotNull();
 
-        this.profileDAO.deleteById(u.getId());
+        this.profileDAO.deleteById(u.getIdentifier());
 
-        Profile u4 = this.profileDAO.findOne(u.getId());
+        Profile u4 = this.profileDAO.findOne(u.getIdentifier());
         Assertions.assertThat(u4).isNull();
     }
 
@@ -131,9 +131,9 @@ public class ProfileDAOTest implements IDAOTest {
         u.setNome("Perfil B");
 
         this.profileDAO.save(u);
-        Assertions.assertThat(u.getId()).isNotNull();
+        Assertions.assertThat(u.getIdentifier()).isNotNull();
 
-        Profile u4 = this.profileDAO.findOne(u.getId());
+        Profile u4 = this.profileDAO.findOne(u.getIdentifier());
         Assertions.assertThat(u4).isNotNull();
         Assertions.assertThat(u4.getNome()).isNotNull();
         Assertions.assertThat(u4).isEqualTo(u);

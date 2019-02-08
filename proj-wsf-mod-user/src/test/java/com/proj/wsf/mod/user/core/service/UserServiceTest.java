@@ -61,7 +61,7 @@ public class UserServiceTest implements IServiceTest {
             Assertions.assertThat(nomeRegra).isNotNull();
             List<IStrategy> regras = mapaDeRegras.get(nomeRegra); 
             Assertions.assertThat(regras).isNotNull();
-            Assertions.assertThat(regras.size()).isEqualTo(0);
+            Assertions.assertThat(regras.size()).isNotEqualTo(0);
             System.out.println("Regra .: " + nomeRegra +"\n Quantidade de regras de " + nomeRegra + " .: " + regras.size());
             for (IStrategy regra : regras) {
                  System.out.println("Classe regra.:" + regra.getClass().getSimpleName());

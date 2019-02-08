@@ -3,8 +3,8 @@
  *
  * Created on 29-01-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 
@@ -21,7 +21,7 @@ import javax.persistence.EmbeddedId;
 public class ActMicroService {
     
     @EmbeddedId
-    private ActMicroServiceId id;
+    private ActMicroServiceId identifier;
     
     
 

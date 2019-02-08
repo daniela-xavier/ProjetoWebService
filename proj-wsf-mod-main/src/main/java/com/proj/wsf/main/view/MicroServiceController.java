@@ -3,8 +3,8 @@
  *
  * Created on 24-01-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 
@@ -36,6 +36,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/microService")
 public class MicroServiceController extends DomainEntityController<MicroService> {
 
+     /**
+     * Construtor da classe
+     */
     public MicroServiceController() {
         super(MicroService.class);
     }
@@ -54,7 +57,7 @@ public class MicroServiceController extends DomainEntityController<MicroService>
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity getEntityById(@PathVariable String id) {
+    ResponseEntity getEntityById(@PathVariable final String id) {
         return super.getEntityById(id);
     }
 
@@ -71,7 +74,7 @@ public class MicroServiceController extends DomainEntityController<MicroService>
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity getEntityByFiltro(@RequestBody MicroService entity) {
+    ResponseEntity getEntityByFiltro(@RequestBody final MicroService entity) {
         return super.getEntityByFiltro(entity);
     }
 
@@ -88,7 +91,7 @@ public class MicroServiceController extends DomainEntityController<MicroService>
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity createEntity(@RequestBody MicroService entity) {
+    ResponseEntity createEntity(@RequestBody final MicroService entity) {
         return super.createEntity(entity);
     }
 
@@ -105,7 +108,7 @@ public class MicroServiceController extends DomainEntityController<MicroService>
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity updateEntity(@RequestBody MicroService entity) {
+    ResponseEntity updateEntity(@RequestBody final MicroService entity) {
         return super.updateEntity(entity);
     }
 
@@ -121,7 +124,7 @@ public class MicroServiceController extends DomainEntityController<MicroService>
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity deleteEntity(@PathVariable String id) {
+    ResponseEntity deleteEntity(@PathVariable final String id) {
         return super.deleteEntity(id);
     }
 
@@ -138,7 +141,7 @@ public class MicroServiceController extends DomainEntityController<MicroService>
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity disableEntity(@RequestBody MicroService entity) {
+    ResponseEntity disableEntity(@RequestBody final MicroService entity) {
         return super.disableEntity(entity);
     }
     

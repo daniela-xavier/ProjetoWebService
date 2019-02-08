@@ -3,27 +3,21 @@
  *
  * Created on 29-01-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 package com.proj.wsf.mod.user.model;
 
 import com.google.gson.annotations.Expose;
 import com.proj.wsf.model.DomainEntity;
-import java.util.Collection;
-import java.util.Collections;
-import java.util.Optional;
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
 import javax.persistence.Column;
 import javax.persistence.Entity;
-import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
-import javax.persistence.JoinColumn;
-import javax.persistence.OneToMany;
 import javax.persistence.SequenceGenerator;
 import javax.persistence.Table;
 
@@ -52,7 +46,7 @@ public class Profile extends DomainEntity {
     @Column(name = "PE_ID")
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_PERFIL")
     @SequenceGenerator(name = "SEQ_PERFIL", sequenceName = "SEQ_PERFIL", allocationSize = 1)
-    private Long id;
+    private Long identifier;
 
     @Expose
     @Column(name = "PE_NOME", unique = true)
@@ -62,34 +56,64 @@ public class Profile extends DomainEntity {
     @Column(name = "PE_DESCRICAO")
     private String descricao;
 
+    /**
+     *
+     */
     public Profile() {
     }
     
+    /**
+     *
+     * @param nome
+     */
     public Profile(String nome) {
        this.nome = nome;    
     }
  
-
-    public Long getId() {
-        return id;
+    /**
+     *
+     * @return
+     */
+    public Long getIdentifier() {
+        return identifier;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getNome() {
         return nome;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getDescricao() {
         return descricao;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    /**
+     *
+     * @param identifier
+     */
+    public void setIdentifier(Long identifier) {
+        this.identifier = identifier;
     }
 
+    /**
+     *
+     * @param nome
+     */
     public void setNome(String nome) {
         this.nome = nome;
     }
 
+    /**
+     *
+     * @param descricao
+     */
     public void setDescricao(String descricao) {
         this.descricao = descricao;
     }

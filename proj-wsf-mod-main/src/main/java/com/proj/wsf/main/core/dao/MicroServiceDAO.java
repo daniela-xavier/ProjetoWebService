@@ -3,17 +3,16 @@
  *
  * Created on 24-01-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
-
 package com.proj.wsf.main.core.dao;
 
 import com.proj.wsf.core.IDAO;
 import com.proj.wsf.core.dao.impl.DAOImp;
 import com.proj.wsf.main.model.MicroService;
-import java.util.Date;
+import com.proj.wsf.main.model.MicroService_;
 import java.util.List;
 import javax.persistence.TypedQuery;
 import javax.persistence.criteria.CriteriaBuilder;
@@ -26,9 +25,10 @@ import org.springframework.stereotype.Component;
 import org.springframework.stereotype.Repository;
 
 /**
- * Description the class  MicroServiceDAO - xxxxx
+ * Description the class MicroServiceDAO - xxxxx
+ *
  * @author Daniela Xavier Conceição - sistemas@fozadvogados.com.br
- * @version $v rev. $rev  $Revision$
+ * @version $v rev. $rev $Revision$
  * @since Build 1.1 24/01/2019
  */
 @Component("microServiceDAO")
@@ -36,26 +36,25 @@ import org.springframework.stereotype.Repository;
 public class MicroServiceDAO extends DAOImp<MicroService> implements IDAO<MicroService> {
 
     /**
-     * Método que consulta todos os MicroService, porém retorna no numero inicial ao
-     * numero final estabelecidos na consulta.
+     * Método que consulta todos os MicroService, porém retorna no numero
+     * inicial ao numero final estabelecidos na consulta.
      *
      * @param begin
      * @param end
      * @return List<MicroService>
      */
     @Override
-    public List<MicroService> findByMaxList(int begin, int end) {
-        CriteriaBuilder builder = this.em.getCriteriaBuilder();
-        CriteriaQuery<MicroService> query = builder.createQuery(MicroService.class);
+    public List<MicroService> findByMaxList(final int begin, final int end) {
+        final CriteriaBuilder builder = this.em.getCriteriaBuilder();
+        final CriteriaQuery<MicroService> query = builder.createQuery(MicroService.class);
 
-        TypedQuery<MicroService> typedQuery = this.em.createQuery(
+        final TypedQuery<MicroService> typedQuery = this.em.createQuery(
                 query.select(
                         query.from(MicroService.class))
         ).setFirstResult(begin) // offset
                 .setMaxResults(end); // limit
-
-        List<MicroService> results = typedQuery.getResultList();
-        return results;
+      
+        return (List<MicroService>) typedQuery.getResultList();
 
     }
 
@@ -66,52 +65,61 @@ public class MicroServiceDAO extends DAOImp<MicroService> implements IDAO<MicroS
      * @return List<MicroService>
      */
     @Override
-    public List<MicroService> findByCriteria(MicroService microService) {
+    public List<MicroService> findByCriteria(final MicroService microService) {
 
-        CriteriaBuilder builder = this.em.getCriteriaBuilder();
-        CriteriaQuery<MicroService> query = builder.createQuery(MicroService.class);
+        final CriteriaBuilder builder = this.em.getCriteriaBuilder();
+        final CriteriaQuery<MicroService> query = builder.createQuery(MicroService.class);
         Root from = query.from(MicroService.class);
 
         Predicate predicate = builder.and();
 
-        /*if (microService.getId() != null) {
+        if (microService.getIdentifier() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<Long>get("id"), microService.getId()));
+                    builder.equal(from.get(MicroService_.IDENTIFIER), microService.getIdentifier()));
         }
-    
 
-        if (microService.getNomr() != null) {
-        predicate = builder.and(predicate,
-        builder.equal(from.<String>get("nome"), microService.getNome()));
-        }*/
+        if (microService.getNome() != null) {
+            predicate = builder.and(predicate,
+                    builder.equal(from.get(MicroService_.NOME), microService.getNome()));
+        }
+        
+        if (microService.getDescricao()!= null) {
+            predicate = builder.and(predicate,
+                    builder.equal(from.get(MicroService_.DESCRICAO), microService.getDescricao()));
+        }
+        
+        if (microService.getFluxo()!= null) {
+            predicate = builder.and(predicate,
+                    builder.equal(from.get(MicroService_.FLUXO), microService.getFluxo()));
+        }
+
         if (microService.getIncludedIn() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<Date>get("includedIn"), new DateTime(microService.getIncludedIn(), DateTimeZone.UTC)));
+                    builder.equal(from.get(MicroService_.INCLUDED_IN), new DateTime(microService.getIncludedIn(), DateTimeZone.UTC)));
         }
 
         if (microService.getChangedIn() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<Date>get("changedIn"), new DateTime(microService.getChangedIn(), DateTimeZone.UTC)));
+                    builder.equal(from.get(MicroService_.CHANGED_IN), new DateTime(microService.getChangedIn(), DateTimeZone.UTC)));
         }
 
         if (microService.getIncludedBy() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<String>get("includedBy"), (microService.getIncludedBy())));
+                    builder.equal(from.get(MicroService_.INCLUDED_BY), microService.getIncludedBy()));
         }
 
         if (microService.getChangedBy() != null) {
             predicate = builder.and(predicate,
-                    builder.equal(from.<String>get("chancedBy"), (microService.getChangedBy())));
+                    builder.equal(from.get(MicroService_.CHANGED_BY), microService.getChangedBy()));
         }
 
-        TypedQuery<MicroService> typedQuery = this.em.createQuery(
+        final TypedQuery<MicroService> typedQuery = this.em.createQuery(
                 query.select(from)
                         .where(predicate)
-                        .orderBy(builder.asc(from.get("id")))
+                        .orderBy(builder.asc(from.get(MicroService_.IDENTIFIER)))
         );
 
-        List<MicroService> results = typedQuery.getResultList();
-        return results;
+        return (List<MicroService>) typedQuery.getResultList();
     }
 
 }

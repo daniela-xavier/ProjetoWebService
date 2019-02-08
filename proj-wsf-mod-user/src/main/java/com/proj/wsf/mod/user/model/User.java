@@ -3,8 +3,8 @@
  *
  * Created on 29-01-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 package com.proj.wsf.mod.user.model;
@@ -54,7 +54,7 @@ public class User extends DomainEntity {
     @Column(name = "US_ID", nullable = false)
     @GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "SEQ_USUARIO")
     @SequenceGenerator(name = "SEQ_USUARIO", sequenceName = "SEQ_USUARIO", allocationSize = 1)
-    private Long id;
+    private Long identifier;
 
     @Expose
     @Column(name = "US_USUARIO", unique = true, nullable = false)
@@ -77,42 +77,82 @@ public class User extends DomainEntity {
     @JoinColumn(name = "US_ID")
     private Collection<UserProfile> userProfiles;
 
-    public Long getId() {
-        return id;
+    /**
+     *
+     * @return
+     */
+    public Long getIdentifier() {
+        return identifier;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getUsuario() {
         return usuario;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getEmail() {
         return email;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getObservacao() {
         return observacao;
     }
 
+    /**
+     *
+     * @return
+     */
     public String getToken() {
         return token;
     }
 
-    public void setId(Long id) {
-        this.id = id;
+    /**
+     *
+     * @param identifier
+     */
+    public void setIdentifier(Long identifier) {
+        this.identifier = identifier;
     }
 
+    /**
+     *
+     * @param usuario
+     */
     public void setUsuario(String usuario) {
         this.usuario = usuario;
     }
 
+    /**
+     *
+     * @param email
+     */
     public void setEmail(String email) {
         this.email = email;
     }
 
+    /**
+     *
+     * @param observacao
+     */
     public void setObservacao(String observacao) {
         this.observacao = observacao;
     }
 
+    /**
+     *
+     * @param profile
+     */
     public void addProfileCollectionUserProfile(Profile profile) {
         Collection<UserProfile> userProfs;
 
@@ -129,6 +169,10 @@ public class User extends DomainEntity {
 
     }
 
+    /**
+     *
+     * @return
+     */
     public Collection<UserProfile> getUserProfile() {
         
         if (this.userProfiles == null) {
@@ -139,12 +183,21 @@ public class User extends DomainEntity {
         return listaSegura;
     }
 
+    /**
+     *
+     * @return
+     */
     public UserProfile getFirstUserProfile() {
         Collection<UserProfile> listaSegura = Collections.unmodifiableCollection(this.userProfiles);
         Optional<UserProfile> firstElement = listaSegura.stream().findFirst();
         return firstElement.get();
     }
 
+    /**
+     *
+     * @param profile
+     * @return
+     */
     public UserProfile getSearchNameProfile(Profile profile) {
         Collection<UserProfile> listaSegura = Collections.unmodifiableCollection(this.userProfiles);
         UserProfile userProfile

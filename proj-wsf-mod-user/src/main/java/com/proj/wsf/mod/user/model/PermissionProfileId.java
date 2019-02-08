@@ -3,8 +3,8 @@
  *
  * Created on 29-01-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 package com.proj.wsf.mod.user.model;
@@ -30,20 +30,38 @@ public class PermissionProfileId implements Serializable {
     @Column(name = "MS_AC_ID", nullable = false, insertable = false, updatable = false)
     private Long idActMicroService;
 
-    // must have a default construcot
+    
+
+    /**
+     * default construcot
+     */
     public PermissionProfileId() {
     }
 
+    /**
+     *
+     * @param idProfile
+     * @param idActMicroService
+     */
     public PermissionProfileId(Long idProfile, Long idActMicroService) {
         this.idProfile = idProfile;
         this.idActMicroService = idActMicroService;
     }
      
+    /**
+     * 
+     * @return int
+     */
     @Override
     public int hashCode() {
         return (int) (idProfile + idActMicroService);
     }
 
+    /**
+     * 
+     * @param obj
+     * @return boolean
+     */
     @Override
     public boolean equals(Object obj) {
         if (obj instanceof PermissionProfileId) {

@@ -3,8 +3,8 @@
  *
  * Created on 29-01-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 package com.proj.wsf.mod.user.model;
@@ -20,7 +20,6 @@ import javax.persistence.EmbeddedId;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
 import javax.persistence.JoinColumn;
-import javax.persistence.ManyToOne;
 import javax.persistence.OneToOne;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
@@ -48,7 +47,7 @@ import javax.persistence.TemporalType;
 public class UserProfile extends DomainEntity {
 
     @EmbeddedId
-    private UserProfileId id;
+    private UserProfileId identifier;
 
     @Expose
     @Column(name = "UP_DATA_INICIO")
@@ -69,10 +68,18 @@ public class UserProfile extends DomainEntity {
     @JoinColumn(name = "PE_ID", nullable = false, insertable = false, updatable = false)
     private Profile profile;
 
+    /**
+     *
+     * @return
+     */
     public Profile getProfile() {
         return profile;
     }
 
+    /**
+     *
+     * @param profile
+     */
     public void setProfile(Profile profile) {
         this.profile = profile;
     }

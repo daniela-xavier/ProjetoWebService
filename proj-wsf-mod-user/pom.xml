@@ -80,6 +80,7 @@
                         <groupId>org.hibernate</groupId>
                         <artifactId>hibernate-jpamodelgen</artifactId>
                         <version>5.4.0.Final</version>
+                        <scope>compile</scope>
                     </dependency>
                 </dependencies>
             </plugin>
@@ -142,14 +143,7 @@
                 <artifactId>maven-jxr-plugin</artifactId>
                 <version>2.5</version>
             </plugin>
-            <plugin>               
-                <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-javadoc-plugin</artifactId>
-                <version>2.10.3</version>
-                <configuration>
-                    <additionalparam>-Xdoclint:none</additionalparam>
-                </configuration>
-            </plugin>            
+                       
             <plugin>
                 <!-- The PMD plugin generates PMD and CPD reports using the PMD code 
                 analysis tool. -->

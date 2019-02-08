@@ -3,8 +3,8 @@
  *
  * Created on 23-01-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 package com.proj.wsf.model;
@@ -54,7 +54,7 @@ public class DomainEntity implements IEntity, Serializable {
 
     @Transient
     @Expose
-    private String token;
+    private String tk;
 
     @Transient
     @Expose
@@ -151,12 +151,12 @@ public class DomainEntity implements IEntity, Serializable {
     }
 
     /**
-     * Método para inserção do token.
+     * Método para inserção do tk.
      *
-     * @param token
+     * @param tk
      */
-    public void setToken(String token) {
-        this.token = token;
+    public void setTk(String tk) {
+        this.tk = tk;
     }
 
     /**

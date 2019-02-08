@@ -3,8 +3,8 @@
  *
  * Created on 05-02-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 package com.proj.wsf.mod.user.view;
@@ -40,6 +40,9 @@ import org.springframework.web.bind.annotation.RestController;
 @Api(value = "API REST FOZ - PROFILE")
 public class ProfileController extends DomainEntityController<Profile> {
 
+    /**
+     * Construtor da classe
+     */
     public ProfileController() {
         super(Profile.class);
     }
@@ -57,7 +60,7 @@ public class ProfileController extends DomainEntityController<Profile> {
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity getEntityById(@PathVariable String id) {
+    ResponseEntity getEntityById(@PathVariable final String id) {
         return super.getEntityById(id);
     }
 
@@ -74,7 +77,7 @@ public class ProfileController extends DomainEntityController<Profile> {
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity getEntityByFiltro(@RequestBody Profile entity) {
+    ResponseEntity getEntityByFiltro(@RequestBody final Profile entity) {
         return super.getEntityByFiltro(entity);
     }
 
@@ -91,7 +94,7 @@ public class ProfileController extends DomainEntityController<Profile> {
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity createEntity(@RequestBody Profile entity) {
+    ResponseEntity createEntity(@RequestBody final Profile entity) {
         return super.createEntity(entity);
     }
 
@@ -108,7 +111,7 @@ public class ProfileController extends DomainEntityController<Profile> {
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity updateEntity(@RequestBody Profile entity) {
+    ResponseEntity updateEntity(@RequestBody final Profile entity) {
         return super.updateEntity(entity);
     }
 
@@ -124,7 +127,7 @@ public class ProfileController extends DomainEntityController<Profile> {
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity deleteEntity(@PathVariable String id) {
+    ResponseEntity deleteEntity(@PathVariable final String id) {
         return super.deleteEntity(id);
     }
 
@@ -140,7 +143,7 @@ public class ProfileController extends DomainEntityController<Profile> {
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity disableEntity(@RequestBody Profile entity) {
+    ResponseEntity disableEntity(@RequestBody final Profile entity) {
         return super.disableEntity(entity);
     }
 

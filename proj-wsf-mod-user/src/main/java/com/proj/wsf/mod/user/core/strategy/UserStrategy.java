@@ -3,8 +3,8 @@
  *
  * Created on 05-02-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 package com.proj.wsf.mod.user.core.strategy;
@@ -36,14 +36,14 @@ public class UserStrategy {
         /* Criando uma lista para conter as regras de negocio de User
          * quando a operacao for salvar
          */
-        List<IStrategy> rnsSalvarUser = new ArrayList<IStrategy>();
+        final List<IStrategy> rnsSalvarUser = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao salvar do User */
         rnsSalvarUser.add(desabilitarAcao);
 
         /* Criando uma lista para conter as regras de negocio de User
          * quando a operacao for alterar
          */
-        List<IStrategy> rnsAlterarUser = new ArrayList<IStrategy>();
+        final List<IStrategy> rnsAlterarUser = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao alterar do User */
         rnsAlterarUser.add(desabilitarAcao);
 
@@ -51,28 +51,28 @@ public class UserStrategy {
         /* Criando uma lista para conter as regras de negocio de act
          * quando a operacao for alterar
          */
-        List<IStrategy> rnsConsultarUser = new ArrayList<IStrategy>();
+        final List<IStrategy> rnsConsultarUser = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao consultar do User */
         rnsConsultarUser.add(desabilitarAcao);
 
         /* Criando uma lista para conter as regras de negocio de act
          * quando a operacao for excluir
          */
-        List<IStrategy> rnsExcluirUser = new ArrayList<IStrategy>();
+        final List<IStrategy> rnsExcluirUser = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao excluir do User */
         rnsExcluirUser.add(desabilitarAcao);
 
         /* Criando uma lista para conter as regras de negocio de act
          * quando a operacao for visualizar
          */
-        List<IStrategy> rnsVisualizarUser = new ArrayList<IStrategy>();
+        final List<IStrategy> rnsVisualizarUser = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao visualizar do User */
         rnsVisualizarUser.add(desabilitarAcao);
         
         /* Criando uma lista para conter as regras de negocio de act
          * quando a operacao for desativar
          */
-        List<IStrategy> rnsDesativarUser = new ArrayList<IStrategy>();
+        final List<IStrategy> rnsDesativarUser = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao desativar do User */
         rnsDesativarUser.add(desabilitarAcao);
 
@@ -103,6 +103,10 @@ public class UserStrategy {
 
     }
 
+    /**
+     *
+     * @return  Map<String, List<IStrategy>>
+     */
     public Map<String, List<IStrategy>> getRnsUser() {
         return rnsUser;
     }

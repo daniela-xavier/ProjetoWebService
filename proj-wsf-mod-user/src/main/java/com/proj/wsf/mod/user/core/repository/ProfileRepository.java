@@ -3,8 +3,8 @@
  *
  * Created on 05-02-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 
@@ -16,6 +16,7 @@ import com.proj.wsf.mod.user.model.Profile;
 import com.proj.wsf.model.DomainEntity;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Transient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -29,9 +30,13 @@ import org.springframework.stereotype.Component;
 @Component("profileRepository")
 public class ProfileRepository implements IRepository {
 
+    /**
+     * Classe de persistencia de dados
+     */
     @Autowired
     @Qualifier(value = "profileDAO")
-    ProfileDAO profileDAO;
+    @Transient
+    private ProfileDAO profileDAO;
 
     /**
      * Método que salva a entity fornecida no método.
@@ -41,7 +46,7 @@ public class ProfileRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> save(DomainEntity entity) {
-        Profile perfil = (Profile) entity;
+        final Profile perfil = (Profile) entity;
         profileDAO.save(perfil);
         return returnEntitys(perfil);
     }
@@ -54,7 +59,7 @@ public class ProfileRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> update(DomainEntity entity) {
-        Profile perfil = (Profile) entity;
+        final Profile perfil = (Profile) entity;
         this.profileDAO.update(perfil);
         return returnEntitys(entity);
     }
@@ -67,9 +72,9 @@ public class ProfileRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> delete(Long id) {
-        Profile act = this.profileDAO.findOne(id);
+        Profile profile = this.profileDAO.findOne(id);
         this.profileDAO.deleteById(id);
-        return returnEntitys(act);
+        return returnEntitys(profile);
     }
 
     /**
@@ -80,7 +85,7 @@ public class ProfileRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> disable(DomainEntity entity) {
-        Profile perfil = (Profile) entity;
+        final Profile perfil = (Profile) entity;
         this.profileDAO.delete(perfil);
         return returnEntitys(entity);
     }
@@ -93,7 +98,7 @@ public class ProfileRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> findByFilter(DomainEntity entity) {
-        Profile perfil = (Profile) entity;
+        final Profile perfil = (Profile) entity;
         List<Profile> entitys = this.profileDAO.findByCriteria(perfil);
         return returnEntitys(entitys);
     }
@@ -117,8 +122,8 @@ public class ProfileRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> findById(Long id) {
-        Profile act = this.profileDAO.findOne(id);
-        return returnEntitys(act);
+        Profile profile = this.profileDAO.findOne(id);
+        return returnEntitys(profile);
     }
 
     /**

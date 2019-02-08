@@ -101,7 +101,7 @@ public class UserRepositoryTest  implements IRepositoryTest {
         uR.save(entidade);
 
         try {
-            uR.delete(entidade.getId());
+            uR.delete(entidade.getIdentifier());
 
             User u = new User();
             u.setEmail("teste3@teste.com.br");
@@ -168,7 +168,7 @@ public class UserRepositoryTest  implements IRepositoryTest {
         uR.save(entidade);
 
         try {
-            List<DomainEntity> entidades = uR.findById(entidade.getId());
+            List<DomainEntity> entidades = uR.findById(entidade.getIdentifier());
             resultado.setEntity(entidades);
         } catch (Exception e) {
             System.out.println("Exception: " + e.toString() + " Message: " + e.getMessage());

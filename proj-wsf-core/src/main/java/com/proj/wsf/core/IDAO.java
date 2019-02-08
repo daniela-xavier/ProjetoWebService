@@ -3,8 +3,8 @@
  *
  * Created on 23-01-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 
@@ -51,7 +51,7 @@ public interface IDAO<DomainEntity> {
      * @param end
      * @return List<'DomainEntity'>
      */
-    public List<DomainEntity> findByMaxList(int begin, int end);
+    public List<DomainEntity> findByMaxList(final int begin,final int end);
 
     /**
      * Método de pesquisa de entidade por critérios.

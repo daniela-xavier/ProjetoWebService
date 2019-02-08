@@ -3,8 +3,8 @@
  *
  * Created on 24-01-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
 package com.proj.wsf.main.core.repository;
@@ -15,6 +15,7 @@ import com.proj.wsf.main.model.MainConfiguration;
 import com.proj.wsf.model.DomainEntity;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Transient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
@@ -29,9 +30,13 @@ import org.springframework.stereotype.Component;
 @Component("mainConfigurationRepository")
 public class MainConfigurationRepository implements IRepository {
 
+    /**
+     * Classe de persistencia de dados
+     */
     @Autowired
     @Qualifier(value = "mainConfigurationDAO")
-    MainConfigurationDAO mainConfigurationDAO;
+    @Transient
+    private MainConfigurationDAO mainConfigurationDAO;
 
     /**
      * Método que salva a entity fornecida no método.
@@ -41,9 +46,9 @@ public class MainConfigurationRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> save(DomainEntity entity) {
-        MainConfiguration u = (MainConfiguration) entity;
-        mainConfigurationDAO.save(u);
-        return returnEntitys(u);
+        final MainConfiguration mc = (MainConfiguration) entity;
+        mainConfigurationDAO.save(mc);
+        return returnEntitys(mc);
     }
 
     /**
@@ -54,8 +59,8 @@ public class MainConfigurationRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> update(DomainEntity entity) {
-        MainConfiguration u = (MainConfiguration) entity;
-        this.mainConfigurationDAO.update(u);
+        final MainConfiguration mc = (MainConfiguration) entity;
+        this.mainConfigurationDAO.update(mc);
         return returnEntitys(entity);
     }
 
@@ -93,8 +98,8 @@ public class MainConfigurationRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> findByFilter(DomainEntity entity) {
-        MainConfiguration u = (MainConfiguration) entity;
-        List<MainConfiguration> entitys = this.mainConfigurationDAO.findByCriteria(u);
+        final MainConfiguration mc = (MainConfiguration) entity;
+        List<MainConfiguration> entitys = this.mainConfigurationDAO.findByCriteria(mc);
         return returnEntitys(entitys);
     }
 

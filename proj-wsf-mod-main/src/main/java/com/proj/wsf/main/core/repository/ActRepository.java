@@ -3,11 +3,10 @@
  *
  * Created on 24-01-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados Company, Inc.  All Rights Reserved.
- * This software is the proprietary information of Foz Sociedade de Advogados Company.
+ * Copyright(c) 2019 Foz Sociedade de Advogados.
+ 
  *
  */
-
 package com.proj.wsf.main.core.repository;
 
 import com.proj.wsf.core.IRepository;
@@ -16,22 +15,28 @@ import com.proj.wsf.main.model.Act;
 import com.proj.wsf.model.DomainEntity;
 import java.util.ArrayList;
 import java.util.List;
+import javax.persistence.Transient;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 /**
- * Description the class  ActRepository - xxxxx
+ * Description the class ActRepository - xxxxx
+ *
  * @author Daniela Xavier Conceição - sistemas@fozadvogados.com.br
- * @version $v rev. $rev  $Revision$
+ * @version $v rev. $rev $Revision$
  * @since Build 1.1 24/01/2019
  */
 @Component("actRepository")
 public class ActRepository implements IRepository {
 
+    /**
+     * Classe de persistencia de dados
+     */
     @Autowired
     @Qualifier(value = "actDAO")
-    ActDAO actDAO;
+    @Transient
+    private ActDAO actDAO;
 
     /**
      * Método que salva a entity fornecida no método.
@@ -41,7 +46,7 @@ public class ActRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> save(DomainEntity entity) {
-        Act acao = (Act) entity;
+        final Act acao =(Act) entity;
         actDAO.save(acao);
         return returnEntitys(acao);
     }
@@ -54,7 +59,7 @@ public class ActRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> update(DomainEntity entity) {
-        Act acao = (Act) entity;
+        final Act acao =(Act) entity;
         this.actDAO.update(acao);
         return returnEntitys(entity);
     }
@@ -71,16 +76,16 @@ public class ActRepository implements IRepository {
         this.actDAO.deleteById(id);
         return returnEntitys(act);
     }
-    
+
     /**
      * Método que desativa a entidade, por meio do id fornecido no método.
      *
-     * @param entity 
+     * @param entity
      * @return List<'DomainEntity'>
      */
     @Override
     public List<DomainEntity> disable(DomainEntity entity) {
-         Act acao = (Act) entity;
+        final Act acao =(Act) entity;
         this.actDAO.delete(acao);
         return returnEntitys(entity);
     }
@@ -93,7 +98,7 @@ public class ActRepository implements IRepository {
      */
     @Override
     public List<DomainEntity> findByFilter(DomainEntity entity) {
-        Act acao = (Act) entity;
+        final Act acao =(Act) entity;
         List<Act> entitys = this.actDAO.findByCriteria(acao);
         return returnEntitys(entitys);
     }
@@ -122,9 +127,9 @@ public class ActRepository implements IRepository {
     }
 
     /**
-     * 
+     *
      * @param entity
-     * @return 
+     * @return
      */
     public List<DomainEntity> returnEntitys(DomainEntity entity) {
         List<DomainEntity> entitys = new ArrayList<DomainEntity>();
@@ -133,9 +138,9 @@ public class ActRepository implements IRepository {
     }
 
     /**
-     * 
+     *
      * @param entitys
-     * @return 
+     * @return
      */
     public List<DomainEntity> returnEntitys(List<Act> entitys) {
         List<DomainEntity> ents = new ArrayList<DomainEntity>();
