@@ -10,12 +10,19 @@
 package com.proj.wsf.main.view;
 
 import com.proj.wsf.main.model.Act;
+import com.proj.wsf.model.interfaces.OnDisable;
+import com.proj.wsf.model.interfaces.OnFindFilter;
+import com.proj.wsf.model.interfaces.OnSave;
+import com.proj.wsf.model.interfaces.OnUpdate;
 import com.proj.wsf.view.controller.DomainEntityController;
 import io.swagger.annotations.ApiOperation;
+import java.util.Optional;
 import javax.transaction.Transactional;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -50,13 +57,14 @@ public class ActController extends DomainEntityController<Act> {
      * @param idAct - Identificador da classe.
      * @return ResponseEntity - Entidade resposta.
      */
-    @GetMapping(value = "{idAct}", consumes = {MediaType.APPLICATION_JSON_VALUE},
-            produces = {MediaType.APPLICATION_JSON_VALUE})
+    @GetMapping(value = "{idAct}", 
+            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @ApiOperation(value = "Retorna o evento do sistema")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity getEntityById(@PathVariable final String idAct) {
+    ResponseEntity getEntityById(@PathVariable final Optional<String> idAct) {
         return super.getEntityById(idAct);
     }
 
@@ -67,14 +75,15 @@ public class ActController extends DomainEntityController<Act> {
      * @param entity - RequestBody Entidade da classe
      * @return ResponseEntity - ResponseBody.
      */
-    @GetMapping(consumes = {MediaType.APPLICATION_JSON_VALUE},
-            produces = {MediaType.APPLICATION_JSON_VALUE})
+    @GetMapping(
+            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @ApiOperation(value = "Retorna uma lista de eventos do sistema")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity getEntityByFiltro(@RequestBody final Act entity) {
-        return super.getEntityByFiltro(entity);
+    ResponseEntity getEntityByFiltro(@Validated(OnFindFilter.class) @RequestBody Act entity, BindingResult result) {
+        return super.getEntityByFiltro(entity, result);
     }
 
     /**
@@ -84,14 +93,15 @@ public class ActController extends DomainEntityController<Act> {
      * @param entity - RequestBody Entidade da classe.
      * @return ResponseEntity - RequestBody.
      */
-    @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE},
-            produces = {MediaType.APPLICATION_JSON_VALUE})
+    @PostMapping(
+            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @ApiOperation(value = "Cria um evento do sistema")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity createEntity(@RequestBody final Act entity) {
-        return super.createEntity(entity);
+    ResponseEntity createEntity(@Validated(OnSave.class) @RequestBody Act entity, BindingResult result) {
+        return super.createEntity(entity, result);
     }
 
     /**
@@ -101,14 +111,15 @@ public class ActController extends DomainEntityController<Act> {
      * @param entity - RequestBody Entidade da classe.
      * @return ResponseEntity - RequestBody.
      */
-    @PutMapping(consumes = {MediaType.APPLICATION_JSON_VALUE},
-            produces = {MediaType.APPLICATION_JSON_VALUE})
+    @PutMapping(
+            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @ApiOperation(value = "Altera o evento do sistema")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity updateEntity(@RequestBody final Act entity) {
-        return super.updateEntity(entity);
+    ResponseEntity updateEntity(@Validated(OnUpdate.class) @RequestBody Act entity, BindingResult result) {
+        return super.updateEntity(entity, result);
     }
 
     /**
@@ -118,12 +129,14 @@ public class ActController extends DomainEntityController<Act> {
      * @param idAct - Identificador da classe.
      * @return ResponseEntity - RequestBody.
      */
-    @DeleteMapping(value = "{idAct}", consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
+    @DeleteMapping(value = "{idAct}", 
+            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE}, 
+            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @ApiOperation(value = "Deleta um evento do sistema")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity deleteEntity(@PathVariable final String idAct) {
+    ResponseEntity deleteEntity(@PathVariable Optional<String> idAct) {
         return super.deleteEntity(idAct);
     }
 
@@ -134,13 +147,15 @@ public class ActController extends DomainEntityController<Act> {
      * @param entity - RequestBody Entidade da classe.
      * @return ResponseEntity - RequestBody.
      */
-    @DeleteMapping(consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
+    @DeleteMapping(
+            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE}, 
+            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @ApiOperation(value = "Desativa um evento do sistema")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity disableEntity(@RequestBody final Act entity) {
-        return super.disableEntity(entity);
+    ResponseEntity disableEntity(@Validated(OnDisable.class) @RequestBody Act entity, BindingResult result) {
+        return super.disableEntity(entity, result);
     }
 
 }

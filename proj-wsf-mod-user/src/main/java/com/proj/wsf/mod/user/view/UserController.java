@@ -10,13 +10,20 @@
 package com.proj.wsf.mod.user.view;
 
 import com.proj.wsf.mod.user.model.User;
+import com.proj.wsf.model.interfaces.OnDisable;
+import com.proj.wsf.model.interfaces.OnFindFilter;
+import com.proj.wsf.model.interfaces.OnSave;
+import com.proj.wsf.model.interfaces.OnUpdate;
 import com.proj.wsf.view.controller.DomainEntityController;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import java.util.Optional;
 import javax.transaction.Transactional;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -38,6 +45,7 @@ import org.springframework.web.bind.annotation.RestController;
 @Controller(value = "userController")
 @RequestMapping("/user")
 @Api(value = "API REST FOZ - USER")
+@Validated
 public class UserController extends DomainEntityController<User> {
 
     /**
@@ -55,13 +63,13 @@ public class UserController extends DomainEntityController<User> {
      * @return ResponseEntity - Entidade resposta.
      */
     @GetMapping(value = "{idUser}",
-            consumes = {MediaType.APPLICATION_JSON_VALUE},
-            produces = {MediaType.APPLICATION_JSON_VALUE})
+            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @ApiOperation(value = "Retorna a entidade usuário")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity getEntityById(@PathVariable final String idUser) {
+    ResponseEntity getEntityById(@PathVariable final Optional<String> idUser) {
         return super.getEntityById(idUser);
     }
 
@@ -73,14 +81,14 @@ public class UserController extends DomainEntityController<User> {
      * @return ResponseEntity - ResponseBody.
      */
     @GetMapping(
-            consumes = {MediaType.APPLICATION_JSON_VALUE},
-            produces = {MediaType.APPLICATION_JSON_VALUE})
+            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @ApiOperation(value = "Retorna uma lista de usuários")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity getEntityByFiltro(@RequestBody final User entity) {
-        return super.getEntityByFiltro(entity);
+    ResponseEntity getEntityByFiltro(@Validated(OnFindFilter.class) @RequestBody User entity, BindingResult result) {
+        return super.getEntityByFiltro(entity, result);
     }
 
     /**
@@ -91,14 +99,14 @@ public class UserController extends DomainEntityController<User> {
      * @return ResponseEntity - RequestBody.
      */
     @PostMapping(
-            consumes = {MediaType.APPLICATION_JSON_VALUE},
-            produces = {MediaType.APPLICATION_JSON_VALUE})
+            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @ApiOperation(value = "Cria um usuário no sistema")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity createEntity(@RequestBody final User entity) {
-        return super.createEntity(entity);
+    ResponseEntity createEntity(@Validated(OnSave.class) @RequestBody User entity, BindingResult result) {
+        return super.createEntity(entity, result);
     }
 
     /**
@@ -109,14 +117,14 @@ public class UserController extends DomainEntityController<User> {
      * @return ResponseEntity - RequestBody.
      */
     @PutMapping(
-            consumes = {MediaType.APPLICATION_JSON_VALUE},
-            produces = {MediaType.APPLICATION_JSON_VALUE})
+            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @ApiOperation(value = "Altera o usuario enviado")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity updateEntity(@RequestBody final User entity) {
-        return super.updateEntity(entity);
+    ResponseEntity updateEntity(@Validated(OnUpdate.class) @RequestBody User entity, BindingResult result) {
+        return super.updateEntity(entity, result);
     }
 
     /**
@@ -127,13 +135,13 @@ public class UserController extends DomainEntityController<User> {
      * @return ResponseEntity - RequestBody.
      */
     @DeleteMapping(value = "{idUser}",
-            consumes = {MediaType.APPLICATION_JSON_VALUE},
-            produces = {MediaType.APPLICATION_JSON_VALUE})
+            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @ApiOperation(value = "Deleta uma entidade")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity deleteEntity(@PathVariable final String idUser) {
+    ResponseEntity deleteEntity(@PathVariable Optional<String> idUser) {
         return super.deleteEntity(idUser);
     }
 
@@ -145,14 +153,14 @@ public class UserController extends DomainEntityController<User> {
      * @return ResponseEntity - RequestBody.
      */
     @DeleteMapping(
-            consumes = {MediaType.APPLICATION_JSON_VALUE},
-            produces = {MediaType.APPLICATION_JSON_VALUE})
+            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @ApiOperation(value = "Desativa uma entidade")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity disableEntity(@RequestBody final User entity) {
-        return super.disableEntity(entity);
+    ResponseEntity disableEntity(@Validated(OnDisable.class) @RequestBody User entity, BindingResult result) {
+        return super.disableEntity(entity, result);
     }
 
 }

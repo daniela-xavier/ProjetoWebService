@@ -10,13 +10,20 @@
 package com.proj.wsf.main.view;
 
 import com.proj.wsf.main.model.MainConfiguration;
+import com.proj.wsf.model.interfaces.OnDisable;
+import com.proj.wsf.model.interfaces.OnFindFilter;
+import com.proj.wsf.model.interfaces.OnSave;
+import com.proj.wsf.model.interfaces.OnUpdate;
 import com.proj.wsf.view.controller.DomainEntityController;
 import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
+import java.util.Optional;
 import javax.transaction.Transactional;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
+import org.springframework.validation.BindingResult;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.DeleteMapping;
 import org.springframework.web.bind.annotation.GetMapping;
@@ -54,13 +61,13 @@ public class MainConfigurationController extends DomainEntityController<MainConf
      * @param idMC - Identificador da classe.
      * @return ResponseEntity - Entidade resposta.
      */
-    @GetMapping(value = "{idMC}", consumes = {MediaType.APPLICATION_JSON_VALUE},
-            produces = {MediaType.APPLICATION_JSON_VALUE})
+    @GetMapping(value = "{idMC}", consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @ApiOperation(value = "Retorna o MainConfiguration")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity getEntityById(@PathVariable final String idMC) {
+    ResponseEntity getEntityById(@PathVariable final Optional<String> idMC) {
         return super.getEntityById(idMC);
     }
 
@@ -71,14 +78,14 @@ public class MainConfigurationController extends DomainEntityController<MainConf
      * @param entity - RequestBody Entidade da classe
      * @return ResponseEntity - ResponseBody.
      */
-    @GetMapping(consumes = {MediaType.APPLICATION_JSON_VALUE},
-            produces = {MediaType.APPLICATION_JSON_VALUE})
+    @GetMapping(consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @ApiOperation(value = "Retorna uma lista de MainConfigurations")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity getEntityByFiltro(@RequestBody final MainConfiguration entity) {
-        return super.getEntityByFiltro(entity);
+    ResponseEntity getEntityByFiltro(@Validated(OnFindFilter.class) @RequestBody MainConfiguration entity, BindingResult result) {
+        return super.getEntityByFiltro(entity, result);
     }
 
     /**
@@ -88,14 +95,15 @@ public class MainConfigurationController extends DomainEntityController<MainConf
      * @param entity - RequestBody Entidade da classe.
      * @return ResponseEntity - RequestBody.
      */
-    @PostMapping(consumes = {MediaType.APPLICATION_JSON_VALUE},
-            produces = {MediaType.APPLICATION_JSON_VALUE})
+    @PostMapping(
+            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @ApiOperation(value = "Cria um MainConfiguration")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity createEntity(@RequestBody final MainConfiguration entity) {
-        return super.createEntity(entity);
+    ResponseEntity createEntity(@Validated(OnSave.class) @RequestBody MainConfiguration entity, BindingResult result) {
+        return super.createEntity(entity, result);
     }
 
     /**
@@ -105,14 +113,15 @@ public class MainConfigurationController extends DomainEntityController<MainConf
      * @param entity - RequestBody Entidade da classe.
      * @return ResponseEntity - RequestBody.
      */
-    @PutMapping(consumes = {MediaType.APPLICATION_JSON_VALUE},
-            produces = {MediaType.APPLICATION_JSON_VALUE})
+    @PutMapping(
+            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @ApiOperation(value = "Altera o MainConfiguration")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity updateEntity(@RequestBody final MainConfiguration entity) {
-        return super.updateEntity(entity);
+    ResponseEntity updateEntity(@Validated(OnUpdate.class) @RequestBody MainConfiguration entity, BindingResult result) {
+        return super.updateEntity(entity, result);
     }
 
     /**
@@ -122,12 +131,14 @@ public class MainConfigurationController extends DomainEntityController<MainConf
      * @param idMC - Identificador da classe.
      * @return ResponseEntity - RequestBody.
      */
-    @DeleteMapping(value = "{idMC}", consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
+    @DeleteMapping(value = "{idMC}",
+            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @ApiOperation(value = "Deleta um MainConfiguration")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity deleteEntity(@PathVariable final String idMC) {
+    ResponseEntity deleteEntity(@PathVariable Optional<String> idMC) {
         return super.deleteEntity(idMC);
     }
 
@@ -138,13 +149,13 @@ public class MainConfigurationController extends DomainEntityController<MainConf
      * @param entity - RequestBody Entidade da classe.
      * @return ResponseEntity - RequestBody.
      */
-    @DeleteMapping(consumes = {MediaType.APPLICATION_JSON_VALUE}, produces = {MediaType.APPLICATION_JSON_VALUE})
+    @DeleteMapping(consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE}, produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @ApiOperation(value = "Desativa um MainConfiguration")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity disableEntity(@RequestBody final MainConfiguration entity) {
-        return super.disableEntity(entity);
+    ResponseEntity disableEntity(@Validated(OnDisable.class) @RequestBody MainConfiguration entity, BindingResult result) {
+        return super.disableEntity(entity, result);
     }
 
 }

@@ -357,3 +357,274 @@
 [DEBUG] 2019-02-08 17:35:15.755 [main] ProjWsfViewApplicationTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
 [INFO ] 2019-02-08 17:35:15.755 [main] ProjWsfViewApplicationTest - The following profiles are active: dev
 [INFO ] 2019-02-08 17:35:19.747 [main] ProjWsfViewApplicationTest - Started ProjWsfViewApplicationTest in 4.029 seconds (JVM running for 19.282)
+[INFO ] 2019-02-11 12:58:56.174 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 2616 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 12:58:56.174 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 12:58:56.174 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 13:01:47.377 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 2748 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 13:01:47.377 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 13:01:47.377 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 13:05:06.563 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 2444 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 13:05:06.563 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 13:05:06.563 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 13:05:20.704 [main] PostEntityValidateTest - Started PostEntityValidateTest in 14.968 seconds (JVM running for 17.329)
+[INFO ] 2019-02-11 13:07:13.360 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 5536 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 13:07:13.360 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 13:07:13.360 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 13:07:26.885 [main] PostEntityValidateTest - Started PostEntityValidateTest in 14.976 seconds (JVM running for 17.31)
+[INFO ] 2019-02-11 13:08:40.913 [main] ProjWsfViewApplicationTest - Starting ProjWsfViewApplicationTest on Empousa-Desenv with PID 3956 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 13:08:40.913 [main] ProjWsfViewApplicationTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 13:08:40.928 [main] ProjWsfViewApplicationTest - The following profiles are active: dev
+[INFO ] 2019-02-11 13:08:53.341 [main] ProjWsfViewApplicationTest - Started ProjWsfViewApplicationTest in 13.754 seconds (JVM running for 16.437)
+[INFO ] 2019-02-11 13:09:43.805 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4144 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 13:09:43.805 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 13:09:43.805 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-11 13:09:57.505 [restartedMain] ProjWsfViewApplication - Started ProjWsfViewApplication in 15.843 seconds (JVM running for 17.342)
+[INFO ] 2019-02-11 13:11:25.034 [restartedMain] ProjWsfViewApplication - Starting ProjWsfViewApplication on Empousa-Desenv with PID 4144 (E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view\target\classes started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 13:11:25.034 [restartedMain] ProjWsfViewApplication - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 13:11:25.036 [restartedMain] ProjWsfViewApplication - The following profiles are active: dev
+[INFO ] 2019-02-11 13:11:37.572 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 6012 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 13:11:37.572 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 13:11:37.572 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 13:11:50.996 [main] PostEntityValidateTest - Started PostEntityValidateTest in 14.407 seconds (JVM running for 17.876)
+[INFO ] 2019-02-11 13:17:38.807 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 3664 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 13:17:38.809 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 13:17:38.814 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 13:17:52.710 [main] PostEntityValidateTest - Started PostEntityValidateTest in 14.876 seconds (JVM running for 18.089)
+[INFO ] 2019-02-11 13:27:35.579 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 3392 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 13:27:35.579 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 13:27:35.579 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 13:27:47.068 [main] PostEntityValidateTest - Started PostEntityValidateTest in 12.489 seconds (JVM running for 14.968)
+[INFO ] 2019-02-11 13:28:45.483 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 4228 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 13:28:45.484 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 13:28:45.485 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 13:28:56.408 [main] PostEntityValidateTest - Started PostEntityValidateTest in 12.426 seconds (JVM running for 14.454)
+[INFO ] 2019-02-11 14:37:44.461 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 4016 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 14:37:44.499 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 14:37:44.500 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 14:38:02.255 [main] PostEntityValidateTest - Started PostEntityValidateTest in 19.104 seconds (JVM running for 22.997)
+[INFO ] 2019-02-11 14:39:31.838 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 3188 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 14:39:31.838 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 14:39:31.838 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 14:39:44.615 [main] PostEntityValidateTest - Started PostEntityValidateTest in 13.912 seconds (JVM running for 16.077)
+[INFO ] 2019-02-11 14:41:24.645 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 4888 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 14:41:24.648 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 14:41:24.649 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 14:41:37.661 [main] PostEntityValidateTest - Started PostEntityValidateTest in 14.417 seconds (JVM running for 16.531)
+[INFO ] 2019-02-11 14:43:32.244 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 5780 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 14:43:32.245 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 14:43:32.245 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 14:43:46.316 [main] PostEntityValidateTest - Started PostEntityValidateTest in 15.045 seconds (JVM running for 17.626)
+[INFO ] 2019-02-11 14:44:57.303 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 1244 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 14:44:57.304 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 14:44:57.304 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 14:45:10.465 [main] PostEntityValidateTest - Started PostEntityValidateTest in 14.291 seconds (JVM running for 16.801)
+[INFO ] 2019-02-11 14:48:27.631 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 2840 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 14:48:27.633 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 14:48:27.633 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 14:48:41.245 [main] PostEntityValidateTest - Started PostEntityValidateTest in 14.755 seconds (JVM running for 17.521)
+[INFO ] 2019-02-11 14:57:12.329 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 5400 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 14:57:12.344 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 14:57:12.344 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 14:57:20.725 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 5400 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 14:57:20.725 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 14:57:20.725 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 14:59:15.056 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 4628 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 14:59:15.056 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 14:59:15.056 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 14:59:28.032 [main] PostEntityValidateTest - Started PostEntityValidateTest in 14.04 seconds (JVM running for 16.666)
+[INFO ] 2019-02-11 15:09:27.883 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 2868 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 15:09:27.883 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 15:09:27.883 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 15:09:40.937 [main] PostEntityValidateTest - Started PostEntityValidateTest in 13.959 seconds (JVM running for 16.793)
+[INFO ] 2019-02-11 15:12:56.593 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 5536 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 15:12:56.594 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 15:12:56.594 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 15:13:10.879 [main] PostEntityValidateTest - Started PostEntityValidateTest in 15.406 seconds (JVM running for 18.069)
+[INFO ] 2019-02-11 15:34:20.121 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 440 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 15:34:20.122 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 15:34:20.122 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 15:34:36.872 [main] PostEntityValidateTest - Started PostEntityValidateTest in 17.955 seconds (JVM running for 20.881)
+[INFO ] 2019-02-11 15:45:39.768 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 5800 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 15:45:39.769 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 15:45:39.770 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 15:45:47.702 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 5800 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 15:45:47.702 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 15:45:47.702 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 15:48:01.661 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 2768 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 15:48:01.662 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 15:48:01.663 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 15:48:11.015 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 2768 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 15:48:11.015 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 15:48:11.015 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 15:49:32.448 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 2616 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 15:49:32.449 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 15:49:32.450 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 15:49:47.055 [main] PostEntityValidateTest - Started PostEntityValidateTest in 15.646 seconds (JVM running for 18.284)
+[INFO ] 2019-02-11 15:50:35.522 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 4708 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 15:50:35.523 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 15:50:35.523 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 15:50:43.396 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 4708 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 15:50:43.397 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 15:50:43.397 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 15:50:45.475 [main] IndexControllerTest - Starting IndexControllerTest on Empousa-Desenv with PID 4708 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 15:50:45.475 [main] IndexControllerTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 15:50:45.475 [main] IndexControllerTest - The following profiles are active: dev
+[DEBUG] 2019-02-11 15:50:47.537 [main] Log4J2PropertiesConf - This is a debug message
+[INFO ] 2019-02-11 15:50:47.537 [main] Log4J2PropertiesConf - This is an info message
+[WARN ] 2019-02-11 15:50:47.537 [main] Log4J2PropertiesConf - This is a warn message
+[ERROR] 2019-02-11 15:50:47.537 [main] Log4J2PropertiesConf - This is an error message
+[FATAL] 2019-02-11 15:50:47.537 [main] Log4J2PropertiesConf - This is a fatal message
+[INFO ] 2019-02-11 15:50:47.581 [main] ProjWsfViewApplicationTest - Starting ProjWsfViewApplicationTest on Empousa-Desenv with PID 4708 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 15:50:47.582 [main] ProjWsfViewApplicationTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 15:50:47.582 [main] ProjWsfViewApplicationTest - The following profiles are active: dev
+[INFO ] 2019-02-11 15:57:37.295 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 5488 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 15:57:37.296 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 15:57:37.296 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 15:57:52.034 [main] PostEntityValidateTest - Started PostEntityValidateTest in 15.99 seconds (JVM running for 18.464)
+[INFO ] 2019-02-11 16:04:58.191 [main] PostEntityValidateTest - Starting PostEntityValidateTest on Empousa-Desenv with PID 2340 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:04:58.193 [main] PostEntityValidateTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:04:58.193 [main] PostEntityValidateTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:05:11.906 [main] PostEntityValidateTest - Started PostEntityValidateTest in 14.445 seconds (JVM running for 17.788)
+[INFO ] 2019-02-11 16:12:58.583 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 5236 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:12:58.584 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:12:58.585 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:13:04.175 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 5236 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:13:04.175 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:13:04.175 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:13:57.403 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 1812 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:13:57.405 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:13:57.405 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:14:05.102 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 1812 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:14:05.102 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:14:05.102 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:14:07.185 [main] IndexControllerTest - Starting IndexControllerTest on Empousa-Desenv with PID 1812 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:14:07.185 [main] IndexControllerTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:14:07.185 [main] IndexControllerTest - The following profiles are active: dev
+[DEBUG] 2019-02-11 16:14:09.128 [main] Log4J2PropertiesConf - This is a debug message
+[INFO ] 2019-02-11 16:14:09.128 [main] Log4J2PropertiesConf - This is an info message
+[WARN ] 2019-02-11 16:14:09.129 [main] Log4J2PropertiesConf - This is a warn message
+[ERROR] 2019-02-11 16:14:09.129 [main] Log4J2PropertiesConf - This is an error message
+[FATAL] 2019-02-11 16:14:09.129 [main] Log4J2PropertiesConf - This is a fatal message
+[INFO ] 2019-02-11 16:14:09.186 [main] ProjWsfViewApplicationTest - Starting ProjWsfViewApplicationTest on Empousa-Desenv with PID 1812 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:14:09.186 [main] ProjWsfViewApplicationTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:14:09.186 [main] ProjWsfViewApplicationTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:15:37.163 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 3016 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:15:37.163 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:15:37.163 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:15:49.122 [main] ValidatedTest - Started ValidatedTest in 13.198 seconds (JVM running for 15.141)
+[DEBUG] 2019-02-11 16:15:49.961 [main] Log4J2PropertiesConf - This is a debug message
+[INFO ] 2019-02-11 16:15:49.961 [main] Log4J2PropertiesConf - This is an info message
+[WARN ] 2019-02-11 16:15:49.961 [main] Log4J2PropertiesConf - This is a warn message
+[ERROR] 2019-02-11 16:15:49.961 [main] Log4J2PropertiesConf - This is an error message
+[FATAL] 2019-02-11 16:15:49.961 [main] Log4J2PropertiesConf - This is a fatal message
+[INFO ] 2019-02-11 16:15:50.024 [main] ProjWsfViewApplicationTest - Starting ProjWsfViewApplicationTest on Empousa-Desenv with PID 3016 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:15:50.024 [main] ProjWsfViewApplicationTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:15:50.024 [main] ProjWsfViewApplicationTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:15:53.004 [main] ProjWsfViewApplicationTest - Started ProjWsfViewApplicationTest in 3.043 seconds (JVM running for 19.02)
+[INFO ] 2019-02-11 16:16:45.578 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 2232 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:16:45.578 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:16:45.578 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:16:59.134 [main] ValidatedTest - Started ValidatedTest in 14.471 seconds (JVM running for 17.145)
+[INFO ] 2019-02-11 16:19:01.672 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 5016 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:19:01.674 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:19:01.674 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:19:07.923 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 5016 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:19:07.923 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:19:07.923 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:20:49.438 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 4860 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:20:49.439 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:20:49.439 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:20:55.653 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 4860 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:20:55.653 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:20:55.653 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:22:56.368 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 4660 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:22:56.368 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:22:56.368 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:23:02.575 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 4660 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:23:02.575 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:23:02.575 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:24:08.630 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 5864 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:24:08.630 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:24:08.630 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:24:19.396 [main] ValidatedTest - Started ValidatedTest in 11.774 seconds (JVM running for 13.803)
+[DEBUG] 2019-02-11 16:24:20.176 [main] Log4J2PropertiesConf - This is a debug message
+[INFO ] 2019-02-11 16:24:20.176 [main] Log4J2PropertiesConf - This is an info message
+[WARN ] 2019-02-11 16:24:20.176 [main] Log4J2PropertiesConf - This is a warn message
+[ERROR] 2019-02-11 16:24:20.176 [main] Log4J2PropertiesConf - This is an error message
+[FATAL] 2019-02-11 16:24:20.176 [main] Log4J2PropertiesConf - This is a fatal message
+[INFO ] 2019-02-11 16:24:20.258 [main] ProjWsfViewApplicationTest - Starting ProjWsfViewApplicationTest on Empousa-Desenv with PID 5864 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:24:20.258 [main] ProjWsfViewApplicationTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:24:20.258 [main] ProjWsfViewApplicationTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:24:22.974 [main] ProjWsfViewApplicationTest - Started ProjWsfViewApplicationTest in 2.798 seconds (JVM running for 17.381)
+[INFO ] 2019-02-11 16:25:09.937 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 3016 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:25:09.938 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:25:09.939 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:25:23.763 [main] ValidatedTest - Started ValidatedTest in 14.951 seconds (JVM running for 17.676)
+[INFO ] 2019-02-11 16:26:45.526 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 3712 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:26:45.542 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:26:45.542 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:26:59.202 [main] ValidatedTest - Started ValidatedTest in 14.973 seconds (JVM running for 18.169)
+[INFO ] 2019-02-11 16:28:08.313 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 5724 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:28:08.362 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:28:08.363 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:28:20.463 [main] ValidatedTest - Started ValidatedTest in 13.75 seconds (JVM running for 15.795)
+[INFO ] 2019-02-11 16:28:58.305 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 1388 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:28:58.305 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:28:58.305 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:29:10.153 [main] ValidatedTest - Started ValidatedTest in 13.147 seconds (JVM running for 15.559)
+[INFO ] 2019-02-11 16:32:19.427 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 2616 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 16:32:19.427 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:32:19.427 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:32:30.710 [main] ValidatedTest - Started ValidatedTest in 12.914 seconds (JVM running for 14.998)
+[INFO ] 2019-02-11 17:02:20.855 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 2864 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 17:02:20.855 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:02:20.855 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:02:29.489 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 2864 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 17:02:29.489 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:02:29.489 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:03:16.727 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 5936 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 17:03:16.727 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:03:16.727 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:03:36.707 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 5936 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 17:03:36.707 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:03:36.707 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:03:40.250 [main] IndexControllerTest - Starting IndexControllerTest on Empousa-Desenv with PID 5936 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 17:03:40.250 [main] IndexControllerTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:03:40.250 [main] IndexControllerTest - The following profiles are active: dev
+[DEBUG] 2019-02-11 17:03:43.963 [main] Log4J2PropertiesConf - This is a debug message
+[INFO ] 2019-02-11 17:03:43.963 [main] Log4J2PropertiesConf - This is an info message
+[WARN ] 2019-02-11 17:03:43.963 [main] Log4J2PropertiesConf - This is a warn message
+[ERROR] 2019-02-11 17:03:43.963 [main] Log4J2PropertiesConf - This is an error message
+[FATAL] 2019-02-11 17:03:43.963 [main] Log4J2PropertiesConf - This is a fatal message
+[INFO ] 2019-02-11 17:03:44.322 [main] ProjWsfViewApplicationTest - Starting ProjWsfViewApplicationTest on Empousa-Desenv with PID 5936 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 17:03:44.322 [main] ProjWsfViewApplicationTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:03:44.322 [main] ProjWsfViewApplicationTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:05:26.122 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 3924 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 17:05:26.122 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:05:26.138 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:05:33.964 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 3924 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 17:05:33.964 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:05:33.964 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:09:27.832 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 4612 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 17:09:27.832 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:09:27.832 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:09:37.778 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 4612 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 17:09:37.778 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:09:37.778 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:32:13.859 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 1436 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 17:32:13.859 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:32:13.859 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:32:24.582 [main] ValidatedTest - Started ValidatedTest in 12.198 seconds (JVM running for 14.234)
+[INFO ] 2019-02-11 17:48:00.976 [main] ValidatedTest - Starting ValidatedTest on Empousa-Desenv with PID 956 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 17:48:00.976 [main] ValidatedTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:48:00.976 [main] ValidatedTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:48:12.197 [main] ValidatedTest - Started ValidatedTest in 12.703 seconds (JVM running for 14.678)
+[DEBUG] 2019-02-11 17:48:12.914 [main] Log4J2PropertiesConf - This is a debug message
+[INFO ] 2019-02-11 17:48:12.914 [main] Log4J2PropertiesConf - This is an info message
+[WARN ] 2019-02-11 17:48:12.914 [main] Log4J2PropertiesConf - This is a warn message
+[ERROR] 2019-02-11 17:48:12.914 [main] Log4J2PropertiesConf - This is an error message
+[FATAL] 2019-02-11 17:48:12.914 [main] Log4J2PropertiesConf - This is a fatal message
+[INFO ] 2019-02-11 17:48:12.977 [main] ProjWsfViewApplicationTest - Starting ProjWsfViewApplicationTest on Empousa-Desenv with PID 956 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-view)
+[DEBUG] 2019-02-11 17:48:12.977 [main] ProjWsfViewApplicationTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:48:12.977 [main] ProjWsfViewApplicationTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:48:16.191 [main] ProjWsfViewApplicationTest - Started ProjWsfViewApplicationTest in 3.261 seconds (JVM running for 18.668)

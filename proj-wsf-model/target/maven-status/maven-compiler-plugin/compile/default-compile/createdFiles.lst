@@ -1,4 +1,11 @@
 com\proj\wsf\model\DomainEntity.class
+com\proj\wsf\model\interfaces\OnDelete.class
+com\proj\wsf\model\interfaces\OnFindAll.class
 com\proj\wsf\model\IEntity.class
-com\proj\wsf\model\anotations\ADomainEntity.class
+com\proj\wsf\model\interfaces\OnFindFilter.class
 com\proj\wsf\model\DomainEntity_.class
+com\proj\wsf\model\interfaces\OnUpdate.class
+com\proj\wsf\model\interfaces\OnFindId.class
+com\proj\wsf\model\anotations\ADomainEntity.class
+com\proj\wsf\model\interfaces\OnSave.class
+com\proj\wsf\model\interfaces\OnDisable.class

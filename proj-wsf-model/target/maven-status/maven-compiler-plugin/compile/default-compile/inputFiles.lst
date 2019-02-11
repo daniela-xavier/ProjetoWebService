@@ -1,3 +1,10 @@
+E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-model\src\main\java\com\proj\wsf\model\interfaces\OnUpdate.java
+E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-model\src\main\java\com\proj\wsf\model\interfaces\OnDelete.java
 E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-model\src\main\java\com\proj\wsf\model\anotations\ADomainEntity.java
 E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-model\src\main\java\com\proj\wsf\model\DomainEntity.java
+E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-model\src\main\java\com\proj\wsf\model\interfaces\OnFindFilter.java
 E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-model\src\main\java\com\proj\wsf\model\IEntity.java
+E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-model\src\main\java\com\proj\wsf\model\interfaces\OnFindId.java
+E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-model\src\main\java\com\proj\wsf\model\interfaces\OnFindAll.java
+E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-model\src\main\java\com\proj\wsf\model\interfaces\OnDisable.java
+E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-model\src\main\java\com\proj\wsf\model\interfaces\OnSave.java

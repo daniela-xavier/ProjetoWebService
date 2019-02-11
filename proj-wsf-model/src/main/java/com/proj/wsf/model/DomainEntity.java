@@ -10,6 +10,8 @@
 package com.proj.wsf.model;
 
 import com.google.gson.annotations.Expose;
+import com.proj.wsf.model.interfaces.OnSave;
+import com.proj.wsf.model.interfaces.OnUpdate;
 import java.io.Serializable;
 import java.util.Date;
 import javax.persistence.Column;
@@ -17,6 +19,8 @@ import javax.persistence.MappedSuperclass;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
 import javax.persistence.Transient;
+import javax.validation.constraints.NotEmpty;
+import javax.validation.constraints.NotNull;
 
 /**
  * Description the class DomainEntity - Classe de objeto real DomainEntity.
@@ -32,23 +36,29 @@ public class DomainEntity implements IEntity, Serializable {
 
     @Expose
     @Column(name = "INCLUIDO_EM")
+    @NotNull(message = "Item incluido em inválido", groups = {OnSave.class})
     @Temporal(TemporalType.TIMESTAMP)
     private Date includedIn;
 
     @Expose
-    @Column(name = "ALTERADO_EM")
+    @Column(name = "ALTERADO_EM")    
+    @NotNull(message = "Item alterado em inválido", groups = {OnUpdate.class})
     @Temporal(TemporalType.TIMESTAMP)
     private Date changedIn;
 
     @Expose
+    @NotNull(message = "Item incluido por inválido", groups = {OnSave.class})
     @Column(name = "INCLUIDO_POR")
     private String includedBy;
 
     @Expose
     @Column(name = "ALTERADO_POR")
+    @NotNull(message = "Item alterado por inválido", groups = {OnUpdate.class})
     private String changedBy;
 
     @Expose
+    @NotNull(message = "Item ativo inválido", groups = {OnSave.class})
+    @NotEmpty(message = "Item ativo não pode estar em branco" , groups = {OnSave.class})
     @Column(name = "ATIVO")
     private String active;
 
@@ -81,7 +91,7 @@ public class DomainEntity implements IEntity, Serializable {
     /**
      * Método para retorno de active (S - sim ou N - não).
      *
-     * @return active 
+     * @return active
      */
     public String getActive() {
         return active;

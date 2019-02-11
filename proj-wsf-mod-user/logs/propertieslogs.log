@@ -506,3 +506,171 @@
 [DEBUG] 2019-02-08 17:18:53.093 [main] UserServiceTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
 [INFO ] 2019-02-08 17:18:53.094 [main] UserServiceTest - The following profiles are active: dev
 [INFO ] 2019-02-08 17:18:53.991 [main] UserServiceTest - Started UserServiceTest in 0.929 seconds (JVM running for 36.01)
+[INFO ] 2019-02-11 16:15:04.045 [main] ProfileDAOTest - Starting ProfileDAOTest on Empousa-Desenv with PID 5072 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 16:15:04.045 [main] ProfileDAOTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:15:04.045 [main] ProfileDAOTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:15:09.219 [main] ProfileDAOTest - Started ProfileDAOTest in 6.783 seconds (JVM running for 9.588)
+[INFO ] 2019-02-11 16:15:10.693 [main] UserDAOTest - Starting UserDAOTest on Empousa-Desenv with PID 5072 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 16:15:10.693 [main] UserDAOTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:15:10.693 [main] UserDAOTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:15:11.763 [main] UserDAOTest - Started UserDAOTest in 1.207 seconds (JVM running for 12.143)
+[INFO ] 2019-02-11 16:15:12.304 [main] ProfileRepositoryTest - Starting ProfileRepositoryTest on Empousa-Desenv with PID 5072 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 16:15:12.305 [main] ProfileRepositoryTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:15:12.305 [main] ProfileRepositoryTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:15:13.067 [main] ProfileRepositoryTest - Started ProfileRepositoryTest in 0.781 seconds (JVM running for 13.464)
+[INFO ] 2019-02-11 16:15:13.401 [main] UserRepositoryTest - Starting UserRepositoryTest on Empousa-Desenv with PID 5072 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 16:15:13.401 [main] UserRepositoryTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:15:13.401 [main] UserRepositoryTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:15:13.921 [main] UserRepositoryTest - Started UserRepositoryTest in 0.567 seconds (JVM running for 14.301)
+[INFO ] 2019-02-11 16:15:14.192 [main] ProfileServiceTest - Starting ProfileServiceTest on Empousa-Desenv with PID 5072 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 16:15:14.193 [main] ProfileServiceTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:15:14.193 [main] ProfileServiceTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:15:14.832 [main] ProfileServiceTest - Started ProfileServiceTest in 0.673 seconds (JVM running for 15.2)
+[INFO ] 2019-02-11 16:15:15.034 [main] UserServiceTest - Starting UserServiceTest on Empousa-Desenv with PID 5072 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 16:15:15.034 [main] UserServiceTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:15:15.034 [main] UserServiceTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:15:15.632 [main] UserServiceTest - Started UserServiceTest in 0.767 seconds (JVM running for 16.007)
+[INFO ] 2019-02-11 16:45:58.270 [main] ProfileDAOTest - Starting ProfileDAOTest on Empousa-Desenv with PID 1152 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 16:45:58.271 [main] ProfileDAOTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:45:58.271 [main] ProfileDAOTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:46:02.146 [main] ProfileDAOTest - Started ProfileDAOTest in 5.396 seconds (JVM running for 7.577)
+[INFO ] 2019-02-11 16:46:03.231 [main] UserDAOTest - Starting UserDAOTest on Empousa-Desenv with PID 1152 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 16:46:03.231 [main] UserDAOTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:46:03.231 [main] UserDAOTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:46:04.104 [main] UserDAOTest - Started UserDAOTest in 0.945 seconds (JVM running for 9.561)
+[INFO ] 2019-02-11 16:46:04.684 [main] ProfileRepositoryTest - Starting ProfileRepositoryTest on Empousa-Desenv with PID 1152 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 16:46:04.684 [main] ProfileRepositoryTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:46:04.684 [main] ProfileRepositoryTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:46:05.388 [main] ProfileRepositoryTest - Started ProfileRepositoryTest in 0.75 seconds (JVM running for 10.846)
+[INFO ] 2019-02-11 16:46:05.685 [main] UserRepositoryTest - Starting UserRepositoryTest on Empousa-Desenv with PID 1152 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 16:46:05.685 [main] UserRepositoryTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:46:05.685 [main] UserRepositoryTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:46:06.360 [main] UserRepositoryTest - Started UserRepositoryTest in 0.722 seconds (JVM running for 11.817)
+[INFO ] 2019-02-11 16:46:06.595 [main] ProfileServiceTest - Starting ProfileServiceTest on Empousa-Desenv with PID 1152 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 16:46:06.595 [main] ProfileServiceTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:46:06.595 [main] ProfileServiceTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:46:07.120 [main] ProfileServiceTest - Started ProfileServiceTest in 0.557 seconds (JVM running for 12.578)
+[INFO ] 2019-02-11 16:46:07.205 [main] UserServiceTest - Starting UserServiceTest on Empousa-Desenv with PID 1152 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 16:46:07.205 [main] UserServiceTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 16:46:07.205 [main] UserServiceTest - The following profiles are active: dev
+[INFO ] 2019-02-11 16:46:07.810 [main] UserServiceTest - Started UserServiceTest in 0.65 seconds (JVM running for 13.268)
+[INFO ] 2019-02-11 17:03:33.411 [main] ProfileDAOTest - Starting ProfileDAOTest on Empousa-Desenv with PID 4372 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:03:33.411 [main] ProfileDAOTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:03:33.411 [main] ProfileDAOTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:03:47.583 [main] ProfileDAOTest - Started ProfileDAOTest in 16.683 seconds (JVM running for 19.843)
+[INFO ] 2019-02-11 17:03:49.159 [main] UserDAOTest - Starting UserDAOTest on Empousa-Desenv with PID 4372 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:03:49.159 [main] UserDAOTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:03:49.159 [main] UserDAOTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:03:50.017 [main] UserDAOTest - Started UserDAOTest in 0.936 seconds (JVM running for 22.273)
+[INFO ] 2019-02-11 17:03:50.724 [main] ProfileRepositoryTest - Starting ProfileRepositoryTest on Empousa-Desenv with PID 4372 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:03:50.724 [main] ProfileRepositoryTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:03:50.724 [main] ProfileRepositoryTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:03:51.769 [main] ProfileRepositoryTest - Started ProfileRepositoryTest in 1.076 seconds (JVM running for 24.034)
+[INFO ] 2019-02-11 17:03:52.143 [main] UserRepositoryTest - Starting UserRepositoryTest on Empousa-Desenv with PID 4372 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:03:52.143 [main] UserRepositoryTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:03:52.143 [main] UserRepositoryTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:03:52.721 [main] UserRepositoryTest - Started UserRepositoryTest in 0.609 seconds (JVM running for 24.983)
+[INFO ] 2019-02-11 17:03:53.001 [main] ProfileServiceTest - Starting ProfileServiceTest on Empousa-Desenv with PID 4372 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:03:53.001 [main] ProfileServiceTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:03:53.001 [main] ProfileServiceTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:03:53.922 [main] ProfileServiceTest - Started ProfileServiceTest in 0.967 seconds (JVM running for 26.181)
+[INFO ] 2019-02-11 17:03:54.015 [main] UserServiceTest - Starting UserServiceTest on Empousa-Desenv with PID 4372 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:03:54.015 [main] UserServiceTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:03:54.015 [main] UserServiceTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:03:54.889 [main] UserServiceTest - Started UserServiceTest in 0.92 seconds (JVM running for 27.153)
+[INFO ] 2019-02-11 17:06:02.035 [main] ProfileDAOTest - Starting ProfileDAOTest on Empousa-Desenv with PID 2832 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:06:02.035 [main] ProfileDAOTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:06:02.035 [main] ProfileDAOTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:06:07.010 [main] ProfileDAOTest - Started ProfileDAOTest in 5.428 seconds (JVM running for 7.479)
+[INFO ] 2019-02-11 17:06:08.885 [main] UserDAOTest - Starting UserDAOTest on Empousa-Desenv with PID 2832 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:06:08.885 [main] UserDAOTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:06:08.885 [main] UserDAOTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:06:09.806 [main] UserDAOTest - Started UserDAOTest in 1.148 seconds (JVM running for 10.28)
+[INFO ] 2019-02-11 17:06:10.353 [main] ProfileRepositoryTest - Starting ProfileRepositoryTest on Empousa-Desenv with PID 2832 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:06:10.353 [main] ProfileRepositoryTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:06:10.353 [main] ProfileRepositoryTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:06:10.883 [main] ProfileRepositoryTest - Started ProfileRepositoryTest in 0.561 seconds (JVM running for 11.356)
+[INFO ] 2019-02-11 17:06:11.180 [main] UserRepositoryTest - Starting UserRepositoryTest on Empousa-Desenv with PID 2832 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:06:11.180 [main] UserRepositoryTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:06:11.180 [main] UserRepositoryTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:06:11.819 [main] UserRepositoryTest - Started UserRepositoryTest in 0.686 seconds (JVM running for 12.293)
+[INFO ] 2019-02-11 17:06:12.084 [main] ProfileServiceTest - Starting ProfileServiceTest on Empousa-Desenv with PID 2832 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:06:12.084 [main] ProfileServiceTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:06:12.084 [main] ProfileServiceTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:06:12.662 [main] ProfileServiceTest - Started ProfileServiceTest in 0.609 seconds (JVM running for 13.133)
+[INFO ] 2019-02-11 17:06:12.740 [main] UserServiceTest - Starting UserServiceTest on Empousa-Desenv with PID 2832 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:06:12.740 [main] UserServiceTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:06:12.740 [main] UserServiceTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:06:13.348 [main] UserServiceTest - Started UserServiceTest in 0.624 seconds (JVM running for 13.807)
+[INFO ] 2019-02-11 17:40:35.268 [main] UserControllerIT - Starting UserControllerIT on Empousa-Desenv with PID 3848 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:40:35.268 [main] UserControllerIT - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:40:35.268 [main] UserControllerIT - The following profiles are active: dev
+[INFO ] 2019-02-11 17:40:45.857 [main] UserControllerIT - Started UserControllerIT in 12.071 seconds (JVM running for 13.996)
+[INFO ] 2019-02-11 17:43:08.387 [main] UserControllerIT - Starting UserControllerIT on Empousa-Desenv with PID 4000 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:43:08.387 [main] UserControllerIT - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:43:08.387 [main] UserControllerIT - The following profiles are active: dev
+[INFO ] 2019-02-11 17:43:19.762 [main] UserControllerIT - Started UserControllerIT in 12.358 seconds (JVM running for 14.337)
+[INFO ] 2019-02-11 17:48:40.799 [main] ProfileDAOTest - Starting ProfileDAOTest on Empousa-Desenv with PID 1604 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:48:40.799 [main] ProfileDAOTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:48:40.799 [main] ProfileDAOTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:48:45.483 [main] ProfileDAOTest - Started ProfileDAOTest in 6.01 seconds (JVM running for 8.135)
+[INFO ] 2019-02-11 17:48:46.738 [main] UserDAOTest - Starting UserDAOTest on Empousa-Desenv with PID 1604 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:48:46.738 [main] UserDAOTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:48:46.738 [main] UserDAOTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:48:47.738 [main] UserDAOTest - Started UserDAOTest in 1.125 seconds (JVM running for 10.398)
+[INFO ] 2019-02-11 17:48:48.312 [main] ProfileRepositoryTest - Starting ProfileRepositoryTest on Empousa-Desenv with PID 1604 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:48:48.312 [main] ProfileRepositoryTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:48:48.312 [main] ProfileRepositoryTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:48:48.905 [main] ProfileRepositoryTest - Started ProfileRepositoryTest in 0.655 seconds (JVM running for 11.559)
+[INFO ] 2019-02-11 17:48:49.201 [main] UserRepositoryTest - Starting UserRepositoryTest on Empousa-Desenv with PID 1604 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:48:49.201 [main] UserRepositoryTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:48:49.201 [main] UserRepositoryTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:48:49.794 [main] UserRepositoryTest - Started UserRepositoryTest in 0.639 seconds (JVM running for 12.444)
+[INFO ] 2019-02-11 17:48:50.044 [main] ProfileServiceTest - Starting ProfileServiceTest on Empousa-Desenv with PID 1604 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:48:50.044 [main] ProfileServiceTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:48:50.044 [main] ProfileServiceTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:48:50.652 [main] ProfileServiceTest - Started ProfileServiceTest in 0.655 seconds (JVM running for 13.309)
+[INFO ] 2019-02-11 17:48:50.715 [main] UserServiceTest - Starting UserServiceTest on Empousa-Desenv with PID 1604 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:48:50.715 [main] UserServiceTest - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:48:50.715 [main] UserServiceTest - The following profiles are active: dev
+[INFO ] 2019-02-11 17:48:51.323 [main] UserServiceTest - Started UserServiceTest in 0.64 seconds (JVM running for 13.976)
+[INFO ] 2019-02-11 17:49:14.397 [main] UserControllerIT - Starting UserControllerIT on Empousa-Desenv with PID 2748 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:49:14.397 [main] UserControllerIT - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:49:14.397 [main] UserControllerIT - The following profiles are active: dev
+[INFO ] 2019-02-11 17:49:25.784 [main] UserControllerIT - Started UserControllerIT in 12.355 seconds (JVM running for 14.28)
+[INFO ] 2019-02-11 17:50:58.690 [main] UserControllerIT - Starting UserControllerIT on Empousa-Desenv with PID 3532 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:50:58.690 [main] UserControllerIT - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:50:58.690 [main] UserControllerIT - The following profiles are active: dev
+[INFO ] 2019-02-11 17:51:10.008 [main] UserControllerIT - Started UserControllerIT in 12.802 seconds (JVM running for 14.675)
+[INFO ] 2019-02-11 17:52:47.938 [main] UserControllerIT - Starting UserControllerIT on Empousa-Desenv with PID 2636 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 17:52:47.938 [main] UserControllerIT - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 17:52:47.938 [main] UserControllerIT - The following profiles are active: dev
+[INFO ] 2019-02-11 17:52:58.782 [main] UserControllerIT - Started UserControllerIT in 12.061 seconds (JVM running for 14.246)
+[INFO ] 2019-02-11 18:00:21.550 [main] UserControllerIT - Starting UserControllerIT on Empousa-Desenv with PID 168 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 18:00:21.550 [main] UserControllerIT - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 18:00:21.550 [main] UserControllerIT - The following profiles are active: dev
+[INFO ] 2019-02-11 18:00:35.663 [main] UserControllerIT - Started UserControllerIT in 14.909 seconds (JVM running for 17.064)
+[INFO ] 2019-02-11 18:01:47.675 [main] UserControllerIT - Starting UserControllerIT on Empousa-Desenv with PID 4472 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 18:01:47.675 [main] UserControllerIT - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 18:01:47.675 [main] UserControllerIT - The following profiles are active: dev
+[INFO ] 2019-02-11 18:02:02.257 [main] UserControllerIT - Started UserControllerIT in 15.421 seconds (JVM running for 18.658)
+[INFO ] 2019-02-11 18:04:25.593 [main] UserControllerIT - Starting UserControllerIT on Empousa-Desenv with PID 1720 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 18:04:25.593 [main] UserControllerIT - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 18:04:25.593 [main] UserControllerIT - The following profiles are active: dev
+[INFO ] 2019-02-11 18:04:39.403 [main] UserControllerIT - Started UserControllerIT in 14.912 seconds (JVM running for 17.625)
+[INFO ] 2019-02-11 18:06:08.487 [main] UserControllerIT - Starting UserControllerIT on Empousa-Desenv with PID 5556 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 18:06:08.487 [main] UserControllerIT - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 18:06:08.487 [main] UserControllerIT - The following profiles are active: dev
+[INFO ] 2019-02-11 18:06:26.263 [main] UserControllerIT - Started UserControllerIT in 18.883 seconds (JVM running for 21.388)
+[INFO ] 2019-02-11 18:06:36.172 [main] UserControllerIT - Starting UserControllerIT on Empousa-Desenv with PID 5140 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 18:06:36.172 [main] UserControllerIT - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 18:06:36.172 [main] UserControllerIT - The following profiles are active: dev
+[INFO ] 2019-02-11 18:06:53.664 [main] UserControllerIT - Started UserControllerIT in 19.191 seconds (JVM running for 22.761)
+[INFO ] 2019-02-11 18:10:06.370 [main] UserControllerIT - Starting UserControllerIT on Empousa-Desenv with PID 3124 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 18:10:06.370 [main] UserControllerIT - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 18:10:06.370 [main] UserControllerIT - The following profiles are active: dev
+[INFO ] 2019-02-11 18:10:19.824 [main] UserControllerIT - Started UserControllerIT in 14.375 seconds (JVM running for 16.783)
+[INFO ] 2019-02-11 18:11:40.766 [main] UserControllerIT - Starting UserControllerIT on Empousa-Desenv with PID 2988 (started by daniela.conceicao in E:\Projetos\WebService\WebService\Desenvolvimento\Projeto\ProjetoWebService\proj-wsf-mod-user)
+[DEBUG] 2019-02-11 18:11:40.766 [main] UserControllerIT - Running with Spring Boot v2.0.4.RELEASE, Spring v5.0.8.RELEASE
+[INFO ] 2019-02-11 18:11:40.766 [main] UserControllerIT - The following profiles are active: dev
+[INFO ] 2019-02-11 18:11:54.073 [main] UserControllerIT - Started UserControllerIT in 14.618 seconds (JVM running for 17.516)

@@ -1,7 +1,0 @@
-com.proj.wsf.core
-com.proj.wsf.core.application
-com.proj.wsf.core.dao.impl
-com.proj.wsf.core.facade.impl
-com.proj.wsf.core.service.impl
-com.proj.wsf.core.strategy.impl
-com.proj.wsf.core.test

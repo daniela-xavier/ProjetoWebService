@@ -6,6 +6,7 @@ import com.proj.wsf.core.test.IControllerTest;
 import com.proj.wsf.mod.user.model.User;
 import com.proj.wsf.view.ProjWsfViewApplication;
 import com.proj.wsf.view.config.JPAConfiguration;
+import java.util.Date;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -92,13 +93,16 @@ public class UserControllerIT extends AbstractControllerTest implements IControl
         User user = new User();
         user.setIdentifier(1L);
         user.setUsuario("teste");
+        user.setActive("s");
+        user.setIncludedBy("EU");
+        user.setIncludedIn(new Date());
         Gson gson = new Gson();
 
         String json = gson.toJson(user);
 
-        this.mockMvc.perform(MockMvcRequestBuilders.post("/user")
-                .content(json)
-                .contentType(CONTENT_TYPE)).andDo(print())
+        this.mockMvc.perform(MockMvcRequestBuilders.post("/user")                
+                .contentType(CONTENT_TYPE)
+                .content(json)).andDo(print())
                 .andExpect(content().contentType(CONTENT_TYPE))
                 .andExpect(jsonPath("$.message").value("Processos inválido. Não é possível executar esta ação.\n"));
 
@@ -113,14 +117,16 @@ public class UserControllerIT extends AbstractControllerTest implements IControl
     public void testPutInsuccess() throws Exception {
         User user = new User();
         user.setIdentifier(1L);
-        user.setUsuario("teste");
+        user.setUsuario("teste");        
+        user.setChangedBy("EU");
+        user.setChangedIn(new Date());
         Gson gson = new Gson();
 
         String json = gson.toJson(user);
 
         this.mockMvc.perform(MockMvcRequestBuilders.put("/user")
-                .content(json)
-                .contentType(CONTENT_TYPE)).andDo(print())
+                .contentType(CONTENT_TYPE)
+                .content(json)).andDo(print())
                 .andExpect(content().contentType(CONTENT_TYPE))
                 .andExpect(jsonPath("$.message").value("Processos inválido. Não é possível executar esta ação.\n"));
 
