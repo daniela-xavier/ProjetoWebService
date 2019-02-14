@@ -7,7 +7,6 @@
  
  *
  */
-
 package com.proj.wsf.main.core.strategy;
 
 import com.proj.wsf.core.IStrategy;
@@ -19,9 +18,10 @@ import java.util.Map;
 import org.springframework.stereotype.Component;
 
 /**
- * Description the class  MainConfigurationStrategy - xxxxx
+ * Description the class MainConfigurationStrategy - xxxxx
+ *
  * @author Daniela Xavier Conceição - sistemas@fozadvogados.com.br
- * @version $v rev. $rev  $Revision$
+ * @version $v rev. $rev $Revision$
  * @since Build 1.1 24/01/2019
  */
 @Component("mainConfigurationStrategy")
@@ -30,26 +30,27 @@ public class MainConfigurationStrategy {
     Map<String, List<IStrategy>> rnsMainConfiguration = new HashMap<>();
 
     /**
-     * Contrutor da classe para inicializar as strategys.
+     * Contrutor da classe para inicializar as strategys.   
+     * @param disableAction - Strategy que desabilita a operação.
      */
-    public MainConfigurationStrategy() {
-        //Regras para entidade MainConfiguration    
-        DisableAction desabilitarAcao = new DisableAction();
+    public MainConfigurationStrategy(DisableAction disableAction
+    ) {
+        //Regras para entidade MainConfiguration  passadas dentro do construtor 
+        //Injetadas pelo Spring com a anotação @Autowired   
 
-     
         /* Criando uma lista para conter as regras de negocio de MainConfiguration
          * quando a operacao for salvar
          */
         List<IStrategy> rnsSalvarMainConfiguration = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao salvar do MainConfiguration */
-        rnsSalvarMainConfiguration.add(desabilitarAcao);
+        rnsSalvarMainConfiguration.add(disableAction);
 
         /* Criando uma lista para conter as regras de negocio de MainConfiguration
          * quando a operacao for alterar
          */
         List<IStrategy> rnsAlterarMainConfiguration = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao alterar do MainConfiguration */
-        rnsAlterarMainConfiguration.add(desabilitarAcao);
+        rnsAlterarMainConfiguration.add(disableAction);
 
 
         /* Criando uma lista para conter as regras de negocio de mainConfiguration
@@ -57,28 +58,28 @@ public class MainConfigurationStrategy {
          */
         List<IStrategy> rnsConsultarMainConfiguration = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao consultar do MainConfiguration */
-        rnsConsultarMainConfiguration.add(desabilitarAcao);
+        rnsConsultarMainConfiguration.add(disableAction);
 
         /* Criando uma lista para conter as regras de negocio de mainConfiguration
          * quando a operacao for excluir
          */
         List<IStrategy> rnsExcluirMainConfiguration = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao excluir do MainConfiguration */
-        rnsExcluirMainConfiguration.add(desabilitarAcao);
+        rnsExcluirMainConfiguration.add(disableAction);
 
         /* Criando uma lista para conter as regras de negocio de mainConfiguration
          * quando a operacao for visualizar
          */
         List<IStrategy> rnsVisualizarMainConfiguration = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao visualizar do MainConfiguration */
-        rnsVisualizarMainConfiguration.add(desabilitarAcao);
-        
+        rnsVisualizarMainConfiguration.add(disableAction);
+
         /* Criando uma lista para conter as regras de negocio de mainConfiguration
          * quando a operacao for desativar
          */
         List<IStrategy> rnsDesativarMainConfiguration = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao desativar do MainConfiguration */
-        rnsDesativarMainConfiguration.add(desabilitarAcao);
+        rnsDesativarMainConfiguration.add(disableAction);
 
         /*
          * Adiciona a listra de regras na operacao salvar no mapa do MainConfiguration 
@@ -109,6 +110,7 @@ public class MainConfigurationStrategy {
 
     /**
      * Retorna regras da entidade.
+     *
      * @return Map String, List -> IStrategy
      */
     public Map<String, List<IStrategy>> getRnsMainConfiguration() {
@@ -116,5 +118,3 @@ public class MainConfigurationStrategy {
     }
 
 }
-
-

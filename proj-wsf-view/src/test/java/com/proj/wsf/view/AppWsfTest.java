@@ -4,7 +4,6 @@ import com.proj.wsf.view.config.JPAConfiguration;
 import javax.servlet.ServletContext;
 import org.junit.Assert;
 import org.junit.Before;
-
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -13,7 +12,6 @@ import org.springframework.mock.web.MockServletContext;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.ContextConfiguration;
 import org.springframework.test.context.junit4.SpringRunner;
-import org.springframework.test.context.web.WebAppConfiguration;
 import org.springframework.test.web.servlet.MockMvc;
 import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 import org.springframework.web.context.WebApplicationContext;
@@ -27,11 +25,10 @@ import org.springframework.web.context.WebApplicationContext;
  * @since 1.0
  */
 @RunWith(SpringRunner.class)
-@WebAppConfiguration(value = "")
-@SpringBootTest(classes = JPAConfiguration.class)
-@ContextConfiguration(classes = {JPAConfiguration.class, ProjWsfViewApplication.class})
+@SpringBootTest(classes = AppWsf.class)
+@ContextConfiguration(classes = {JPAConfiguration.class, AppWsf.class})
 @ActiveProfiles("dev")
-public class ProjWsfViewApplicationTest {
+public class AppWsfTest {
 
     @Autowired
     private WebApplicationContext wac;
@@ -56,6 +53,11 @@ public class ProjWsfViewApplicationTest {
 
         Assert.assertNotNull(servletContext);
         Assert.assertTrue(servletContext instanceof MockServletContext);
+        /*for (String beanDefinitionName : wac.getBeanDefinitionNames()) {
+        System.out.println("Bean: " + beanDefinitionName);
+        }*/
         Assert.assertNotNull(wac.getBean("domainEntityController"));
+        Assert.assertNotNull(wac.getBean("disableAction"));
+        Assert.assertNotNull(wac.getBean("authenticFilter"));
     }
 }

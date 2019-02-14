@@ -2,7 +2,7 @@ package com.proj.wsf.view.anotations;
 
 import com.google.gson.Gson;
 import com.proj.wsf.model.DomainEntity;
-import com.proj.wsf.view.ProjWsfViewApplication;
+import com.proj.wsf.view.AppWsf;
 import com.proj.wsf.view.config.JPAConfiguration;
 import org.junit.Before;
 import org.junit.Test;
@@ -32,7 +32,7 @@ import org.springframework.web.context.WebApplicationContext;
 @RunWith(SpringRunner.class)
 @WebAppConfiguration
 @SpringBootTest(classes = JPAConfiguration.class)
-@ContextConfiguration(classes = {JPAConfiguration.class, ProjWsfViewApplication.class})
+@ContextConfiguration(classes = {JPAConfiguration.class, AppWsf.class})
 @ActiveProfiles("dev")
 public class ValidatedTest {
     

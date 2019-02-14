@@ -10,6 +10,7 @@
 package com.proj.wsf.model;
 
 import com.google.gson.annotations.Expose;
+import com.proj.wsf.model.anotations.ActivePattern;
 import com.proj.wsf.model.interfaces.OnSave;
 import com.proj.wsf.model.interfaces.OnUpdate;
 import java.io.Serializable;
@@ -41,24 +42,25 @@ public class DomainEntity implements IEntity, Serializable {
     private Date includedIn;
 
     @Expose
-    @Column(name = "ALTERADO_EM")    
+    @Column(name = "ALTERADO_EM")
     @NotNull(message = "Item alterado em inválido", groups = {OnUpdate.class})
     @Temporal(TemporalType.TIMESTAMP)
     private Date changedIn;
 
     @Expose
-    @NotNull(message = "Item incluido por inválido", groups = {OnSave.class})
+    @NotEmpty(message = "Item incluido por inválido", groups = {OnSave.class})
     @Column(name = "INCLUIDO_POR")
     private String includedBy;
 
     @Expose
     @Column(name = "ALTERADO_POR")
-    @NotNull(message = "Item alterado por inválido", groups = {OnUpdate.class})
+    @NotEmpty(message = "Item alterado por inválido", groups = {OnUpdate.class})
     private String changedBy;
 
     @Expose
     @NotNull(message = "Item ativo inválido", groups = {OnSave.class})
-    @NotEmpty(message = "Item ativo não pode estar em branco" , groups = {OnSave.class})
+    @NotEmpty(message = "Item ativo não pode estar em branco", groups = {OnSave.class})
+    @ActivePattern(message = "Item ativo deve ser Sim(s) ou Não(n)", groups = {OnSave.class, OnUpdate.class})
     @Column(name = "ATIVO")
     private String active;
 

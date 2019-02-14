@@ -39,8 +39,11 @@ public class ComplementaryEntityIncludedInBy implements IStrategy {
         } else {
             entity.setIncludedBy(entity.getUser());
         }
-        Date data = Calendar.getInstance().getTime();
-        entity.setIncludedIn(data);
+
+        if (entity.getIncludedIn() == null) {
+            Date data = Calendar.getInstance().getTime();
+            entity.setIncludedIn(data);
+        }
         return null;
     }
 }

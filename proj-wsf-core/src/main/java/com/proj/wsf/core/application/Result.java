@@ -10,6 +10,7 @@
 
 package com.proj.wsf.core.application;
 
+import com.google.gson.annotations.Expose;
 import com.proj.wsf.model.DomainEntity;
 
 /**
@@ -21,26 +22,31 @@ import com.proj.wsf.model.DomainEntity;
  */
 public class Result {
 
-    private String msg;
+    @Expose
+    private String message;
+    
+    @Expose
     private Iterable<DomainEntity> entity;
+    
+    @Expose
     private boolean error;
 
     /**
-     * Método de recuperação do campo msg
+     * Método de recuperação do campo message
      *
-     * @return valor do campo msg
+     * @return valor do campo message
      */
-    public String getMsg() {
-        return msg;
+    public String getMessage() {
+        return message;
     }
 
     /**
-     * Valor de msg atribuído a msg
+     * Valor de message atribuído a message
      *
-     * @param msg Atributo da Classe
+     * @param message Atributo da Classe
      */
-    public void setMsg(String msg) {
-        this.msg = msg;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
     /**

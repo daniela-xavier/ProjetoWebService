@@ -1,11 +1,16 @@
 package com.proj.wsf.mod.user.view;
 
 import com.google.gson.Gson;
+import com.google.gson.GsonBuilder;
 import com.proj.wsf.core.test.AbstractControllerTest;
 import com.proj.wsf.core.test.IControllerTest;
+import com.proj.wsf.core.util.DateDeserializer;
+import com.proj.wsf.core.util.DateSerializer;
 import com.proj.wsf.mod.user.model.Profile;
-import com.proj.wsf.view.ProjWsfViewApplication;
+import com.proj.wsf.view.AppWsf;
 import com.proj.wsf.view.config.JPAConfiguration;
+import java.util.Calendar;
+import java.util.Date;
 import org.junit.Before;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -31,7 +36,7 @@ import org.springframework.test.web.servlet.setup.MockMvcBuilders;
 @RunWith(SpringRunner.class)
 @WebAppConfiguration(value = "")
 @SpringBootTest(classes = JPAConfiguration.class)
-@ContextConfiguration(classes = {JPAConfiguration.class, ProjWsfViewApplication.class})
+@ContextConfiguration(classes = {JPAConfiguration.class, AppWsf.class})
 @ActiveProfiles("dev")
 public class ProfileControllerIT extends AbstractControllerTest implements IControllerTest {
 
@@ -91,10 +96,17 @@ public class ProfileControllerIT extends AbstractControllerTest implements ICont
     public void testPostInsuccess() throws Exception {
         Profile profile = new Profile();
         profile.setIdentifier(1L);
-        profile.setNome("teste");
-        Gson gson = new Gson();
+        profile.setNome("teste"); 
+        profile.setIncludedBy("EU");
+        profile.setActive("S");
+        profile.setIncludedIn(Calendar.getInstance().getTime());
+        
+        GsonBuilder gson = new GsonBuilder();
+        gson.registerTypeAdapter(Date.class, new DateDeserializer());
+        gson.registerTypeAdapter(Date.class, new DateSerializer());
 
-        String json = gson.toJson(profile);
+        Gson objGson = gson.setPrettyPrinting().create();
+        String json = objGson.toJson(profile);
 
         this.mockMvc.perform(MockMvcRequestBuilders.post("/profile")
                 .content(json)
@@ -113,10 +125,17 @@ public class ProfileControllerIT extends AbstractControllerTest implements ICont
     public void testPutInsuccess() throws Exception {
         Profile profile = new Profile();
         profile.setIdentifier(1L);
-        profile.setNome("teste");
-        Gson gson = new Gson();
+        profile.setNome("teste"); 
+        profile.setChangedBy("EU"); 
+        profile.setActive("S");
+        profile.setChangedIn(Calendar.getInstance().getTime());
+        
+        GsonBuilder gson = new GsonBuilder();
+        gson.registerTypeAdapter(Date.class, new DateDeserializer());
+        gson.registerTypeAdapter(Date.class, new DateSerializer());
 
-        String json = gson.toJson(profile);
+        Gson objGson = gson.setPrettyPrinting().create();
+        String json = objGson.toJson(profile);
 
         this.mockMvc.perform(MockMvcRequestBuilders.put("/profile")
                 .content(json)

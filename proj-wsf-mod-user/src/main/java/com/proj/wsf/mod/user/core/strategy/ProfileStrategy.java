@@ -15,6 +15,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -31,10 +32,14 @@ public class ProfileStrategy {
 
     /**
      * Contrutor da classe para inicializar as strategys.
+     * @param desabilitarAcao - Strategy que desabilita a operação.
      */
-    public ProfileStrategy() {
-        //Regras para entidade profile    
-        DisableAction desabilitarAcao = new DisableAction();
+    @Autowired
+    public ProfileStrategy(
+            DisableAction desabilitarAcao) {
+        //Regras para entidade profile passadas dentro do construtor 
+        //Injetadas pelo Spring com a anotação @Autowired    
+       
 
         /* Criando uma lista para conter as regras de negocio de Profile
          * quando a operacao for salvar

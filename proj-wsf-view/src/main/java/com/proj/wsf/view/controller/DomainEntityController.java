@@ -9,6 +9,7 @@
  */
 package com.proj.wsf.view.controller;
 
+import com.google.gson.Gson;
 import com.proj.wsf.core.IFacade;
 import com.proj.wsf.core.IServico;
 import com.proj.wsf.core.application.Result;
@@ -94,7 +95,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
     }
 
     /**
-     * Metodo para requisiçães GET com parametro id preenchido, que aceita
+     * Metodo para requisicoes GET com parametro id preenchido, que aceita
      * entradas em JSON e retorno em JSON.
      *
      * @param id - Identificador da classe.
@@ -121,7 +122,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
             Iterable<DomainEntity> t = resultado.getEntity();
 
             if (resultado.hasError()) {
-                return new ResponseEntity<>(new ResponseMessage(Boolean.TRUE, resultado.getMsg()),
+                return new ResponseEntity<>(new ResponseMessage(Boolean.TRUE, resultado.getMessage()),
                         HttpStatus.INTERNAL_SERVER_ERROR);
             }
 
@@ -142,7 +143,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
     }
 
     /**
-     * Metodo para requisiçães GET com parametro entity preenchido, que aceita
+     * Metodo para requisicoes GET com parametro entity preenchido, que aceita
      * entradas em JSON e retorno em JSON.
      *
      * @param entity - RequestBody Entidade da classe
@@ -166,7 +167,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
             Result resultado = fachada.FindByFilter(entity, entidadeServico);
 
             if (resultado.hasError()) {
-                return new ResponseEntity<>(new ResponseMessage(Boolean.TRUE, resultado.getMsg()),
+                return new ResponseEntity<>(new ResponseMessage(Boolean.TRUE, resultado.getMessage()),
                         HttpStatus.INTERNAL_SERVER_ERROR);
             }
             return new ResponseEntity<>(resultado, HttpStatus.OK);
@@ -185,8 +186,8 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
     }
 
     /**
-     * Metodo para requisiçães POST com parametro entity preenchido, que
-     * aceita entradas em JSON e retorno em JSON.
+     * Metodo para requisicoes POST com parametro entity preenchido, que aceita
+     * entradas em JSON e retorno em JSON.
      *
      * @param entity - RequestBody Entidade da classe.
      * @param result - Resultado da Valida��o
@@ -203,32 +204,40 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
             return new ResponseEntity<>(new ResponseMessage(Boolean.TRUE, getErrors(result)),
                     HttpStatus.INTERNAL_SERVER_ERROR);
         }
+        Result resultado = null;
+        HttpStatus httpStatus;
 
         try {
             IServico entidadeServico = getServico(clazz.getSimpleName());
-            Result resultado = fachada.save(entity, entidadeServico);
+            resultado = fachada.save(entity, entidadeServico);
 
             if (resultado.hasError()) {
-                return new ResponseEntity<>(new ResponseMessage(Boolean.TRUE, resultado.getMsg()),
-                        HttpStatus.INTERNAL_SERVER_ERROR);
+                httpStatus = HttpStatus.INTERNAL_SERVER_ERROR;
+                resultado.setError();
+            } else {
+                httpStatus = HttpStatus.OK;
+                Gson objGson = new Gson();
+                String json = objGson.toJson(resultado);
+                return new ResponseEntity<>(json, httpStatus);
+                
             }
-            return new ResponseEntity<>(entity, HttpStatus.OK);
-
         } catch (ExceptionResponse e) {
-            return new ResponseEntity<>(
-                    new ResponseMessage(Boolean.TRUE, "Erro.".concat(e.getMessage())),
-                    HttpStatus.INTERNAL_SERVER_ERROR);
+            httpStatus = HttpStatus.INTERNAL_SERVER_ERROR;
+            resultado.setError();
+            resultado.setMessage("Erro.".concat(e.getMessage()));
+
         } catch (Exception e) {
-            System.out.println("Error.: " + e.getMessage());
-            return new ResponseEntity<>(
-                    new ResponseMessage(Boolean.TRUE, "Erro ao cadastrar ".concat(clazz.getSimpleName().toLowerCase())),
-                    HttpStatus.INTERNAL_SERVER_ERROR);
+            httpStatus = HttpStatus.INTERNAL_SERVER_ERROR;
+            resultado.setError();
+            resultado.setMessage("Erro ao cadastrar ".concat(clazz.getSimpleName().toLowerCase()));
         }
+        
+        return new ResponseEntity<>(new ResponseMessage(resultado.hasError(), resultado.getMessage()), httpStatus);
 
     }
 
     /**
-     * Metodo para requisiçães PUT com parametro entity preenchido, que aceita
+     * Metodo para requisicoes PUT com parametro entity preenchido, que aceita
      * entradas em JSON e retorno em JSON.
      *
      * @param entity - RequestBody Entidade da classe.
@@ -252,7 +261,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
             Result resultado = fachada.update(entity, entidadeServico);
 
             if (resultado.hasError()) {
-                return new ResponseEntity<>(new ResponseMessage(Boolean.TRUE, resultado.getMsg()),
+                return new ResponseEntity<>(new ResponseMessage(Boolean.TRUE, resultado.getMessage()),
                         HttpStatus.INTERNAL_SERVER_ERROR);
             }
             return new ResponseEntity<>(entity, HttpStatus.OK);
@@ -271,7 +280,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
     }
 
     /**
-     * Metodo para requisiçães DELETE com parametro entity preenchido, que
+     * Metodo para requisicoes DELETE com parametro entity preenchido, que
      * aceita entradas em JSON e retorno em JSON.
      *
      * @param id - Identificador da classe.
@@ -314,7 +323,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
     }
 
     /**
-     * Metodo para requisiçães DELETE com parametro entity preenchido, que
+     * Metodo para requisicoes DELETE com parametro entity preenchido, que
      * aceita entradas em JSON e retorno em JSON.
      *
      * @param entity - RequestBody Entidade da classe.
@@ -322,7 +331,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
      * @return ResponseEntity - RequestBody.
      */
     @DeleteMapping(
-            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE}, 
+            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
             produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
     @ApiOperation(value = "Desativa uma entidade")
     @Transactional
@@ -339,7 +348,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
             Result resultado = fachada.disable(entity, entidadeServico);
 
             if (resultado.hasError()) {
-                return new ResponseEntity<>(new ResponseMessage(Boolean.TRUE, resultado.getMsg()),
+                return new ResponseEntity<>(new ResponseMessage(Boolean.TRUE, resultado.getMessage()),
                         HttpStatus.INTERNAL_SERVER_ERROR);
             }
             return new ResponseEntity<>(entity, HttpStatus.OK);

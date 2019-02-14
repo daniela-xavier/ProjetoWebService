@@ -6,6 +6,7 @@ import com.proj.wsf.mod.user.model.User;
 import com.proj.wsf.mod.user.model.UserProfile;
 import com.proj.wsf.view.config.JPAConfiguration;
 import java.util.ArrayList;
+import java.util.Calendar;
 import java.util.List;
 import javax.transaction.Transactional;
 import org.apache.logging.log4j.LogManager;
@@ -56,6 +57,8 @@ public class UserDAOTest implements IDAOTest {
         u.setEmail("teste@fozadvogados.com.br");
         u.setUsuario("teste.teste");
         u.setTk("token");
+        u.setChangedIn(Calendar.getInstance().getTime());
+        System.out.println(u.getChangedIn());
         this.userDAO.save(u);
         Assertions.assertThat(u.getIdentifier()).isNotNull();
     }

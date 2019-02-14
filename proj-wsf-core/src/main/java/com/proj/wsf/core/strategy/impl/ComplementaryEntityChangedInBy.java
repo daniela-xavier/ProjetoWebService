@@ -34,13 +34,18 @@ public class ComplementaryEntityChangedInBy implements IStrategy {
      */
     @Override
     public String process(DomainEntity entity) {
+
         if (entity.getUser().isEmpty()) {
             entity.setChangedBy("FOZWSF");
         } else {
             entity.setChangedBy(entity.getUser());
         }
-        Date data = Calendar.getInstance().getTime();
-        entity.setChangedIn(data);
+
+        if (entity.getChangedIn() == null) {
+            Date data = Calendar.getInstance().getTime();
+            entity.setChangedIn(data);
+        }
+        
         return null;
     }
 

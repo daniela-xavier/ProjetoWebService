@@ -56,16 +56,18 @@ public class Facade implements IFacade {
 
         if (msg != null) {
             resultado.setError();
-            resultado.setMsg(msg);
+            resultado.setMessage(msg);
         } else {
             try {
                 servico.getRepository().save(entity);
                 List<DomainEntity> entitys = new ArrayList<DomainEntity>();
                 entitys.add(entity);
                 resultado.setEntity(entitys);
+                resultado.setMessage("Cadastro realizado com sucesso.");
             } catch (Exception e) {
                 resultado.setError();
-                resultado.setMsg("Exception: " + e.toString() + " Message: " + e.getMessage());
+                System.out.println("Exception: " + e.toString() + " Message: " + e.getMessage());
+                resultado.setMessage("Cadastro não realizado.");
             }
         }
 
@@ -89,7 +91,7 @@ public class Facade implements IFacade {
 
         if (msg != null) {
             resultado.setError();
-            resultado.setMsg(msg);
+            resultado.setMessage(msg);
         } else {
             try {
                 servico.getRepository().update(entity);
@@ -98,7 +100,7 @@ public class Facade implements IFacade {
                 resultado.setEntity(entitys);
             } catch (Exception e) {
                 resultado.setError();
-                resultado.setMsg("Exception: " + e.toString() + " Message: " + e.getMessage());
+                resultado.setMessage("Exception: " + e.toString() + " Message: " + e.getMessage());
             }
         }
         return resultado;
@@ -121,28 +123,28 @@ public class Facade implements IFacade {
         try {
             entity = (DomainEntity) servico.getClasse().newInstance();
         } catch (IllegalAccessException | InstantiationException ex) {
-            resultado.setMsg("Entity não pode ser instanciada. Exception: " + ex.toString() + " Message: " + ex.getMessage());
+            resultado.setMessage("Entity não pode ser instanciada. Exception: " + ex.toString() + " Message: " + ex.getMessage());
             return resultado;
         }
         String msg = executarRegras(entity, "EXCLUIR", servico.getStrategys());
 
         if (msg != null) {
             resultado.setError();
-            resultado.setMsg(msg);
+            resultado.setMessage(msg);
         } else {
             try {
                 List<DomainEntity> entitys = servico.getRepository().delete(id);
                 if (entitys == null) {
                     resultado.setError();
-                    resultado.setMsg("Exclusão não executado, por gentileza verifique seus dados!");
+                    resultado.setMessage("Exclusão não executado, por gentileza verifique seus dados!");
                     return resultado;
                 }
-                resultado.setMsg("Exclusão realizada com sucesso!");
+                resultado.setMessage("Exclusão realizada com sucesso!");
                 resultado.setEntity(entitys);
 
             } catch (Exception e) {
                 resultado.setError();
-                resultado.setMsg("Exception: " + e.toString() + " Message: " + e.getMessage());
+                resultado.setMessage("Exception: " + e.toString() + " Message: " + e.getMessage());
             }
         }
 
@@ -166,7 +168,7 @@ public class Facade implements IFacade {
 
         if (msg != null) {
             resultado.setError();
-            resultado.setMsg(msg);
+            resultado.setMessage(msg);
         } else {
             try {
                 servico.getRepository().disable(entity);
@@ -175,7 +177,7 @@ public class Facade implements IFacade {
                 resultado.setEntity(entitys);
             } catch (Exception e) {
                 resultado.setError();
-                resultado.setMsg("Exception: " + e.toString() + " Message: " + e.getMessage());
+                resultado.setMessage("Exception: " + e.toString() + " Message: " + e.getMessage());
             }
         }
         return resultado;
@@ -200,7 +202,7 @@ public class Facade implements IFacade {
         try {
             entity = (DomainEntity) servico.getClasse().newInstance();
         } catch (IllegalAccessException | InstantiationException ex) {
-            resultado.setMsg("Entity não pode ser instanciada. Exception: " + ex.toString() + " Message: " + ex.getMessage());
+            resultado.setMessage("Entity não pode ser instanciada. Exception: " + ex.toString() + " Message: " + ex.getMessage());
             return resultado;
         }
 
@@ -208,19 +210,19 @@ public class Facade implements IFacade {
 
         if (msg != null) {
             resultado.setError();
-            resultado.setMsg(msg);
+            resultado.setMessage(msg);
         } else {
             try {
                 List<DomainEntity> findAll = servico.getRepository().findAll();
                 if (findAll == null) {
-                    resultado.setMsg("Busca não encontrada, por favor verifique as dados digitados!");
+                    resultado.setMessage("Busca não encontrada, por favor verifique as dados digitados!");
                     return resultado;
                 }
                 resultado.setEntity(findAll);
 
             } catch (Exception e) {
                 resultado.setError();
-                resultado.setMsg("Exception: " + e.toString() + " Message: " + e.getMessage());
+                resultado.setMessage("Exception: " + e.toString() + " Message: " + e.getMessage());
             }
         }
 
@@ -245,26 +247,26 @@ public class Facade implements IFacade {
         try {
             entity = (DomainEntity) servico.getClasse().newInstance();
         } catch (IllegalAccessException | InstantiationException ex) {
-            resultado.setMsg("Entity não pode ser instanciada. Exception: " + ex.toString() + " Message: " + ex.getMessage());
+            resultado.setMessage("Entity não pode ser instanciada. Exception: " + ex.toString() + " Message: " + ex.getMessage());
             return resultado;
         }
         String msg = executarRegras(entity, "CONSULTAR", servico.getStrategys());
 
         if (msg != null) {
             resultado.setError();
-            resultado.setMsg(msg);
+            resultado.setMessage(msg);
         } else {
             try {
                 List<DomainEntity> entitys = servico.getRepository().findById(id);
                 if (entitys == null) {
-                    resultado.setMsg("Busca não encontrada, por favor verifique as dados digitados!");
+                    resultado.setMessage("Busca não encontrada, por favor verifique as dados digitados!");
                     return resultado;
                 }
                 resultado.setEntity(entitys);
 
             } catch (Exception e) {
                 resultado.setError();
-                resultado.setMsg("Exception: " + e.toString() + " Message: " + e.getMessage());
+                resultado.setMessage("Exception: " + e.toString() + " Message: " + e.getMessage());
             }
         }
 
@@ -289,19 +291,19 @@ public class Facade implements IFacade {
 
         if (msg != null) {
             resultado.setError();
-            resultado.setMsg(msg);
+            resultado.setMessage(msg);
         } else {
             try {
                 Iterable<DomainEntity> findAll = servico.getRepository().findByFilter(entity);
                 if (findAll == null) {
-                    resultado.setMsg("Busca não encontrada, por favor verifique as dados digitados!");
+                    resultado.setMessage("Busca não encontrada, por favor verifique as dados digitados!");
                     return resultado;
                 }
                 resultado.setEntity(findAll);
 
             } catch (Exception e) {
                 resultado.setError();
-                resultado.setMsg("Exception: " + e.toString() + " Message: " + e.getMessage());
+                resultado.setMessage("Exception: " + e.toString() + " Message: " + e.getMessage());
             }
         }
 
@@ -322,7 +324,7 @@ public class Facade implements IFacade {
 
         if (msg != null) {
             resultado.setError();
-            resultado.setMsg(msg);
+            resultado.setMessage(msg);
         } else {
             List<DomainEntity> list = new ArrayList<DomainEntity>();
             list.add(entity);
@@ -353,7 +355,7 @@ public class Facade implements IFacade {
                     String m = s.process(entity);
                     if (m != null) {
                         // throw new RuntimeException("Não foi possivel realizar operação. Mensagem: " + m);
-                        msg.append(m).append("\n");
+                        msg.append(m);
                         break;
                     }
                 }

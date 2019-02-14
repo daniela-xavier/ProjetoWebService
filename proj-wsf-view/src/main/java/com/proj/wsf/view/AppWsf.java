@@ -1,6 +1,6 @@
 package com.proj.wsf.view;
 
-import com.proj.wsf.view.filter.RequestResponseLoggingFilter;
+import com.proj.wsf.view.filter.AuthenticFilter;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
@@ -23,7 +23,7 @@ import org.springframework.core.env.StandardEnvironment;
 @SpringBootApplication
 @ComponentScan(basePackages = {"com.proj.wsf", "com.proj.wsf.mod"})
 @EnableAutoConfiguration(exclude = {ErrorMvcAutoConfiguration.class, SecurityAutoConfiguration.class})
-public class ProjWsfViewApplication {
+public class AppWsf {
 
     private static ConfigurableApplicationContext context;
 
@@ -33,7 +33,7 @@ public class ProjWsfViewApplication {
      */
     public static void main(String[] args) {
         System.out.println("Spring Boot iniciando");
-        SpringApplication application = new SpringApplication(ProjWsfViewApplication.class);
+        SpringApplication application = new SpringApplication(AppWsf.class);
         ConfigurableEnvironment environment = new StandardEnvironment();
         environment.setDefaultProfiles("dev");
         environment.setActiveProfiles("dev");
@@ -62,20 +62,16 @@ public class ProjWsfViewApplication {
         };
     }
 
-    /**
-     *
-     * @return
-     */
+   
     @Bean
-    public FilterRegistrationBean<RequestResponseLoggingFilter> loggingFilter() {
-        FilterRegistrationBean<RequestResponseLoggingFilter> registrationBean
-                = new FilterRegistrationBean<>();
-
-        registrationBean.setFilter(new RequestResponseLoggingFilter());
-        ///registrationBean.setFilter(new AuthenticFilter());
-        registrationBean.addUrlPatterns("/*");
-
-        return registrationBean;
+    public FilterRegistrationBean myFilterBean() {
+        final FilterRegistrationBean filterRegBean = new FilterRegistrationBean();
+        filterRegBean.setFilter(new AuthenticFilter());
+        filterRegBean.addUrlPatterns("/*");
+        filterRegBean.setEnabled(Boolean.TRUE);
+        filterRegBean.setName("authenticFilter");
+        filterRegBean.setAsyncSupported(Boolean.TRUE);
+        return filterRegBean;
     }
 
     /**
@@ -91,6 +87,6 @@ public class ProjWsfViewApplication {
      */
     public static void shutdown() {
         //context.close();
-         //Codigo para desligar o sistema
+        //Codigo para desligar o sistema
     }
 }

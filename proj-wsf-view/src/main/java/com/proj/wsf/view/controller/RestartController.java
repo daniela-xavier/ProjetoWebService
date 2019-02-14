@@ -9,7 +9,7 @@
  */
 package com.proj.wsf.view.controller;
 
-import com.proj.wsf.view.ProjWsfViewApplication;
+import com.proj.wsf.view.AppWsf;
 import javafx.application.Application;
 import org.springframework.boot.ApplicationArguments;
 import org.springframework.boot.SpringApplication;
@@ -33,7 +33,7 @@ public class RestartController {
      */
     @PostMapping("/restartContext")
     public String restartContext() {
-       // ProjWsfViewApplication.restart();
+       // AppWsf.restart();
         return "Web Service sendo reiniciado.";
     }
 

@@ -7,31 +7,33 @@
  
  *
  */
-
 package com.proj.wsf.view.authenticate;
 
+import com.proj.wsf.core.util.JWTUtilToken;
 import com.proj.wsf.model.DomainEntity;
+import com.proj.wsf.model.RulePermission;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import javax.servlet.http.HttpServletRequest;
 
 /**
- * Description the class  Auth - Classe que retorna a validação da autenticação
- * da aplicação.
+ * Description the class Auth - Classe que retorna a validação da
+ * autenticação da aplicação.
+ *
  * @author Daniela Xavier Conceição - sistemas@fozadvogados.com.br
- * @version $v rev. $rev  $Revision$
+ * @version $v rev. $rev $Revision$
  * @since Build 1.1 23/01/2019
  */
 public class Auth {
 
     /**
-     * Método que verifica a autenticidade do token enviado e retorna a entidade
-     * que está solicitando.
+     * Metodo que verifica a autenticidade do token enviado e retorna a entidade
+     * que estao solicitando.
      *
      * @param request - HttpServletRequest solicitada.
      * @return DomainEntity
      */
-    public static DomainEntity authToken(HttpServletRequest request) {
+    public static DomainEntity getUserToken(HttpServletRequest request) {
         String token = request.getHeader(JWTUtilToken.TOKEN_HEADER_AUTHENTICATION);
         DomainEntity me = new DomainEntity();
         if (token != null) {
@@ -39,7 +41,7 @@ public class Auth {
             Jws<Claims> jws = JWTUtilToken.decodificarToken(token);
             if (jws != null) {
                 String user = jws.getBody().getSubject();
-                System.out.println("User request: " + user);                
+                System.out.println("User request: " + user);
                 me.setUser(user);
                 me.setTk(token);
                 return me;
@@ -47,5 +49,37 @@ public class Auth {
         }
         return null;
     }
-}
 
+    /**
+     * Metodo que verifica a autenticidade do token enviado e retorna a entidade
+     * que estao solicitando.
+     *
+     * @param request - HttpServletRequest solicitada.
+     * @return DomainEntity
+     */
+    public static Boolean getValidUser(HttpServletRequest request) {
+        String token = request.getHeader(JWTUtilToken.TOKEN_HEADER_AUTHENTICATION);
+
+        if (token != null) {
+            Jws<Claims> jws;
+            try {
+                jws = JWTUtilToken.decodificarToken(token);
+            } catch (Exception e) {
+                return true;
+            }
+
+            if (jws != null) {
+                String user = jws.getBody().getSubject();
+                if (user != null || !user.isEmpty()) {                    
+                    //Verifico as permiss�es do usuario
+                    return RulePermission.findRuleUser(user, action, uri);
+                } else {
+                    return true;
+                }
+
+            }
+            return true;
+        }
+        return true;
+    }
+}

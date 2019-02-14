@@ -9,7 +9,7 @@
  */
 package com.proj.wsf.view.controller;
 
-import com.proj.wsf.view.ProjWsfViewApplication;
+import com.proj.wsf.view.AppWsf;
 import org.springframework.context.ApplicationContextAware;
 import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RestController;

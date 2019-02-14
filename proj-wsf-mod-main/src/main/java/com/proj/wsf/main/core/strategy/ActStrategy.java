@@ -31,25 +31,26 @@ public class ActStrategy {
 
     /**
      * Contrutor da classe para inicializar as strategys.
+      * @param disableAction - Strategy que desabilita a operação.
      */
-    public ActStrategy() {
-        //Regras para entidade Act    
-        DisableAction desabilitarAcao = new DisableAction();
-
-     
+    public ActStrategy(DisableAction disableAction 
+    ) {
+        //Regras para entidade Act passadas dentro do construtor 
+        //Injetadas pelo Spring com a anotação @Autowired    
+           
         /* Criando uma lista para conter as regras de negocio de Act
          * quando a operacao for salvar
          */
         List<IStrategy> rnsSalvarAct = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao salvar do Act */
-        rnsSalvarAct.add(desabilitarAcao);
+        rnsSalvarAct.add(disableAction);
 
         /* Criando uma lista para conter as regras de negocio de Act
          * quando a operacao for alterar
          */
         List<IStrategy> rnsAlterarAct = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao alterar do Act */
-        rnsAlterarAct.add(desabilitarAcao);
+        rnsAlterarAct.add(disableAction);
 
 
         /* Criando uma lista para conter as regras de negocio de act
@@ -57,28 +58,28 @@ public class ActStrategy {
          */
         List<IStrategy> rnsConsultarAct = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao consultar do Act */
-        rnsConsultarAct.add(desabilitarAcao);
+        rnsConsultarAct.add(disableAction);
 
         /* Criando uma lista para conter as regras de negocio de act
          * quando a operacao for excluir
          */
         List<IStrategy> rnsExcluirAct = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao excluir do Act */
-        rnsExcluirAct.add(desabilitarAcao);
+        rnsExcluirAct.add(disableAction);
 
         /* Criando uma lista para conter as regras de negocio de act
          * quando a operacao for visualizar
          */
         List<IStrategy> rnsVisualizarAct = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao visualizar do Act */
-        rnsVisualizarAct.add(desabilitarAcao);
+        rnsVisualizarAct.add(disableAction);
         
         /* Criando uma lista para conter as regras de negocio de act
          * quando a operacao for desativar
          */
         List<IStrategy> rnsDesativarAct = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao desativar do Act */
-        rnsDesativarAct.add(desabilitarAcao);
+        rnsDesativarAct.add(disableAction);
 
         /*
          * Adiciona a listra de regras na operacao salvar no mapa do Act 

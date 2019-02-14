@@ -16,6 +16,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -31,11 +32,14 @@ public class MicroServiceStrategy {
 
     /**
      * Contrutor da classe para inicializar as strategys.
+     * @param desabilitarAcao
      */
-    public MicroServiceStrategy() {
-        //Regras para entidade MicroService    
-        DisableAction desabilitarAcao = new DisableAction();
-
+    @Autowired
+    public MicroServiceStrategy(DisableAction desabilitarAcao
+    ) {
+        //Regras para entidade MicroService  passadas dentro do construtor 
+        //Injetadas pelo Spring com a anotação @Autowired   
+        
      
         /* Criando uma lista para conter as regras de negocio de MicroService
          * quando a operacao for salvar

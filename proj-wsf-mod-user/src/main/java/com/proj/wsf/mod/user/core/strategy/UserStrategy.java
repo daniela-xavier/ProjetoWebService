@@ -11,10 +11,13 @@ package com.proj.wsf.mod.user.core.strategy;
 
 import com.proj.wsf.core.IStrategy;
 import com.proj.wsf.core.strategy.impl.DisableAction;
+import com.proj.wsf.mod.user.core.strategy.user.CadastroUnicoDeUsuario;
+import com.proj.wsf.mod.user.core.strategy.user.CriarTokenUsuario;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 /**
@@ -31,24 +34,37 @@ public class UserStrategy {
 
     /**
      * Contrutor da classe para inicializar as strategys.
+     *
+     * @param disableAction - Strategy que desabilita a operação.
+     * @param cadastroUnicoDeUsuario - Strategy que verifica cadastro unico de usuario.
+     * @param criarTokenUsuario - Strategy que gera token para user passado.
+     * 
      */
-    public UserStrategy() {
-        //Regras para entidade User    
-        DisableAction desabilitarAcao = new DisableAction();
+    @Autowired
+    public UserStrategy(
+            DisableAction disableAction,
+            CadastroUnicoDeUsuario cadastroUnicoDeUsuario,
+            CriarTokenUsuario criarTokenUsuario
+    ) {
 
+        //Regras para entidade User passadas dentro do construtor 
+        //Injetadas pelo Spring com a anotação @Autowired
+        
         /* Criando uma lista para conter as regras de negocio de User
          * quando a operacao for salvar
          */
         final List<IStrategy> rnsSalvarUser = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao salvar do User */
-        rnsSalvarUser.add(desabilitarAcao);
+
+        rnsSalvarUser.add(cadastroUnicoDeUsuario);
+        rnsSalvarUser.add(criarTokenUsuario);
 
         /* Criando uma lista para conter as regras de negocio de User
          * quando a operacao for alterar
          */
         final List<IStrategy> rnsAlterarUser = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao alterar do User */
-        rnsAlterarUser.add(desabilitarAcao);
+        rnsAlterarUser.add(disableAction);
 
 
         /* Criando uma lista para conter as regras de negocio de act
@@ -56,28 +72,28 @@ public class UserStrategy {
          */
         final List<IStrategy> rnsConsultarUser = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao consultar do User */
-        rnsConsultarUser.add(desabilitarAcao);
+        rnsConsultarUser.add(disableAction);
 
         /* Criando uma lista para conter as regras de negocio de act
          * quando a operacao for excluir
          */
         final List<IStrategy> rnsExcluirUser = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao excluir do User */
-        rnsExcluirUser.add(desabilitarAcao);
+        rnsExcluirUser.add(disableAction);
 
         /* Criando uma lista para conter as regras de negocio de act
          * quando a operacao for visualizar
          */
         final List<IStrategy> rnsVisualizarUser = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao visualizar do User */
-        rnsVisualizarUser.add(desabilitarAcao);
-        
+        rnsVisualizarUser.add(disableAction);
+
         /* Criando uma lista para conter as regras de negocio de act
          * quando a operacao for desativar
          */
         final List<IStrategy> rnsDesativarUser = new ArrayList<IStrategy>();
         /* Adicionando as regras a serem utilizadas na operacao desativar do User */
-        rnsDesativarUser.add(desabilitarAcao);
+        rnsDesativarUser.add(disableAction);
 
         /*
          * Adiciona a listra de regras na operacao salvar no mapa do User 
@@ -108,6 +124,7 @@ public class UserStrategy {
 
     /**
      * Retorna regras da entidade.
+     *
      * @return Map String, List -> IStrategy
      */
     public Map<String, List<IStrategy>> getRnsUser() {

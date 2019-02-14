@@ -8,9 +8,8 @@
  *
  */
 
-package com.proj.wsf.view.authenticate;
+package com.proj.wsf.core.util;
 
-import com.proj.wsf.view.response.ExceptionResponse;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import io.jsonwebtoken.Jwts;
@@ -19,36 +18,36 @@ import java.util.Calendar;
 import java.util.Date;
 
 /**
- * Description the class  JWTUtilToken - Classe que auxilia nas operaçõs
+ * Description the class  JWTUtilToken - Classe que auxilia nas operaÃ§Ãµs
  * realizadas com token.
- * @author Daniela Xavier Conceição - sistemas@fozadvogados.com.br
+ * @author Daniela Xavier Conceicao - sistemas@fozadvogados.com.br
  * @version $v rev. $rev  $Revision$
  * @since Build 1.1 23/01/2019
  */
 public abstract class JWTUtilToken {
 
-    //Váriavel de configuração do token.    
+    //Variavel de configuracao do token.    
 
     /**
      *
      */
     public static final String KEY = "CONTINUE_A_NADAR";
 
-    //Váriavel de auditoria do token.
+    //Variavel de auditoria do token.
 
     /**
      *
      */
     public static final String AUD = "PARA_ACHAR_A_SOLUCAO_NADAR";
 
-    //Váriavel de identificação do token no header da requisição.    
+    //Variavel de identificacao do token no header da requisicao.    
 
     /**
      *
      */
     public static final String TOKEN_HEADER_AUTHENTICATION = "Authentication";
 
-    //Váriavel identificadora da plataforma.
+    //Variavel identificadora da plataforma.
 
     /**
      *
@@ -56,28 +55,28 @@ public abstract class JWTUtilToken {
     public static final String TOKEN_HEADER_API = "APIAuthentication";
 
     /**
-     * Método que cria a String do token.
+     * Metodo que cria a String do token.
      *
      * @param subject - sujeito do token.
      * @return String
      */
     public static String criarToken(String subject) {
         String token = "";
-        try {
+        try {            
             token = Jwts.builder()
                     .setSubject(subject)
                     .setAudience(AUD)
                     .signWith(SignatureAlgorithm.HS512, KEY)
                     .compact();
         } catch (Exception e) {
-            throw new ExceptionResponse("Não foi possivel realizar a criação do token. Exception" + e.getMessage());
+            return("Não foi possivel realizar a criação do token. Exception" + e.getMessage());
         }
         return token;
     }
-
+    
     /**
-     * Método que decodifica o token e retorna um JWS com os atributos
-     * para validação.
+     * Metodo que decodifica o token e retorna um JWS com os atributos
+     * para validacao.
      *
      * @param token - Token enviado.
      * @return JWS
@@ -90,7 +89,7 @@ public abstract class JWTUtilToken {
     }
 
     /**
-     * Método que renova o token de acordo com as entradas passada.
+     * Metodo que renova o token de acordo com as entradas passada.
      *
      * @param token - Token enviado.
      * @param subject - Sujeito do token.
@@ -107,7 +106,7 @@ public abstract class JWTUtilToken {
     }
 
     /**
-     * Método que faz a validação do token de acordo com o a palavra Passe.
+     * Metodo que faz a validacao do token de acordo com o a palavra Passe.
      *
      * @param token - Token enviado.
      * @return boolean

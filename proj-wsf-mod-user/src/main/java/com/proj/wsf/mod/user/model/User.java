@@ -17,6 +17,7 @@ import java.util.Collections;
 import java.util.Optional;
 import javax.persistence.AttributeOverride;
 import javax.persistence.AttributeOverrides;
+import javax.persistence.CascadeType;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.FetchType;
@@ -57,7 +58,7 @@ public class User extends DomainEntity {
     private Long identifier;
 
     @Expose
-    @Column(name = "US_USUARIO", unique = true, nullable = false)    
+    @Column(name = "US_USUARIO", unique = true, nullable = false)
     private String usuario;
 
     @Expose
@@ -73,9 +74,35 @@ public class User extends DomainEntity {
     private String token;
 
     @Expose(serialize = false, deserialize = false)
-    @OneToMany(fetch = FetchType.LAZY, targetEntity = UserProfile.class)
+    @OneToMany(fetch = FetchType.LAZY, targetEntity = UserProfile.class,  cascade = CascadeType.ALL)
     @JoinColumn(name = "US_ID")
     private Collection<UserProfile> userProfiles;
+
+    /**
+     * Construtor padrão
+     */
+    public User() {
+    }
+
+    /**
+     * Contrutor com parametros usuario e email.
+     *
+     * @param usuario - nome do usuario
+     * @param email - email do usuario
+     */
+    public User(String usuario, String email) {
+        this.usuario = usuario;
+        this.email = email;
+    }
+
+    /**
+     * Contrutor com parametros usuario e email.
+     *
+     * @param token - token do usuario
+     */
+    public User(String token) {
+        this.token = token;
+    }
 
     /**
      *
@@ -149,6 +176,11 @@ public class User extends DomainEntity {
         this.observacao = observacao;
     }
 
+    public void setToken(String token) {
+        this.token = token;
+    }
+    
+    
     /**
      *
      * @param profile
@@ -174,11 +206,11 @@ public class User extends DomainEntity {
      * @return
      */
     public Collection<UserProfile> getUserProfile() {
-        
+
         if (this.userProfiles == null) {
             return null;
         }
-        
+
         Collection<UserProfile> listaSegura = Collections.unmodifiableCollection(this.userProfiles);
         return listaSegura;
     }

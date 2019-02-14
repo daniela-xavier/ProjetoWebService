@@ -53,7 +53,7 @@ public class UserRepositoryTest  implements IRepositoryTest {
             entidades.add(entidade);
             resultado.setEntity(entidades);
         } catch (Exception e) {
-            resultado.setMsg("Exception: " + e.toString() + " Message: " + e.getMessage());
+            resultado.setMessage("Exception: " + e.toString() + " Message: " + e.getMessage());
         }
 
         Assertions.assertThat(resultado.getEntity()).isNotNull();
@@ -81,7 +81,7 @@ public class UserRepositoryTest  implements IRepositoryTest {
             resultado.setEntity(entidades);
             
         } catch (Exception e) {
-            resultado.setMsg("Exception: " + e.toString() + " Message: " + e.getMessage());
+            resultado.setMessage("Exception: " + e.toString() + " Message: " + e.getMessage());
         }
 
         Assertions.assertThat(resultado.getEntity()).isNotNull();
@@ -109,7 +109,7 @@ public class UserRepositoryTest  implements IRepositoryTest {
             List<DomainEntity> entidades = uR.findByFilter(u);
             resultado.setEntity(entidades);
         } catch (Exception e) {
-            resultado.setMsg("Exception: " + e.toString() + " Message: " + e.getMessage());
+            resultado.setMessage("Exception: " + e.toString() + " Message: " + e.getMessage());
         }
      
         Assertions.assertThat(((Collection<?>) resultado.getEntity()).size()).isEqualTo(0);
@@ -148,7 +148,7 @@ public class UserRepositoryTest  implements IRepositoryTest {
             List<DomainEntity> entidades = uR.findAll();
             resultado.setEntity(entidades);
         } catch (Exception e) {
-            resultado.setMsg("Exception: " + e.toString() + " Message: " + e.getMessage());
+            resultado.setMessage("Exception: " + e.toString() + " Message: " + e.getMessage());
         }
 
         Assertions.assertThat(resultado.getEntity()).isNotNull();

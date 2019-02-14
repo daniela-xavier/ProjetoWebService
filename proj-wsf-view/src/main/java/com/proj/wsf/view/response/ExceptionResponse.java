@@ -7,38 +7,51 @@
  
  *
  */
-
 package com.proj.wsf.view.response;
 
+import org.springframework.http.HttpStatus;
+
 /**
- * Description the class  ExceptionResponse - Classe responsável pelo retorno de
+ * Description the class ExceptionResponse - Classe responsável pelo retorno de
  * exceções da aplicação.
+ *
  * @author Daniela Xavier Conceição - sistemas@fozadvogados.com.br
- * @version $v rev. $rev  $Revision$
+ * @version $v rev. $rev $Revision$
  * @since Build 1.1 23/01/2019
  */
 public class ExceptionResponse extends RuntimeException {
 
-    private final String msg;
+    private final String message;
+    private final HttpStatus httpStatus;
 
     /**
      * Construtor da classe com parametro.
-     * @param msg - Mensagem para retorno de exception.
+     *
+     * @param message - retorna message
+     * @param httpStatus - retorna http status
      */
-    public ExceptionResponse(String msg) {
-        super(msg);
-        this.msg = msg;
+    public ExceptionResponse(String message, HttpStatus httpStatus) {
+        this.message = message;
+        this.httpStatus = httpStatus;
     }
 
     /**
-     * Método de recuperação de mensagem.
+     * Metodo de recuperacao de mensagem.
+     *
      * @return String
      */
     @Override
     public String getMessage() {
-        return msg;
+        return message;
+    }
+
+    /**
+     * Metodo de recuperacao de Http Status.
+     *
+     * @return HttpStatus
+     */
+    public HttpStatus getHttpStatus() {
+        return httpStatus;
     }
 
 }
-
-
