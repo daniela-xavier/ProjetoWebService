@@ -11,7 +11,6 @@ package com.proj.wsf.view.authenticate;
 
 import com.proj.wsf.core.util.JWTUtilToken;
 import com.proj.wsf.model.DomainEntity;
-import com.proj.wsf.model.RulePermission;
 import io.jsonwebtoken.Claims;
 import io.jsonwebtoken.Jws;
 import javax.servlet.http.HttpServletRequest;
@@ -71,9 +70,7 @@ public class Auth {
             if (jws != null) {
                 String user = jws.getBody().getSubject();
                 if (user != null || !user.isEmpty()) {                    
-                    //Verifico as permissões do usuario
-                    return RulePermission.findRuleUser(user, action, uri);
-                } else {
+                   
                     return true;
                 }
 

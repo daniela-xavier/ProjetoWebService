@@ -62,7 +62,6 @@ public class AppWsf {
         };
     }
 
-   
     @Bean
     public FilterRegistrationBean myFilterBean() {
         final FilterRegistrationBean filterRegBean = new FilterRegistrationBean();
@@ -73,6 +72,7 @@ public class AppWsf {
         filterRegBean.setAsyncSupported(Boolean.TRUE);
         return filterRegBean;
     }
+
 
     /**
      * Método para reiniciar o sistema

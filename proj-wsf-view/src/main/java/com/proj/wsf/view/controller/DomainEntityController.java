@@ -378,7 +378,7 @@ public class DomainEntityController<T extends DomainEntity> extends BaseControll
         if (servico.containsKey(service)) {
             return servico.get(service);
         } else {
-            throw new ExceptionResponse("Execução não permitida.");
+            throw new ExceptionResponse("Execução não permitida.", HttpStatus.NOT_ACCEPTABLE);
         }
 
     }
