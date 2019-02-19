@@ -15,6 +15,7 @@ import com.proj.wsf.model.interfaces.OnFindFilter;
 import com.proj.wsf.model.interfaces.OnSave;
 import com.proj.wsf.model.interfaces.OnUpdate;
 import com.proj.wsf.view.controller.DomainEntityController;
+import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import java.util.Optional;
 import javax.transaction.Transactional;
@@ -31,6 +32,7 @@ import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.bind.annotation.RestController;
 
 /**
  * Description the class ActController - xxxxx
@@ -39,8 +41,12 @@ import org.springframework.web.bind.annotation.ResponseBody;
  * @version $v rev. $rev $Revision$
  * @since Build 1.1 24/01/2019
  */
+
+@RestController
 @Controller(value = "actController")
 @RequestMapping("/act")
+@Api(value = "API REST FOZ - ACT")
+@Validated
 public class ActController extends DomainEntityController<Act> {
 
     /**

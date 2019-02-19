@@ -1,15 +1,15 @@
 /*
- * MainConfigurationController.java
+ * ContaEmailController.java
  *
- * Created on 24-01-2019
+ * Created on 19-02-2019
  *
- * Copyright(c) 2019 Foz Sociedade de Advogados.
- 
+ * Copyright(c) 2019 Foz Sociedade de Advogados 
  *
  */
-package com.proj.wsf.main.view;
 
-import com.proj.wsf.main.model.MainConfiguration;
+package com.proj.wsf.mod.email.view;
+
+import com.proj.wsf.mod.email.model.ContaEmail;
 import com.proj.wsf.model.interfaces.OnDisable;
 import com.proj.wsf.model.interfaces.OnFindFilter;
 import com.proj.wsf.model.interfaces.OnSave;
@@ -35,42 +35,41 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 /**
- * Description the class MainConfigurationController - xxxxx
- *
+ * Description the class  ContaEmailController - xxxxx
  * @author Daniela Xavier Conceição - sistemas@fozadvogados.com.br
- * @version $v rev. $rev $Revision$
- * @since Build 1.1 24/01/2019
+ * @version $v rev. $rev  $Revision$
+ * @since Build 1.1 19/02/2019
  */
-
 @RestController
-@Controller(value = "mainConfigurationController")
-@RequestMapping("/mainConfiguration")
-@Api(value = "API REST FOZ - MAIN CONFIG")
+@Controller(value = "contaEmailController")
+@RequestMapping("/conta_email")
+@Api(value = "API REST FOZ - CONTA DE EMAIL")
 @Validated
-public class MainConfigurationController extends DomainEntityController<MainConfiguration> {
+public class ContaEmailController extends DomainEntityController<ContaEmail> {
 
     /**
      * Construtor da classe
      */
-    public MainConfigurationController() {
-        super(MainConfiguration.class);
+    public ContaEmailController() {
+        super(ContaEmail.class);
     }
 
     /**
-     * Método para requisições GET com parametro idMC preenchido, que aceita
+     * Método para requisições GET com parametro idContaEmail preenchido, que aceita
      * entradas em JSON e retorno em JSON.
      *
-     * @param idMC - Identificador da classe.
+     * @param idContaEmail - Identificador da classe.
      * @return ResponseEntity - Entidade resposta.
      */
-    @GetMapping(value = "{idMC}", consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+    @GetMapping(value = "{idContaEmail}", 
+            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
             produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
-    @ApiOperation(value = "Retorna o MainConfiguration")
+    @ApiOperation(value = "Retorna o evento do sistema")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity getEntityById(@PathVariable final Optional<String> idMC) {
-        return super.getEntityById(idMC);
+    ResponseEntity getEntityById(@PathVariable final Optional<String> idContaEmail) {
+        return super.getEntityById(idContaEmail);
     }
 
     /**
@@ -80,13 +79,14 @@ public class MainConfigurationController extends DomainEntityController<MainConf
      * @param entity - RequestBody Entidade da classe
      * @return ResponseEntity - ResponseBody.
      */
-    @GetMapping(consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+    @GetMapping(
+            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
             produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
-    @ApiOperation(value = "Retorna uma lista de MainConfigurations")
+    @ApiOperation(value = "Retorna uma lista de eventos do sistema")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity getEntityByFiltro(@Validated(OnFindFilter.class) @RequestBody MainConfiguration entity, BindingResult result) {
+    ResponseEntity getEntityByFiltro(@Validated(OnFindFilter.class) @RequestBody ContaEmail entity, BindingResult result) {
         return super.getEntityByFiltro(entity, result);
     }
 
@@ -100,11 +100,11 @@ public class MainConfigurationController extends DomainEntityController<MainConf
     @PostMapping(
             consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
             produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
-    @ApiOperation(value = "Cria um MainConfiguration")
+    @ApiOperation(value = "Cria um evento do sistema")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity createEntity(@Validated(OnSave.class) @RequestBody MainConfiguration entity, BindingResult result) {
+    ResponseEntity createEntity(@Validated(OnSave.class) @RequestBody ContaEmail entity, BindingResult result) {
         return super.createEntity(entity, result);
     }
 
@@ -118,11 +118,11 @@ public class MainConfigurationController extends DomainEntityController<MainConf
     @PutMapping(
             consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
             produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
-    @ApiOperation(value = "Altera o MainConfiguration")
+    @ApiOperation(value = "Altera o evento do sistema")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity updateEntity(@Validated(OnUpdate.class) @RequestBody MainConfiguration entity, BindingResult result) {
+    ResponseEntity updateEntity(@Validated(OnUpdate.class) @RequestBody ContaEmail entity, BindingResult result) {
         return super.updateEntity(entity, result);
     }
 
@@ -130,18 +130,18 @@ public class MainConfigurationController extends DomainEntityController<MainConf
      * Método para requisições DELETE com parametro entity preenchido, que
      * aceita entradas em JSON e retorno em JSON.
      *
-     * @param idMC - Identificador da classe.
+     * @param idContaEmail - Identificador da classe.
      * @return ResponseEntity - RequestBody.
      */
-    @DeleteMapping(value = "{idMC}",
-            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE},
+    @DeleteMapping(value = "{idContaEmail}", 
+            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE}, 
             produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
-    @ApiOperation(value = "Deleta um MainConfiguration")
+    @ApiOperation(value = "Deleta um evento do sistema")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity deleteEntity(@PathVariable Optional<String> idMC) {
-        return super.deleteEntity(idMC);
+    ResponseEntity deleteEntity(@PathVariable Optional<String> idContaEmail) {
+        return super.deleteEntity(idContaEmail);
     }
 
     /**
@@ -151,13 +151,16 @@ public class MainConfigurationController extends DomainEntityController<MainConf
      * @param entity - RequestBody Entidade da classe.
      * @return ResponseEntity - RequestBody.
      */
-    @DeleteMapping(consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE}, produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
-    @ApiOperation(value = "Desativa um MainConfiguration")
+    @DeleteMapping(
+            consumes = {MediaType.APPLICATION_JSON_UTF8_VALUE}, 
+            produces = {MediaType.APPLICATION_JSON_UTF8_VALUE})
+    @ApiOperation(value = "Desativa um evento do sistema")
     @Transactional
     @Override
     public @ResponseBody
-    ResponseEntity disableEntity(@Validated(OnDisable.class) @RequestBody MainConfiguration entity, BindingResult result) {
+    ResponseEntity disableEntity(@Validated(OnDisable.class) @RequestBody ContaEmail entity, BindingResult result) {
         return super.disableEntity(entity, result);
     }
 
 }
+

@@ -29,7 +29,7 @@ import org.springframework.stereotype.Repository;
  * @version $v rev. $rev  $Revision$
  * @since Build 1.1 19/02/2019
  */
-@Repository("ContaEmailDAO")
+@Repository("contaEmailDAO")
 public class ContaEmailDAO extends DAOImp<ContaEmail> implements IDAO<ContaEmail> {
 
     /**

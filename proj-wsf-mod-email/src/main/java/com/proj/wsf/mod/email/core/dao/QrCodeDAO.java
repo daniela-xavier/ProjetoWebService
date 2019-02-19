@@ -29,7 +29,7 @@ import org.springframework.stereotype.Repository;
  * @version $v rev. $rev  $Revision$
  * @since Build 1.1 19/02/2019
  */
-@Repository("QrCodeDAO")
+@Repository("qrCodeDAO")
 public class QrCodeDAO extends DAOImp<QrCode> implements IDAO<QrCode> {
 
     /**
